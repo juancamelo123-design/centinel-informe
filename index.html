@@ -34,7 +34,7 @@ button{font:inherit}
 
 /* top bar */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:#FFFFFF;border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:20px;min-height:72px}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:52px}
 .brand{display:flex;align-items:center;gap:12px;white-space:nowrap}
 .brand img{height:44px;width:auto}
 .brand span{font-family:var(--display);font-weight:600;font-size:16px;padding-left:12px;border-left:1px solid var(--line-2)}
@@ -46,7 +46,7 @@ button{font:inherit}
 .nav a.cta{background:var(--red);color:#fff;font-weight:600}
 .progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--franja);width:0}
 
-section{scroll-margin-top:72px}
+section{scroll-margin-top:52px}
 .sec{padding-block:104px}
 .alt{background:var(--bg-2)}
 .head{display:flex;flex-direction:column;gap:14px;margin-bottom:52px;max-width:780px}
@@ -389,6 +389,20 @@ input[type=range]{width:100%;accent-color:var(--red);height:32px}
 .dec li::before{content:counter(d);font-family:var(--display);font-weight:600;font-size:30px;color:var(--red);line-height:1}
 .risk p{padding:12px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15.5px}
 .risk p b{color:var(--ink);display:block;font-weight:600}
+.dgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.dcard{border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:8px;background:var(--bg)}
+.dcard .n{font-family:var(--display);font-weight:700;font-size:34px;color:var(--red);line-height:1}
+.dcard small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dcard b{font-size:17px;font-weight:600;line-height:1.35}
+.dcard p{font-size:14.5px;color:var(--muted);margin-top:auto}
+.dcard p span{color:var(--red-t);font-weight:600}
+.rt{margin-top:44px;font-size:22px}
+.rtab{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-top:12px}
+.rr{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.rr b{font-weight:600}
+.rr p{color:var(--muted);font-size:15px}
+@media (max-width:920px){.dgrid{grid-template-columns:1fr 1fr}.rtab{grid-template-columns:1fr}}
+@media (max-width:600px){.dgrid{grid-template-columns:1fr}.rr{grid-template-columns:1fr;gap:4px}}
 
 /* whatsapp phone */
 .retos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
@@ -798,7 +812,8 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
 .insight{margin:0 18px;border-radius:16px;padding:14px 16px;background:var(--ok-soft);border:1px solid var(--ok);display:flex;flex-direction:column;gap:2px}
 .insight small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ok)}
 .insight b{font-family:var(--display);font-size:20px;font-weight:700;color:var(--ink)}
-.insight p{font-size:14.5px;color:var(--ink-2)}
+.insight p{font-size:13px;color:var(--muted);font-family:var(--mono)}
+.insight ul{margin:4px 0 2px;padding-left:18px;font-size:14.5px;color:var(--ink-2);display:flex;flex-direction:column;gap:2px}
 .demo .more{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .demo .more small{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
 .demo .chip.mini{background:#fff;border:1px solid var(--line-2);color:var(--ink)}
@@ -813,7 +828,7 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
 .hz div+div{padding-left:20px;border-left:1px solid var(--line)}
 .hz b{font-family:var(--display);font-size:34px;font-weight:700;color:var(--red);line-height:1}
 .hz span{color:var(--muted);font-size:14.5px;line-height:1.35}
-.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line-2);position:sticky;top:72px;background:#fff;z-index:4}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line-2);position:sticky;top:52px;background:#fff;z-index:4}
 .tabs::-webkit-scrollbar{display:none}
 .tab{border:0;background:none;padding:12px 16px;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px}
 .tab:hover{color:var(--ink)}
@@ -827,14 +842,74 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
   .demo .lab{grid-template-columns:1fr!important}
   .hz{grid-template-columns:1fr}
   .hz div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
-  .tabs{top:64px}
+  .tabs{top:52px}
 }
-.tabbar{position:sticky;top:72px;z-index:6;background:#fff;border-bottom:1px solid var(--line-2)}
+.tabbar{position:sticky;top:52px;z-index:6;background:#fff;border-bottom:1px solid var(--line-2)}
 .tabbar .tabs{position:static;border-bottom:0}
 .panes{overflow-anchor:none}
-.panes .pane{min-height:calc(100vh - 72px)}
+.panes .pane{min-height:calc(100vh - 52px)}
 .det .hz{margin-bottom:8px}
-@media (max-width:920px){.tabbar{top:64px}}
+@media (max-width:920px){.tabbar{top:52px}}
+/* ===== revisión 5: fold 1 como antes, casos al mismo nivel, escala tipográfica ===== */
+body{font-size:16px}
+h2{font-size:clamp(24px,2.6vw,34px)}
+h3{font-size:18px}
+.lead{font-size:17px}
+.sec{padding-block:72px}
+.head{margin-bottom:32px;gap:10px}
+.live{padding-block:32px 52px}
+.demo-head{margin-bottom:14px}
+.demo-head h1{font-size:clamp(24px,2.6vw,32px)}
+.demo-head .eyebrow{font-size:13px;padding:4px 12px}
+.demo{gap:14px;padding:18px}
+.cases-l{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cases{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cases .case{all:unset;box-sizing:border-box;width:100%;height:100%;display:flex;flex-direction:column;gap:3px;background:var(--bg-2);border:2px solid var(--bg-2);border-radius:14px;padding:10px 14px;cursor:pointer;transition:border-color .2s,background .2s}
+.cases .case:hover,.cases .case:focus-visible{border-color:var(--red);background:#fff}
+.cases .case:disabled{opacity:.6;cursor:default}
+.cases .case small{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--red-t)}
+.cases .case b{font-size:14px;font-weight:600;color:var(--ink);line-height:1.35}
+.cases .case.run{border-color:var(--red);background:#fff}
+.cases .case.done small::before{content:"✓ ";color:var(--ok)}
+.demo .lab{grid-template-columns:340px minmax(0,1fr)!important;gap:18px;align-items:start}
+.demo .iphone{max-width:340px;width:100%;aspect-ratio:393/852;border-radius:52px}
+.demo .screen{border-radius:42px}
+.demo .island{width:92px;height:28px;top:22px}
+.demo .sb{padding:14px 26px 6px 30px;font-size:14px}
+.demo .wat{min-width:0;flex:1}
+.demo .wat b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.demo .console{align-self:stretch}
+.demo .trace{max-height:none;flex:1}
+.insight b{font-size:16px}
+.demo .mt b{font-size:14.5px;line-height:1.3}
+.demo .mt{padding:10px 12px}
+.insight ul{margin:4px 0 2px;padding-left:18px;font-size:14px;color:var(--ink-2);display:flex;flex-direction:column;gap:2px}
+.det{padding-block:56px 0}
+.hz b{font-size:26px}
+.hz span{font-size:14px}
+.tab{font-size:14.5px;padding:10px 14px}
+.panes .pane{padding-block:36px 72px}
+.jc b{font-size:16.5px}
+.jr .jc{min-height:180px}
+.ctab td{font-size:17px}
+.ctab tfoot td{font-size:20px}
+.ctab tbody th,.ctab tfoot th{font-size:14.5px}
+.tcol h3{font-size:18px}
+.tl2 b{font-size:15.5px}
+.tl2 span{font-size:14.5px}
+.g-st .g-l b{font-size:16px}
+.dcard .n{font-size:26px}
+.dcard b{font-size:15.5px}
+.rt{font-size:18px;margin-top:36px}
+.dt summary{padding:18px 22px}
+@media (max-width:920px){.cases{grid-template-columns:1fr 1fr}.demo .lab{grid-template-columns:1fr!important}.demo .iphone{max-width:330px;margin-inline:auto}}
+@media (max-width:600px){.cases{grid-template-columns:1fr}.demo{padding:12px}}
+
+/* nav compacto */
+.top .wrap{gap:14px}
+.brand img{height:28px}
+.brand span{font-size:14px;padding-left:10px}
+.nav a{font-size:13.5px;padding:5px 11px}
 </style>
 
 <header class="top">
@@ -856,10 +931,14 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
       <a class="dlink" href="#detalle">Ver el detalle del plan ↓</a>
     </div>
     <div class="demo">
-      <ol class="guion" id="chips" aria-label="Guion de la prueba">
-        <li><button class="chip step" type="button" data-step="0" data-msg="La isla 3 de la EDS 4021 no está vendiendo"><i>1</i><span><small>Se resuelve en el chat</small><b>«La isla 3 de la EDS 4021 no está vendiendo»</b></span></button></li>
-        <li><button class="chip step" type="button" data-step="1" data-msg="En la EDS 2290 la isla 2 sigue bloqueada, ya reinicié la interfaz y nada"><i>2</i><span><small>Tú apruebas como técnico</small><b>«La isla 2 sigue bloqueada, ya reinicié y nada»</b></span></button></li>
-        <li><button class="chip step" type="button" data-step="2" data-msg="Quiero hablar con un asesor"><i>3</i><span><small>Pasa a una persona</small><b>«Quiero hablar con un asesor»</b></span></button></li>
+      <p class="cases-l">Elige un caso o escribe el tuyo</p>
+      <ol class="cases" id="chips" aria-label="Casos de prueba">
+        <li><button class="chip case" type="button" data-step="0" data-msg="La isla 3 de la EDS 4021 no está vendiendo"><small>Se resuelve en el chat</small><b>«La isla 3 de la EDS 4021 no está vendiendo»</b></button></li>
+        <li><button class="chip case" type="button" data-step="1" data-msg="En la EDS 2290 la isla 2 sigue bloqueada, ya reinicié la interfaz y nada"><small>Tú apruebas como técnico</small><b>«La isla 2 sigue bloqueada, ya reinicié y nada»</b></button></li>
+        <li><button class="chip case" type="button" data-step="2" data-msg="Quiero hablar con un asesor"><small>Pasa a una persona</small><b>«Quiero hablar con un asesor»</b></button></li>
+        <li><button class="chip case" type="button" data-msg="¿Cómo hago el cierre de turno?"><small>Explica un procedimiento</small><b>«¿Cómo hago el cierre de turno?»</b></button></li>
+        <li><button class="chip case" type="button" data-msg="En la EDS 3350 no hay internet"><small>Escala al proveedor</small><b>«En la EDS 3350 no hay internet»</b></button></li>
+        <li><button class="chip case" type="button" data-msg="En la EDS 1187 el conciliador no cuadra con SAP"><small>Pasa a una persona</small><b>«El conciliador no cuadra con SAP»</b></button></li>
       </ol>
       <div class="lab">
       <div class="iphone" aria-label="WhatsApp de una estación (simulado)">
@@ -896,28 +975,17 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
           <div class="mt"><small>Tipificación</small><b id="mTip">—</b></div>
           <div class="mt"><small>Destino</small><b id="mEst">en curso</b></div>
         </div>
-        <div class="insight" id="insight" hidden><small>Lo que acabas de ver</small><b id="insT"></b><p id="insP"></p></div>
+        <div class="insight" id="insight" hidden><small>Caso cerrado · lo que quedó</small><b id="insT"></b><ul id="insL"></ul><p id="insP"></p></div>
         <div class="approval" id="approval" hidden>
           <p id="apTxt"></p>
           <div class="row"><button class="btn" id="apOk" type="button">Aprobar como técnico N2</button><button class="btn ghost" id="apNo" type="button">Rechazar</button></div>
         </div>
         <div class="trace" id="trace"><p class="empty">La traza aparece aquí cuando el agente trabaja.</p></div>
         <p class="note cnote">ANS N1: revisión en 15 min, cierre en 45 min (prioridad crítica, Anexo C).</p>
-        <div class="stations">
-          <div class="stn"><b>EDS 4021</b>Los Almendros · Afiliada</div>
-          <div class="stn"><b>EDS 1187</b>Puerto Sol · Franquiciada</div>
-          <div class="stn"><b>EDS 3350</b>La Ceiba · Propia</div>
-          <div class="stn"><b>EDS 2290</b>El Mirador · Masser</div>
-        </div>
       </div>
-      </div>
-      <div class="more" id="more"><small>Prueba también</small>
-        <button class="chip mini" type="button">¿Cómo hago el cierre de turno?</button>
-        <button class="chip mini" type="button">En la EDS 3350 no hay internet</button>
-        <button class="chip mini" type="button">En la EDS 1187 el conciliador no cuadra con SAP</button>
       </div>
     </div>
-    <p class="disclaimer">Estaciones, estados y procedimientos ficticios, creados para esta demo.</p>
+    <p class="disclaimer">Datos ficticios para la demo. Estaciones: 4021 Los Almendros · 1187 Puerto Sol · 3350 La Ceiba · 2290 El Mirador.</p>
   </div>
 </section>
 
@@ -994,8 +1062,8 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Dónde empezamos</p>
-      <h2>Los casos que más se repiten y lo que cambia con Centinel</h2>
-      <p class="lead">Casos de soporte de agosto de 2026. Hoy todos llegan a la mesa de ayuda. Las otras columnas muestran cuántos seguirían llegando si Centinel cierra una parte en el chat.</p>
+      <h2>Lo que más se repite</h2>
+      <p class="lead">Agosto de 2026: cuántos casos seguirían llegando a la mesa si Centinel cierra una parte en el chat.</p>
     </div>
     <div class="ctab-wrap">
       <table class="ctab">
@@ -1054,12 +1122,15 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
         <div class="g-row g-sub"><div class="g-l"><span>Ola 2 · dos tercios <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"></i></div></div>
         <div class="g-row g-sub"><div class="g-l"><span>Ola 3 · todas <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"></i></div></div>
 
-        <div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b><span>Operación 24/7 · N1 y N2 en el chat · N3 recibe las fallas repetidas con evidencia</span></div>
+        <div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b><span>Febrero: operar, medir y ajustar con todas las estaciones</span></div>
           <div class="g-t"><i class="g-b open" style="left:77.78%;width:22.22%"><span>febrero →</span></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Medir vs. línea base <em>feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:20.6%"></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Ajustes y nuevos casos <em>feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:20.6%"></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Entrega a operación 24/7 <em>fin feb</em></span></div><div class="g-t"><i class="g-b s m" style="left:93.65%;width:4.76%"></i></div></div>
 
         <div class="g-row g-mr"><div class="g-l"><small>Hitos</small></div><div class="g-t">
           <span class="g-tag" style="left:14.29%"><i></i>13 nov · demo lista</span>
-          <span class="g-tag y" style="left:19.84%;top:30px"><i></i>20 nov · CEO</span>
+          <span class="g-tag y" style="left:19.84%;top:30px"><i></i>20 nov · muestra de POC</span>
           <span class="g-tag k" style="left:25.4%;top:56px"><i></i>27 nov · aprobación Terpel</span>
           <span class="g-tag g gl" style="left:76.19%"><i></i>29 ene · todas las estaciones</span>
         </div></div>
@@ -1085,7 +1156,7 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
           <div class="r"><div class="t"><b>Dev de la mesa (experto Wolkvox)</b><em>dedicado</em></div><p>construir lo que se ve: WhatsApp, el paso a llamada con la mesa y la consola. Conoce la operación y Wolkvox.</p></div>
           <div class="r"><div class="t"><b>Especialista N2 TerpelPOS</b><em>~4 h/semana</em></div><p>escribir y validar los procedimientos, para que el agente responda como un técnico real.</p></div>
           <div class="r"><div class="t"><b>QA y evaluaciones</b><em>9 – 13 nov</em></div><p>armar el set de evaluación y dar la cifra de calidad que verá el CEO.</p></div>
-          <div class="r"><div class="t"><b>¿Por qué dos devs?</b><em>13 nov</em></div><p>hay dos frentes en paralelo: cerebro y canales. Con uno solo no llegamos a la demo del 13.</p></div>
+          <div class="r"><div class="t"><b>Dos devs en paralelo</b><em>13 nov</em></div><p>cerebro y canales avanzan a la vez; con uno solo no llegamos a la demo del 13.</p></div>
         </div>
       </details>
       <details class="dt">
@@ -1158,19 +1229,18 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
       <p class="eyebrow">Para decidir</p>
       <h2>Cuatro decisiones esta semana</h2>
     </div>
-    <div class="dec">
-      <ol>
-        <li>Aprobar la eficiencia de N1 como eje de la demo.</li>
-        <li>Asignar 2 ingenieros dedicados desde el 3 de noviembre.</li>
-        <li>Abrir con Terpel datos, estaciones piloto y acceso remoto.</li>
-        <li>Alinear el mensaje con el plan de corto plazo de la operación.</li>
-      </ol>
-      <div class="risk">
-        <p><b>Automatizar un proceso roto</b>Empezamos por casos de uso con procedimiento claro.</p>
-        <p><b>Seguridad frena el canary</b>Pedir aprobaciones ya; la POC no las necesita.</p>
-        <p><b>Falla en vivo</b>Una semana de margen y demo grabada.</p>
-        <p><b>Resistencia del equipo</b>La mesa valida al agente; libera capacidad.</p>
-      </div>
+    <div class="dgrid">
+      <div class="dcard"><span class="n">1</span><small>Enfoque</small><b>Aprobar la eficiencia de N1 como eje de la demo</b><p><span>Para qué:</span> una sola historia frente al CEO.</p></div>
+      <div class="dcard"><span class="n">2</span><small>Equipo</small><b>Asignar 2 desarrolladores dedicados desde el 3 nov</b><p><span>Para qué:</span> tener la demo lista el 13.</p></div>
+      <div class="dcard"><span class="n">3</span><small>Terpel</small><b>Abrir datos, estaciones piloto y acceso remoto</b><p><span>Para qué:</span> que el canary no se frene en diciembre.</p></div>
+      <div class="dcard"><span class="n">4</span><small>Mensaje</small><b>Alinearnos con el plan de corto plazo de la operación</b><p><span>Para qué:</span> que Terpel vea un solo plan.</p></div>
+    </div>
+    <h3 class="rt">Riesgos y cómo los cuidamos</h3>
+    <div class="rtab">
+      <div class="rr"><b>Automatizar un proceso roto</b><p>Empezamos por casos de uso con procedimiento claro.</p></div>
+      <div class="rr"><b>Seguridad frena el canary</b><p>Pedimos las aprobaciones ya; la POC no las necesita.</p></div>
+      <div class="rr"><b>Falla en vivo</b><p>Una semana de margen y una demo grabada de respaldo.</p></div>
+      <div class="rr"><b>Resistencia del equipo</b><p>La mesa valida al agente; libera capacidad, no reemplaza.</p></div>
     </div>
   </div>
 </section>
@@ -1367,16 +1437,15 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
 
   $('form').addEventListener('submit',function(e){e.preventDefault();var v=$('inp').value;$('inp').value='';ask(v);});
     var INS=[
-    ['645 casos así en agosto','Este se resolvió en el chat, sin esperar a un asesor.'],
-    ['Aprobado sin llamar y registrado solo','Quedó en Salesforce y Wolkvox. Hoy se van 341 h al mes registrando cada caso dos veces.'],
-    ['Pasa a llamada con el caso armado','El especialista ya ve el resumen: no vuelve a preguntar.']];
+    ['✓ Resuelto en el chat, sin asesor',['Se ahorran ~15 min de un asesor N1 (hay 645 casos así al mes).','Registrado solo en Wolkvox y Salesforce: cero doble digitación.','Cerrado dentro del ANS de 45 min.']],
+    ['✓ Resuelto con tu aprobación, sin llamada',['El técnico aprobó con un clic; la acción remota no corre sin él.','Registrado solo en Wolkvox y Salesforce.','Cada paso queda en la traza para auditoría.']],
+    ['→ Pasó a una persona con el caso armado',['El especialista ve estación, diagnóstico y pasos ya hechos.','La estación no repite su historia.','El caso queda tipificado para medirlo.']]];
   function waitIdle(){return new Promise(function(r){(function c(){if(!busy&&!approvalRes)r();else setTimeout(c,250);})();});}
   function markSteps(cur,done){document.querySelectorAll('.guion .step').forEach(function(b){var k=+b.getAttribute('data-step');b.classList.toggle('run',k===cur);if(k===done)b.classList.add('done');});}
   function onChip(e){var b=e.target.closest('.chip');if(!b||b.disabled)return;var st=b.getAttribute('data-step');var k=st===null?null:+st;$('insight').hidden=true;
-    if(k!==null){markSteps(k,null);caseClosed=true;}
-    Promise.resolve(ask(b.getAttribute('data-msg')||b.textContent)).then(waitIdle).then(function(){if(k===null)return;markSteps(-1,k);$('insT').textContent=INS[k][0];$('insP').textContent=INS[k][1];$('insight').hidden=false;});}
+    document.querySelectorAll('.cases .case').forEach(function(x){x.classList.remove('run')});b.classList.add('run');caseClosed=true;
+    Promise.resolve(ask(b.getAttribute('data-msg')||b.textContent)).then(waitIdle).then(function(){b.classList.remove('run');b.classList.add('done');if(k===null)return;$('insT').textContent=INS[k][0];var L=$('insL');L.textContent='';INS[k][1].forEach(function(x){var li=document.createElement('li');li.textContent=x;L.appendChild(li);});$('insP').textContent='Tiempo de atención: '+$('mClock').textContent+' · destino: '+$('mEst').textContent;$('insight').hidden=false;});}
   $('chips').addEventListener('click',onChip);
-  $('more').addEventListener('click',onChip);
   // tabs
   var tabBtns=[].slice.call(document.querySelectorAll('.tab'));
   function openTab(id,scroll){tabBtns.forEach(function(t){var on=t.getAttribute('aria-controls')===id;t.classList.toggle('on',on);t.setAttribute('aria-selected',on?'true':'false');});document.querySelectorAll('.pane').forEach(function(p){p.hidden=p.id!==id;});if(scroll)document.getElementById('detalle').scrollIntoView({behavior:RM?'auto':'smooth'});}
@@ -1394,4 +1463,5 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
 })();
 </script>
 
+</body></html>
 </body></html>
