@@ -34,7 +34,7 @@ button{font:inherit}
 
 /* top bar */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:#FFFFFF;border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;gap:20px;min-height:52px}
+.top .wrap{display:flex;align-items:center;gap:20px;min-height:40px}
 .brand{display:flex;align-items:center;gap:12px;white-space:nowrap}
 .brand img{height:44px;width:auto}
 .brand span{font-family:var(--display);font-weight:600;font-size:16px;padding-left:12px;border-left:1px solid var(--line-2)}
@@ -46,7 +46,7 @@ button{font:inherit}
 .nav a.cta{background:var(--red);color:#fff;font-weight:600}
 .progress{position:absolute;left:0;bottom:-1px;height:3px;background:var(--franja);width:0}
 
-section{scroll-margin-top:52px}
+section{scroll-margin-top:40px}
 .sec{padding-block:104px}
 .alt{background:var(--bg-2)}
 .head{display:flex;flex-direction:column;gap:14px;margin-bottom:52px;max-width:780px}
@@ -828,7 +828,7 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
 .hz div+div{padding-left:20px;border-left:1px solid var(--line)}
 .hz b{font-family:var(--display);font-size:34px;font-weight:700;color:var(--red);line-height:1}
 .hz span{color:var(--muted);font-size:14.5px;line-height:1.35}
-.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line-2);position:sticky;top:52px;background:#fff;z-index:4}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--line-2);position:sticky;top:40px;background:#fff;z-index:4}
 .tabs::-webkit-scrollbar{display:none}
 .tab{border:0;background:none;padding:12px 16px;font-size:15px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-1px}
 .tab:hover{color:var(--ink)}
@@ -842,14 +842,14 @@ footer ul{margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;g
   .demo .lab{grid-template-columns:1fr!important}
   .hz{grid-template-columns:1fr}
   .hz div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
-  .tabs{top:52px}
+  .tabs{top:40px}
 }
-.tabbar{position:sticky;top:52px;z-index:6;background:#fff;border-bottom:1px solid var(--line-2)}
+.tabbar{position:sticky;top:40px;z-index:6;background:#fff;border-bottom:1px solid var(--line-2)}
 .tabbar .tabs{position:static;border-bottom:0}
 .panes{overflow-anchor:none}
-.panes .pane{min-height:calc(100vh - 52px)}
+.panes .pane{min-height:calc(100vh - 40px)}
 .det .hz{margin-bottom:8px}
-@media (max-width:920px){.tabbar{top:52px}}
+@media (max-width:920px){.tabbar{top:40px}}
 /* ===== revisión 5: fold 1 como antes, casos al mismo nivel, escala tipográfica ===== */
 body{font-size:16px}
 h2{font-size:clamp(24px,2.6vw,34px)}
@@ -905,11 +905,15 @@ h3{font-size:18px}
 @media (max-width:920px){.cases{grid-template-columns:1fr 1fr}.demo .lab{grid-template-columns:1fr!important}.demo .iphone{max-width:330px;margin-inline:auto}}
 @media (max-width:600px){.cases{grid-template-columns:1fr}.demo{padding:12px}}
 
+.jc .who{margin-top:auto;padding:6px 10px;border-radius:10px;background:var(--yellow-soft);border:1px solid #F2D27A;color:#6E4E00;font-size:12.5px;font-weight:600;line-height:1.35}
+.cases .case{background:#F6F6F6;border-color:#F6F6F6}
+.cases .case:hover,.cases .case:focus-visible,.cases .case.run{background:#fff;border-color:var(--red)}
+.cases-l{color:var(--red-t);font-size:12.5px;font-weight:500}
 /* nav compacto */
 .top .wrap{gap:14px}
-.brand img{height:28px}
-.brand span{font-size:14px;padding-left:10px}
-.nav a{font-size:13.5px;padding:5px 11px}
+.brand img{height:22px}
+.brand span{font-size:13.5px;padding-left:10px;color:var(--red);font-weight:700}
+.nav a{font-size:13px;padding:3px 10px}
 </style>
 
 <header class="top">
@@ -1021,7 +1025,7 @@ h3{font-size:18px}
   <div class="wrap">
     <div class="head j-head">
       <p class="eyebrow">La solución</p>
-      <h2>Así se atiende un caso</h2>
+      <h2>Así se atendería el caso con Centinel</h2>
       <p class="lead">Centinel resuelve en el chat los niveles 1 y 2. Si el caso sigue abierto, pasa a una llamada con una persona de la mesa, que ya tiene todo el contexto.</p>
     </div>
     <div class="jr">
@@ -1037,8 +1041,8 @@ h3{font-size:18px}
         <div class="pop"><b>Qué hace</b><ul><li>Revisa el POS de la isla.</li><li>Guía con los procedimientos aprobados.</li><li>Responde dudas de uso.</li></ul></div>
       </div>
       <div class="jn j1 dn" tabindex="0" style="grid-column:3">
-        <div class="jc"><span class="jt">N2</span><span class="cond">si N1 no lo resuelve</span><b>Centinel propone la acción</b><p>Un técnico la aprueba desde la consola.</p></div>
-        <div class="pop"><b>Qué hace</b><ul><li>Diagnostica la falla con los datos del POS.</li><li>Propone reinicio o reactivación remota.</li><li>Solo se ejecuta si un técnico la aprueba.</li></ul></div>
+        <div class="jc"><span class="jt">N2</span><span class="cond">si N1 no lo resuelve</span><b>Centinel propone la solución</b><p>Diagnostica y propone el reinicio remoto.</p><span class="who">Aquí interviene el técnico N2: la aprueba con un clic desde su consola</span></div>
+        <div class="pop"><b>Qué hace</b><ul><li>Diagnostica la falla con los datos del POS.</li><li>Propone reinicio o reactivación remota.</li><li>Solo se ejecuta si un técnico la aprueba.</li></ul><b>El técnico N2</b><ul><li>Ve el diagnóstico y lo que ya se intentó.</li><li>Aprueba o rechaza desde la consola, sin llamar a la estación.</li><li>Si rechaza, el caso pasa a una llamada.</li></ul></div>
       </div>
       <div class="jn jh dn" tabindex="0" style="grid-column:4">
         <div class="jc"><span class="jt">Llamada</span><span class="cond">si sigue abierto o pide una persona</span><b>Un especialista atiende con el caso armado</b><p>No vuelve a preguntar lo que ya se hizo.</p></div>
@@ -1062,7 +1066,7 @@ h3{font-size:18px}
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Dónde empezamos</p>
-      <h2>Lo que más se repite</h2>
+      <h2>Los casos que más se repiten en la actualidad</h2>
       <p class="lead">Agosto de 2026: cuántos casos seguirían llegando a la mesa si Centinel cierra una parte en el chat.</p>
     </div>
     <div class="ctab-wrap">
@@ -1101,7 +1105,7 @@ h3{font-size:18px}
       <div class="gantt">
         <div class="g-ov" aria-hidden="true">
           <i class="g-m" style="left:4.76%"></i><i class="g-m" style="left:28.57%"></i><i class="g-m" style="left:53.17%"></i><i class="g-m" style="left:77.78%"></i>
-          <i class="g-ms" style="left:14.29%"></i><i class="g-ms y" style="left:19.84%"></i><i class="g-ms k" style="left:25.4%"></i><i class="g-ms g" style="left:76.19%"></i>
+          <i class="g-ms" style="left:14.29%"></i><i class="g-ms y" style="left:19.84%"></i><i class="g-ms k" style="left:25.4%"></i><i class="g-ms g" style="left:76.19%"></i><i class="g-ms g" style="left:97.62%"></i>
         </div>
         <div class="g-row g-hd"><div class="g-l"><small>Etapa</small></div><div class="g-t">
           <span style="left:4.76%">nov</span><span style="left:28.57%">dic</span><span style="left:53.17%">ene 2027</span><span style="left:77.78%">feb</span></div></div>
@@ -1118,21 +1122,22 @@ h3{font-size:18px}
 
         <div class="g-row g-st"><div class="g-l"><b><em>3</em>Masificación</b><span>Una ola por semana · más casos de uso</span></div>
           <div class="g-t"><i class="g-b" style="left:61.9%;width:15.08%"><span class="out">12 → 29 ene</span></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ola 1 · un tercio de las estaciones <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ola 2 · dos tercios <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ola 3 · todas <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Ola 1 · 360 estaciones <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Ola 2 · +360 (720 en total) <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Ola 3 · +356 (las 1.076) <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"></i></div></div>
 
-        <div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b><span>Febrero: operar, medir y ajustar con todas las estaciones</span></div>
-          <div class="g-t"><i class="g-b open" style="left:77.78%;width:22.22%"><span>febrero →</span></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Medir vs. línea base <em>feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:20.6%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ajustes y nuevos casos <em>feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:20.6%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Entrega a operación 24/7 <em>fin feb</em></span></div><div class="g-t"><i class="g-b s m" style="left:93.65%;width:4.76%"></i></div></div>
+        <div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b><span>4 semanas para medir, ajustar y entregar a la operación</span></div>
+          <div class="g-t"><i class="g-b" style="left:77.78%;width:19.84%"><span>1 → 26 feb</span></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Medir vs. línea base <em>1–12 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:11.11%"></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Ajustes y nuevos casos <em>9–20 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:84.13%;width:11.11%"></i></div></div>
+        <div class="g-row g-sub"><div class="g-l"><span>Entrega a la operación 24/7 <em>23–26 feb</em></span></div><div class="g-t"><i class="g-b s m" style="left:94.44%;width:3.17%"></i></div></div>
 
         <div class="g-row g-mr"><div class="g-l"><small>Hitos</small></div><div class="g-t">
           <span class="g-tag" style="left:14.29%"><i></i>13 nov · demo lista</span>
           <span class="g-tag y" style="left:19.84%;top:30px"><i></i>20 nov · muestra de POC</span>
           <span class="g-tag k" style="left:25.4%;top:56px"><i></i>27 nov · aprobación Terpel</span>
-          <span class="g-tag g gl" style="left:76.19%"><i></i>29 ene · todas las estaciones</span>
+          <span class="g-tag g gl" style="left:76.19%"><i></i>29 ene · las 1.076 estaciones</span>
+          <span class="g-tag g gl" style="left:97.62%;top:30px"><i></i>26 feb · entregado a la operación</span>
         </div></div>
       </div>
     </div>
