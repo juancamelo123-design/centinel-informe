@@ -956,6 +956,34 @@ h3{font-size:18px}
 .g-b.s.c3{background:var(--ink-2)}
 .g-b.s.c1 span,.g-b.s.c2 span,.g-b.s.c3 span{font-size:11.5px}
 .tab[hidden]{display:none!important}
+/* roadmap compacto: una pantalla */
+#roadmap.sec{padding-block:18px 16px}
+#roadmap .g-head{margin-bottom:12px;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:18px}
+#roadmap .g-head .eyebrow{display:none}
+#roadmap .g-head>*{flex:none;width:auto}
+#roadmap .g-head h2{font-size:clamp(22px,2.2vw,28px);margin:0}
+#roadmap .g-head .lead{font-size:15px;margin-top:0;max-width:none}
+#roadmap .gantt{--lw:290px}
+#roadmap .g-l{padding-block:0}
+#roadmap .g-hd .g-t{min-height:28px}
+#roadmap .g-st .g-t{min-height:30px}
+#roadmap .g-st .g-l b{font-size:15px;white-space:nowrap}
+#roadmap .g-st .g-l b em{width:20px;height:20px;font-size:11px}
+#roadmap .g-sub .g-t{min-height:20px}
+#roadmap .g-sub .g-l{padding-block:0}
+#roadmap .g-sub .g-l span{font-size:12.5px;white-space:nowrap;justify-content:flex-start}
+#roadmap .g-sub .g-l em{margin-left:auto;min-width:84px;text-align:right}
+#roadmap .g-b{height:22px}
+#roadmap .g-b.s{height:11px}
+#roadmap .g-b.s.c1,#roadmap .g-b.s.c2,#roadmap .g-b.s.c3{height:17px}
+#roadmap .g-b span{font-size:11.5px}
+#roadmap .g-b.s.c1 span,#roadmap .g-b.s.c2 span,#roadmap .g-b.s.c3 span{font-size:11px}
+#roadmap .g-b span.lft{position:absolute;right:100%;padding:0 8px 0 0;color:var(--muted);font-size:11px}
+#roadmap .g-st .g-b span.lft{color:var(--red-t)}
+#roadmap .g-mr .g-t{min-height:60px}
+#roadmap .g-tag{font-size:11px}
+#roadmap .g-ms{top:28px;bottom:6px}
+@media (max-width:720px){#roadmap .gantt{--lw:200px}#roadmap .g-sub .g-l span{white-space:normal;font-size:12px}#roadmap .g-sub .g-l em{min-width:0}}
 /* nav compacto */
 .top .wrap{gap:14px}
 .brand img{height:22px}
@@ -1163,7 +1191,7 @@ h3{font-size:18px}
     <div class="head g-head">
       <p class="eyebrow">Roadmap</p>
       <h2>De la demo a la solución</h2>
-      <p class="lead">Avanzamos por olas semanales de casos de uso, con los canales en paralelo.</p>
+      <p class="lead">Olas semanales de casos de uso, con los canales en paralelo.</p>
     </div>
     <div class="g-scroll">
       <div class="gantt">
@@ -1173,40 +1201,30 @@ h3{font-size:18px}
         </div>
         <div class="g-row g-hd"><div class="g-l"><small>Etapa</small></div><div class="g-t">
           <span style="left:4.76%">nov</span><span style="left:28.57%">dic</span><span style="left:53.17%">ene 2027</span><span style="left:77.78%">feb</span></div></div>
-
-        <div class="g-row g-st"><div class="g-l"><b><em>1</em>POC</b><span>3 casos de uso · WhatsApp · datos ficticios</span></div>
-          <div class="g-t"><i class="g-b" style="left:1.59%;width:19.04%"><span class="out">28 oct → 20 nov</span></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Diagnosticar <em>28–31 oct</em></span></div><div class="g-t"><i class="g-b s" style="left:1.59%;width:3.17%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Diseñar y arrancar <em>3–6 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:6.35%;width:3.17%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Construir <em>9–13 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:11.11%;width:3.97%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Margen y ensayos <em>17–20 nov</em></span></div><div class="g-t"><i class="g-b s m" style="left:17.46%;width:3.17%"></i></div></div>
-
-        <div class="g-row g-st"><div class="g-l"><b><em>2</em>Canary</b><span>3–5 casos de uso · una persona revisa cada caso</span></div>
-          <div class="g-t"><i class="g-b" style="left:27.78%;width:15.08%"><span class="out">30 nov → 18 dic · 3 semanas</span></i></div></div>
-
-        <div class="g-row g-st"><div class="g-l"><b><em>3</em>Masificación</b><span>Una ola de casos de uso por semana</span></div>
-          <div class="g-t"><i class="g-b" style="left:61.9%;width:15.08%"><span class="out">12 → 29 ene</span></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ola 1 · servicios detenidos, bloqueo de interfaz y dudas de uso <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ola 2 · salto de lectura, lentitud, reimpresión e interfaz cerrada <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ola 3 · facturación electrónica y turnos <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"></i></div></div>
-
-        <div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b><span>4 semanas para medir, ajustar y entregar a la operación</span></div>
-          <div class="g-t"><i class="g-b" style="left:77.78%;width:19.84%"><span>1 → 26 feb</span></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Medir vs. línea base <em>1–12 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:11.11%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Ajustes y nuevos casos <em>9–20 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:84.13%;width:11.11%"></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Entrega a la operación 24/7 <em>23–26 feb</em></span></div><div class="g-t"><i class="g-b s m" style="left:94.44%;width:3.17%"></i></div></div>
-
-        <div class="g-row g-st g-ch"><div class="g-l"><b><em>≡</em>Canales en paralelo</b><span>Avanzan junto con las etapas</span></div><div class="g-t"></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>WhatsApp · número oficial <em>desde la POC</em></span></div><div class="g-t"><i class="g-b s c1" style="left:1.59%;width:96.03%"><span>en vivo → canary → todas las olas</span></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Llamadas con voz <em>desde 10 nov</em></span></div><div class="g-t"><i class="g-b s c2" style="left:11.9%;width:85.72%"><span>demo 20 nov (si pasa el 12 nov) → canary → olas</span></i></div></div>
-        <div class="g-row g-sub"><div class="g-l"><span>Paso a la mesa (Wolkvox) <em>desde 30 nov</em></span></div><div class="g-t"><i class="g-b s c3" style="left:27.78%;width:69.84%"><span>integración con el tercero que la opera</span></i></div></div>
-
+<div class="g-row g-st"><div class="g-l"><b><em>1</em>POC</b></div><div class="g-t"><i class="g-b" style="left:1.59%;width:19.04%"><span class="out">28 oct → 20 nov · 3 casos de uso · datos ficticios</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Diagnosticar <em>28–31 oct</em></span></div><div class="g-t"><i class="g-b s" style="left:1.59%;width:3.17%"></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Diseñar y arrancar <em>3–6 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:6.35%;width:3.17%"></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Construir <em>9–13 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:11.11%;width:3.97%"></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Margen y ensayos <em>17–20 nov</em></span></div><div class="g-t"><i class="g-b s m" style="left:17.46%;width:3.17%"></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>2</em>Canary</b></div><div class="g-t"><i class="g-b" style="left:27.78%;width:15.08%"><span class="out">30 nov → 18 dic · 3–5 casos de uso · revisión de una persona</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>3</em>Masificación</b></div><div class="g-t"><i class="g-b" style="left:61.9%;width:15.08%"><span class="lft">una ola de casos de uso por semana</span><span class="out">12 → 29 ene</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Ola 1 <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"><span class="lft">servicios detenidos · bloqueo de interfaz · dudas de uso</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Ola 2 <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"><span class="lft">salto de lectura · lentitud · reimpresión · interfaz cerrada</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Ola 3 <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"><span class="lft">facturación electrónica · turnos</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b></div><div class="g-t"><i class="g-b" style="left:77.78%;width:19.84%"><span class="lft">medir, ajustar y entregar</span><span>1 → 26 feb</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Medir vs. línea base <em>1–12 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:11.11%"></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Ajustes y nuevos casos <em>9–20 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:84.13%;width:11.11%"></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Entrega a la operación <em>23–26 feb</em></span></div><div class="g-t"><i class="g-b s m" style="left:94.44%;width:3.17%"></i></div></div>
+<div class="g-row g-st g-ch"><div class="g-l"><b><em>≡</em>Canales en paralelo</b></div><div class="g-t"></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>WhatsApp oficial <em>desde la POC</em></span></div><div class="g-t"><i class="g-b s c1" style="left:1.59%;width:96.03%"><span>en vivo → canary → todas las olas</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Llamadas con voz <em>desde 10 nov</em></span></div><div class="g-t"><i class="g-b s c2" style="left:11.9%;width:85.72%"><span>demo 20 nov (si pasa el 12 nov) → canary → olas</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Paso a la mesa (Wolkvox) <em>desde 30 nov</em></span></div><div class="g-t"><i class="g-b s c3" style="left:27.78%;width:69.84%"><span>integración con el tercero que la opera</span></i></div></div>
         <div class="g-row g-mr"><div class="g-l"><small>Hitos</small></div><div class="g-t">
-          <span class="g-tag" style="left:14.29%"><i></i>13 nov · demo lista</span>
-          <span class="g-tag y" style="left:19.84%;top:30px"><i></i>20 nov · muestra de POC</span>
-          <span class="g-tag k" style="left:25.4%;top:56px"><i></i>27 nov · aprobación Terpel</span>
-          <span class="g-tag g gl" style="left:76.19%"><i></i>29 ene · todos los casos de uso priorizados</span>
-          <span class="g-tag g gl" style="left:97.62%;top:30px"><i></i>26 feb · entregado a la operación</span>
+          <span class="g-tag" style="left:14.29%;top:4px"><i></i>13 nov · demo lista</span>
+          <span class="g-tag y" style="left:19.84%;top:22px"><i></i>20 nov · muestra de POC</span>
+          <span class="g-tag k" style="left:25.4%;top:40px"><i></i>27 nov · aprobación Terpel</span>
+          <span class="g-tag g gl" style="left:76.19%;top:4px"><i></i>29 ene · todos los casos de uso priorizados</span>
+          <span class="g-tag g gl" style="left:97.62%;top:22px"><i></i>26 feb · entregado a la operación</span>
         </div></div>
       </div>
     </div>
@@ -1274,7 +1292,7 @@ h3{font-size:18px}
       <p class="eyebrow">Tecnología y control</p>
       <h2>Cómo se conecta todo: chat, llamadas y sistemas</h2>
     </div>
-<div class="tinfo"><svg viewBox="0 0 1120 560" role="img" aria-label="Cómo se conecta Centinel: la estación escribe por WhatsApp o llama; Centinel atiende, identifica la EDS en la base de datos de estaciones, consulta el POS, registra el caso en Salesforce y pasa a la mesa por Wolkvox; un técnico N2 aprueba las acciones remotas."><defs><marker id="tah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#46646B"/></marker></defs><text x="0" y="36" class="ti-k">ORIGEN</text><text x="210" y="36" class="ti-k">CANALES</text><text x="500" y="36" class="ti-k">CENTINEL</text><text x="780" y="36" class="ti-k">DATOS Y SISTEMAS DE TERPEL</text><text x="500" y="446" class="ti-k">PERSONAS</text><path id="p1" d="M160 205 C 185 205, 185 125, 208 125" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p2" d="M160 245 C 185 245, 185 305, 208 305" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p3" d="M440 125 C 470 125, 470 200, 498 200" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p4" d="M440 305 C 470 305, 470 300, 498 300" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p5" d="M720 175 C 750 175, 750 125, 778 125" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p6" d="M720 250 C 750 250, 750 245, 778 245" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p7" d="M720 325 C 750 325, 750 365, 778 365" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p9" d="M610 392 L610 458" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p10" d="M950 410 L950 458" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><g class="mv"><circle r="5" class="ti-dot"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#p6"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#p7"/></animateMotion></circle></g><g class="ti-o"><rect x="0" y="150" width="160" height="140" rx="16"/><text x="16" y="180" class="ti-h">Estación</text><text x="16" y="202" class="ti-s">Promotor o</text><text x="16" y="220" class="ti-s">administrador</text></g><g class="ti-c"><rect x="210" y="80" width="230" height="90" rx="16"/><text x="226" y="110" class="ti-h">WhatsApp</text><text x="226" y="132" class="ti-s">Número oficial de soporte</text></g><g class="ti-c"><rect x="210" y="260" width="230" height="90" rx="16"/><text x="226" y="290" class="ti-h">Llamada</text><text x="226" y="312" class="ti-s">Línea de soporte con voz</text></g><g class="ti-core"><rect x="500" y="110" width="220" height="282" rx="20"/><text x="524" y="152" class="ti-hh">Centinel</text><line x1="524" y1="170" x2="696" y2="170" stroke="#F5B5B9" stroke-width="1.5"/><circle cx="530" cy="201" r="4" class="ti-b"/><text x="544" y="206" class="ti-s2">Motor Perxia</text><circle cx="530" cy="241" r="4" class="ti-b"/><text x="544" y="246" class="ti-s2">Identifica la EDS</text><circle cx="530" cy="281" r="4" class="ti-b"/><text x="544" y="286" class="ti-s2">Diagnostica y guía</text><circle cx="530" cy="321" r="4" class="ti-b"/><text x="544" y="326" class="ti-s2">Escala con reglas fijas</text><circle cx="530" cy="361" r="4" class="ti-b"/><text x="544" y="366" class="ti-s2">Registra cada paso</text></g><g class="ti-y"><rect x="780" y="80" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 113 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="113" rx="12" ry="5"/><path d="M798 122 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="116" class="ti-h">Base de datos de estaciones</text><text x="836" y="138" class="ti-s">Identifica la EDS por el número que escribe</text></g><g class="ti-y"><rect x="780" y="200" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 233 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="233" rx="12" ry="5"/><path d="M798 242 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="236" class="ti-h">POS de la estación</text><text x="836" y="258" class="ti-s">Estado de la isla y acción remota</text></g><g class="ti-y"><rect x="780" y="320" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 353 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="353" rx="12" ry="5"/><path d="M798 362 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="356" class="ti-h">Salesforce y Wolkvox</text><text x="836" y="378" class="ti-s">Registro del caso y paso a la mesa</text></g><g class="ti-p"><rect x="500" y="460" width="220" height="80" rx="16"/><text x="516" y="490" class="ti-h">Técnico N2</text><text x="516" y="512" class="ti-s">Aprueba acciones remotas</text><text x="516" y="530" class="ti-s">desde la consola</text></g><g class="ti-p"><rect x="820" y="460" width="260" height="80" rx="16"/><text x="836" y="490" class="ti-h">Especialista de la mesa</text><text x="836" y="512" class="ti-s">Atiende la llamada con</text><text x="836" y="530" class="ti-s">el caso armado</text></g></svg></div>
+<div class="tinfo"><svg viewBox="0 0 1120 560" role="img" aria-label="Cómo se conecta Centinel: la estación escribe por WhatsApp o llama; Centinel atiende, identifica la EDS en la base de datos de estaciones, consulta el POS, registra el caso en Salesforce y pasa a la mesa por Wolkvox; un técnico N2 aprueba las acciones remotas."><defs><marker id="tah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#46646B"/></marker></defs><text x="0" y="36" class="ti-k">ORIGEN</text><text x="210" y="36" class="ti-k">CANALES</text><text x="500" y="36" class="ti-k">CENTINEL</text><text x="780" y="36" class="ti-k">DATOS Y SISTEMAS DE TERPEL</text><text x="500" y="446" class="ti-k">PERSONAS</text><path id="p1" d="M160 205 C 185 205, 185 125, 208 125" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p2" d="M160 245 C 185 245, 185 305, 208 305" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p3" d="M440 125 C 470 125, 470 200, 498 200" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p4" d="M440 305 C 470 305, 470 300, 498 300" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p5" d="M720 175 C 750 175, 750 125, 778 125" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p6" d="M720 250 C 750 250, 750 245, 778 245" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p7" d="M720 325 C 750 325, 750 365, 778 365" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p9" d="M610 392 L610 458" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p10" d="M950 410 L950 458" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><g class="mv"><circle r="5" class="ti-dot"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#p6"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#p7"/></animateMotion></circle></g><g class="ti-o"><rect x="0" y="150" width="160" height="140" rx="16"/><text x="16" y="180" class="ti-h">Estación</text><text x="16" y="202" class="ti-s">Promotor o</text><text x="16" y="220" class="ti-s">administrador</text></g><g class="ti-c"><rect x="210" y="80" width="230" height="90" rx="16"/><text x="226" y="110" class="ti-h">WhatsApp</text><text x="226" y="132" class="ti-s">Número oficial de soporte</text></g><g class="ti-c"><rect x="210" y="260" width="230" height="90" rx="16"/><text x="226" y="290" class="ti-h">Llamada</text><text x="226" y="312" class="ti-s">Línea de soporte con voz</text></g><g class="ti-core"><rect x="500" y="110" width="220" height="282" rx="20"/><text x="524" y="172" class="ti-hh">Centinel</text><line x1="524" y1="188" x2="696" y2="188" stroke="#F5B5B9" stroke-width="1.5"/><circle cx="530" cy="213" r="4" class="ti-b"/><text x="544" y="218" class="ti-s2">Motor Perxia</text><circle cx="530" cy="243" r="4" class="ti-b"/><text x="544" y="248" class="ti-s2">Identifica la EDS</text><circle cx="530" cy="273" r="4" class="ti-b"/><text x="544" y="278" class="ti-s2">Diagnostica y guía</text><circle cx="530" cy="303" r="4" class="ti-b"/><text x="544" y="308" class="ti-s2">Escala con reglas fijas</text><circle cx="530" cy="333" r="4" class="ti-b"/><text x="544" y="338" class="ti-s2">Registra cada paso</text></g><g class="ti-y"><rect x="780" y="80" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 113 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="113" rx="12" ry="5"/><path d="M798 122 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="116" class="ti-h">Base de datos de estaciones</text><text x="836" y="138" class="ti-s">Identifica la EDS por el número que escribe</text></g><g class="ti-y"><rect x="780" y="200" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 233 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="233" rx="12" ry="5"/><path d="M798 242 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="236" class="ti-h">POS de la estación</text><text x="836" y="258" class="ti-s">Estado de la isla y acción remota</text></g><g class="ti-y"><rect x="780" y="320" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 353 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="353" rx="12" ry="5"/><path d="M798 362 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="356" class="ti-h">Salesforce y Wolkvox</text><text x="836" y="378" class="ti-s">Registro del caso y paso a la mesa</text></g><g class="ti-p"><rect x="500" y="460" width="220" height="80" rx="16"/><text x="516" y="490" class="ti-h">Técnico N2</text><text x="516" y="512" class="ti-s">Aprueba acciones remotas</text><text x="516" y="530" class="ti-s">desde la consola</text></g><g class="ti-p"><rect x="820" y="460" width="260" height="80" rx="16"/><text x="836" y="490" class="ti-h">Especialista de la mesa</text><text x="836" y="512" class="ti-s">Atiende la llamada con</text><text x="836" y="530" class="ti-s">el caso armado</text></g></svg></div>
     <p class="note" style="margin-top:10px">Un solo agente para todos los canales: el caso es el mismo si empieza en WhatsApp y termina en una llamada.</p>
     <div class="tcx">
       <div class="tcol ctl">
