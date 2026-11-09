@@ -984,6 +984,7 @@ h3{font-size:18px}
 #roadmap .g-tag{font-size:11px}
 #roadmap .g-ms{top:28px;bottom:6px}
 @media (max-width:720px){#roadmap .gantt{--lw:200px}#roadmap .g-sub .g-l span{white-space:normal;font-size:12px}#roadmap .g-sub .g-l em{min-width:0}}
+.ctab tfoot th small.ds{display:block;font-weight:400;font-size:12.5px;color:var(--muted);margin-top:3px}
 /* nav compacto */
 .top .wrap{gap:14px}
 .brand img{height:22px}
@@ -1095,9 +1096,9 @@ h3{font-size:18px}
       <h2>Por qué Centinel y cómo llegamos</h2>
     </div>
     <div class="hz">
-      <div><b class="num">42 %</b><span>de los tipos de caso se resuelven en el primer contacto</span></div>
-      <div><b class="num">645</b><span>casos de «servicios detenidos» en agosto, el motivo n.º 1</span></div>
-      <div><b class="num">341 h</b><span>al mes registrando cada caso dos veces (Salesforce y Wolkvox)</span></div>
+      <div><b class="num">9.114</b><span>casos en octubre; el motivo n.º 1 son las dudas de uso del POS (1.212)</span></div>
+      <div><b class="num">80 %</b><span>de los casos se concentra en 30 patrones repetitivos</span></div>
+      <div><b class="num">521 h</b><span>al mes registrando cada caso dos veces (Salesforce y Wolkvox)</span></div>
     </div>
   </div>
 </section>
@@ -1159,7 +1160,7 @@ h3{font-size:18px}
     <div class="head">
       <p class="eyebrow">Dónde empezamos</p>
       <h2>Los casos que más se repiten en la actualidad</h2>
-      <p class="lead">Agosto de 2026: cuántos casos seguirían llegando a la mesa si Centinel cierra una parte en el chat.</p>
+      <p class="lead">Octubre de 2026 (Salesforce): cuántos casos seguirían llegando a la mesa si Centinel cierra una parte en el chat.</p>
     </div>
     <div class="ctab-wrap">
       <table class="ctab">
@@ -1168,18 +1169,15 @@ h3{font-size:18px}
           <tr><th scope="col">Motivo</th><th scope="col">Hoy<small>sin Centinel</small></th><th scope="col">Centinel cierra 1 de cada 4<small>25 %</small></th><th scope="col" class="hi">Centinel cierra 1 de cada 2<small>50 %</small></th></tr>
         </thead>
         <tbody>
-          <tr><th scope="row"><span>Servicios detenidos (POS)<small class="ds">La isla no vende</small></span><i class="tb"><i style="width:100.0%"></i></i></th><td>645</td><td>484</td><td class="hi">322</td></tr>
-          <tr><th scope="row"><span>Cómo funciona TerpelPOS<small class="ds">Dudas de uso del POS</small></span><i class="tb"><i style="width:71.0%"></i></i></th><td>458</td><td>344</td><td class="hi">229</td></tr>
-          <tr><th scope="row"><span>Conciliador vs. SAP<small class="ds">Las ventas del POS no cuadran con SAP</small></span><i class="tb"><i style="width:65.6%"></i></i></th><td>423</td><td>317</td><td class="hi">212</td></tr>
-          <tr><th scope="row"><span>Tirilla vs. Head Office<small class="ds">El reporte de cierre no cuadra con el sistema central</small></span><i class="tb"><i style="width:49.8%"></i></i></th><td>321</td><td>241</td><td class="hi">160</td></tr>
-          <tr><th scope="row"><span>Salto de lectura (POS)<small class="ds">La lectura del surtidor no cuadra con el POS</small></span><i class="tb"><i style="width:43.1%"></i></i></th><td>278</td><td>208</td><td class="hi">139</td></tr>
-          <tr><th scope="row"><span>Bloqueo de interfaz (POS)<small class="ds">El POS se congela</small></span><i class="tb"><i style="width:41.4%"></i></i></th><td>267</td><td>200</td><td class="hi">134</td></tr>
-          <tr><th scope="row"><span>Facturación electrónica<small class="ds">La factura no llega a la DIAN</small></span><i class="tb"><i style="width:40.0%"></i></i></th><td>258</td><td>194</td><td class="hi">129</td></tr>
-        </tbody>
-        <tfoot>
-          <tr><th scope="row">Todos los casos del mes</th><td>5.964</td><td>4.473</td><td class="hi">2.982</td></tr>
-          <tr class="hrs"><th scope="row">Horas al mes que la mesa gana para los casos complejos</th><td>0</td><td>385</td><td class="hi">770</td></tr>
-        </tfoot>
+<tr><th scope="row"><span>Cómo funciona TerpelPOS<small class="ds">Dudas de uso del POS</small></span><i class="tb"><i style="width:100.0%"></i></i></th><td>1.212</td><td>909</td><td class="hi">606</td></tr>
+<tr><th scope="row"><span>Turnos<small class="ds">No abre o no cierra el turno</small></span><i class="tb"><i style="width:59.6%"></i></i></th><td>722</td><td>542</td><td class="hi">361</td></tr>
+<tr><th scope="row"><span>Servicios detenidos (POS)<small class="ds">La isla no vende</small></span><i class="tb"><i style="width:42.9%"></i></i></th><td>520</td><td>390</td><td class="hi">260</td></tr>
+<tr><th scope="row"><span>Lentitud del sistema (POS)<small class="ds">El POS responde lento</small></span><i class="tb"><i style="width:32.3%"></i></i></th><td>392</td><td>294</td><td class="hi">196</td></tr>
+<tr><th scope="row"><span>Facturación electrónica<small class="ds">La factura no llega a la DIAN</small></span><i class="tb"><i style="width:32.1%"></i></i></th><td>389</td><td>292</td><td class="hi">194</td></tr>
+<tr><th scope="row"><span>Salto de lectura (POS)<small class="ds">La lectura del surtidor no cuadra con el POS</small></span><i class="tb"><i style="width:31.7%"></i></i></th><td>384</td><td>288</td><td class="hi">192</td></tr>
+<tr><th scope="row"><span>Bloqueo de interfaz (POS)<small class="ds">El POS se congela</small></span><i class="tb"><i style="width:26.0%"></i></i></th><td>315</td><td>236</td><td class="hi">158</td></tr>
+</tbody>
+        <tfoot> <tr><th scope="row">Todos los casos del mes<small class="ds">Sin las 870 llamadas caídas o mudas</small></th><td>8.244</td><td>6.183</td><td class="hi">4.122</td></tr> <tr class="hrs"><th scope="row">Horas al mes que la mesa gana para los casos complejos<small class="ds">Con 13,7 min de atención por caso</small></th><td>0</td><td>471</td><td class="hi">941</td></tr> </tfoot>
       </table>
     </div>
   </div>
@@ -1191,7 +1189,7 @@ h3{font-size:18px}
     <div class="head g-head">
       <p class="eyebrow">Roadmap</p>
       <h2>De la demo a la solución</h2>
-      <p class="lead">Olas semanales de casos de uso, con los canales en paralelo.</p>
+      <p class="lead">Cada semana Centinel empieza a atender nuevos tipos de caso. Los canales avanzan en paralelo.</p>
     </div>
     <div class="g-scroll">
       <div class="gantt">
@@ -1201,29 +1199,29 @@ h3{font-size:18px}
         </div>
         <div class="g-row g-hd"><div class="g-l"><small>Etapa</small></div><div class="g-t">
           <span style="left:4.76%">nov</span><span style="left:28.57%">dic</span><span style="left:53.17%">ene 2027</span><span style="left:77.78%">feb</span></div></div>
-<div class="g-row g-st"><div class="g-l"><b><em>1</em>POC</b></div><div class="g-t"><i class="g-b" style="left:1.59%;width:19.04%"><span class="out">28 oct → 20 nov · 3 casos de uso · datos ficticios</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>1</em>POC</b></div><div class="g-t"><i class="g-b" style="left:1.59%;width:19.04%"><span class="out">28 oct → 20 nov · 3 tipos de caso · datos ficticios</span></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Diagnosticar <em>28–31 oct</em></span></div><div class="g-t"><i class="g-b s" style="left:1.59%;width:3.17%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Diseñar y arrancar <em>3–6 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:6.35%;width:3.17%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Construir <em>9–13 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:11.11%;width:3.97%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Margen y ensayos <em>17–20 nov</em></span></div><div class="g-t"><i class="g-b s m" style="left:17.46%;width:3.17%"></i></div></div>
-<div class="g-row g-st"><div class="g-l"><b><em>2</em>Canary</b></div><div class="g-t"><i class="g-b" style="left:27.78%;width:15.08%"><span class="out">30 nov → 18 dic · 3–5 casos de uso · revisión de una persona</span></i></div></div>
-<div class="g-row g-st"><div class="g-l"><b><em>3</em>Masificación</b></div><div class="g-t"><i class="g-b" style="left:61.9%;width:15.08%"><span class="lft">una ola de casos de uso por semana</span><span class="out">12 → 29 ene</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Ola 1 <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"><span class="lft">servicios detenidos · bloqueo de interfaz · dudas de uso</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Ola 2 <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"><span class="lft">salto de lectura · lentitud · reimpresión · interfaz cerrada</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Ola 3 <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"><span class="lft">facturación electrónica · turnos</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>2</em>Canary</b></div><div class="g-t"><i class="g-b" style="left:27.78%;width:15.08%"><span class="out">30 nov → 18 dic · 3–5 tipos de caso · una persona revisa cada uno</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>3</em>Masificación</b></div><div class="g-t"><i class="g-b" style="left:61.9%;width:15.08%"><span class="lft">cada semana se suman tipos de caso</span><span class="out">12 → 29 ene</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Semana 1 · 3 tipos <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"><span class="lft">servicios detenidos · bloqueo de interfaz · dudas de uso</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Semana 2 · 4 tipos más <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"><span class="lft">salto de lectura · lentitud · reimpresión · interfaz cerrada</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Semana 3 · 2 tipos más <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"><span class="lft">facturación electrónica · turnos</span></i></div></div>
 <div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b></div><div class="g-t"><i class="g-b" style="left:77.78%;width:19.84%"><span class="lft">medir, ajustar y entregar</span><span>1 → 26 feb</span></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Medir vs. línea base <em>1–12 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:11.11%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Ajustes y nuevos casos <em>9–20 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:84.13%;width:11.11%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Entrega a la operación <em>23–26 feb</em></span></div><div class="g-t"><i class="g-b s m" style="left:94.44%;width:3.17%"></i></div></div>
 <div class="g-row g-st g-ch"><div class="g-l"><b><em>≡</em>Canales en paralelo</b></div><div class="g-t"></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>WhatsApp oficial <em>desde la POC</em></span></div><div class="g-t"><i class="g-b s c1" style="left:1.59%;width:96.03%"><span>en vivo → canary → todas las olas</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Llamadas con voz <em>desde 10 nov</em></span></div><div class="g-t"><i class="g-b s c2" style="left:11.9%;width:85.72%"><span>demo 20 nov (si pasa el 12 nov) → canary → olas</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>WhatsApp oficial <em>desde la POC</em></span></div><div class="g-t"><i class="g-b s c1" style="left:1.59%;width:96.03%"><span>en vivo → canary → masificación</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Llamadas con voz <em>desde 10 nov</em></span></div><div class="g-t"><i class="g-b s c2" style="left:11.9%;width:85.72%"><span>demo 20 nov (si pasa el 12 nov) → canary → masificación</span></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Paso a la mesa (Wolkvox) <em>desde 30 nov</em></span></div><div class="g-t"><i class="g-b s c3" style="left:27.78%;width:69.84%"><span>integración con el tercero que la opera</span></i></div></div>
         <div class="g-row g-mr"><div class="g-l"><small>Hitos</small></div><div class="g-t">
           <span class="g-tag" style="left:14.29%;top:4px"><i></i>13 nov · demo lista</span>
           <span class="g-tag y" style="left:19.84%;top:22px"><i></i>20 nov · muestra de POC</span>
           <span class="g-tag k" style="left:25.4%;top:40px"><i></i>27 nov · aprobación Terpel</span>
-          <span class="g-tag g gl" style="left:76.19%;top:4px"><i></i>29 ene · todos los casos de uso priorizados</span>
+          <span class="g-tag g gl" style="left:76.19%;top:4px"><i></i>29 ene · todos los tipos de caso priorizados</span>
           <span class="g-tag g gl" style="left:97.62%;top:22px"><i></i>26 feb · entregado a la operación</span>
         </div></div>
       </div>
@@ -1523,7 +1521,7 @@ h3{font-size:18px}
 
   $('form').addEventListener('submit',function(e){e.preventDefault();var v=$('inp').value;$('inp').value='';ask(v);});
     var INS=[
-    ['✓ Resuelto en el chat, sin asesor',['Se ahorran ~15 min de un asesor N1 (hay 645 casos así al mes).','Registrado solo en Wolkvox y Salesforce: cero doble digitación.','Cerrado dentro del ANS de 45 min.']],
+    ['✓ Resuelto en el chat, sin asesor',['Se ahorran ~14 min de un asesor N1 (hay 520 casos así al mes).','Registrado solo en Wolkvox y Salesforce: cero doble digitación.','Cerrado dentro del ANS de 45 min.']],
     ['✓ Resuelto con tu aprobación, sin llamada',['El técnico aprobó con un clic; la acción remota no corre sin él.','Registrado solo en Wolkvox y Salesforce.','Cada paso queda en la traza para auditoría.']],
     ['→ Pasó a una persona con el caso armado',['El especialista ve estación, diagnóstico y pasos ya hechos.','La estación no repite su historia.','El caso queda tipificado para medirlo.']]];
   function waitIdle(){return new Promise(function(r){(function c(){if(!busy&&!approvalRes)r();else setTimeout(c,250);})();});}
