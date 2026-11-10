@@ -1553,6 +1553,10 @@ h3{font-size:18px}
 #control .mc-k b+p,#control .mc-g b+p,#control .wrap>b+p{margin-top:-5px!important}
 #control .ct-i b{line-height:1.25}
 #control .ct-i b+span{margin-top:-4px!important}
+/* hero diagrama light */
+.hx{display:grid;place-items:center}
+.hx-s{width:100%;max-width:440px;height:auto;font-family:var(--display)}
+@media (prefers-reduced-motion:reduce){.hx-s animateMotion{display:none}}
 /* indicadores */
 .kpi2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
 .kg{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px}
@@ -1612,10 +1616,22 @@ h3{font-size:18px}
       <div class="mk-ctas"><a class="mk-btn" href="#prueba">Probar Centinel ↓</a><a class="mk-btn gh" href="#monitor">Ver el monitor ↓</a></div>
       <ul class="mk-chips"><li>Orquestador + 5 agentes</li><li>N1 y N2</li><li>Trazabilidad total</li></ul>
     </div>
-    <div class="mk-qr">
-      <div class="qrx" aria-label="Código QR para probar Centinel"></div>
-      <div><b>Escanea y prueba Centinel</b><ol><li>Envía el «Hola» que aparece listo.</li><li>Cuenta tu caso en un audio o escríbelo.</li><li>Mira cómo los agentes lo resuelven.</li></ol><a href="https://wa.me/18164517011?text=Hola" target="_blank" rel="noopener">o ábrelo en WhatsApp Web</a></div>
-    </div>
+    <div class="hx" aria-hidden="true"><svg viewBox="0 0 420 340" class="hx-s">
+<defs><path id="hx0" d="M128 70 C190 70 190 170 236 170"/><path id="hx1" d="M128 170 L236 170"/><path id="hx2" d="M128 270 C190 270 190 170 236 170"/><path id="hx3" d="M304 170 L356 170"/></defs>
+<g fill="none" stroke="#DCEBEC" stroke-width="1.5"><use href="#hx0"/><use href="#hx1"/><use href="#hx2"/><use href="#hx3"/></g>
+<circle cx="270" cy="170" r="64" fill="none" stroke="#F5B5B9" stroke-width="1" stroke-dasharray="3 6"/>
+<g fill="#FFDADD"><circle cx="270" cy="106" r="5"/><circle cx="331" cy="150" r="5"/><circle cx="308" cy="222" r="5"/><circle cx="232" cy="222" r="5"/><circle cx="209" cy="150" r="5"/></g>
+<circle cx="270" cy="170" r="34" fill="#FF0818"/><text x="270" y="175" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Centinel</text>
+<g font-size="14" fill="#132023">
+<rect x="20" y="50" width="108" height="40" rx="20" fill="#fff" stroke="#DCEBEC"/><text x="74" y="75" text-anchor="middle">Opción</text>
+<rect x="20" y="150" width="108" height="40" rx="20" fill="#fff" stroke="#DCEBEC"/><text x="74" y="175" text-anchor="middle">Audio</text>
+<rect x="20" y="250" width="108" height="40" rx="20" fill="#fff" stroke="#DCEBEC"/><text x="74" y="275" text-anchor="middle">Foto</text>
+</g>
+<circle cx="374" cy="170" r="18" fill="#fff" stroke="#0F8A5F" stroke-width="1.5"/><path d="M366 170 l6 6 l11 -12" fill="none" stroke="#0F8A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="374" y="210" text-anchor="middle" font-size="13" fill="#46646B">Resuelto</text>
+<g fill="#FF0818"><circle r="3.5"><animateMotion dur="3s" begin="0s" repeatCount="indefinite"><mpath href="#hx0"/></animateMotion></circle><circle r="3.5"><animateMotion dur="3s" begin="-1s" repeatCount="indefinite"><mpath href="#hx1"/></animateMotion></circle><circle r="3.5"><animateMotion dur="3s" begin="-2s" repeatCount="indefinite"><mpath href="#hx2"/></animateMotion></circle></g>
+<circle r="3.5" fill="#0F8A5F"><animateMotion dur="1.5s" repeatCount="indefinite"><mpath href="#hx3"/></animateMotion></circle>
+</svg></div>
   </div>
 </section>
 
@@ -2266,7 +2282,7 @@ h3{font-size:18px}
     var steps=$('waSteps'),items=[];
     if(WA_JOIN)items.push('Envía el mensaje que aparece listo (<code>'+WA_JOIN.replace(/</g,'&lt;')+'</code>) para activar el número.');
     if(!WA_JOIN)items.push('Envía el «Hola» que aparece listo.');
-    items.push('Cuenta tu caso en un audio o escríbelo, por ejemplo: «La isla 3 de la EDS 4021 no está vendiendo».');
+    items.push('Cuenta tu caso en un audio, una foto o tocando una opción, por ejemplo: «La isla 3 de la EDS 4021 no está vendiendo».');
     items.push('Mira cómo los agentes lo resuelven.');
     steps.innerHTML=items.map(function(t){return '<li>'+t+'</li>';}).join('');
     function drawQr(){if(!window.qrcode)return;var q=qrcode(0,'M');q.addData(url);q.make();var svg=q.createSvgTag({cellSize:4,margin:2,scalable:true});if(!$('waQr').firstChild)$('waQr').innerHTML=svg;document.querySelectorAll('.qrx').forEach(function(el){if(!el.firstChild)el.innerHTML=svg;});}
