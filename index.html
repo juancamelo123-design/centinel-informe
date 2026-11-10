@@ -1728,6 +1728,199 @@ h3{font-size:18px}
 .fb-s{margin-top:14px;font-size:13px;color:var(--muted)}
 @media (max-width:900px){.fb-l{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:560px){.fb-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* paso 1 con celular + QR */
+.st-t{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:56px;align-items:center;text-align:center}
+.st-t .ph{transition:opacity .5s ease}
+.st-stage[data-s="1"] .st-t h1{font-size:clamp(44px,6.6vw,96px)!important}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{grid-template-columns:minmax(0,1fr) 0;gap:0}
+.st-stage[data-s="2"] .st-t .ph,.st-stage[data-s="3"] .st-t .ph{opacity:0;width:0;overflow:hidden;pointer-events:none}
+.ph{width:250px}
+.ph-f{position:relative;background:#132023;border-radius:38px;padding:12px;box-shadow:0 30px 60px -30px rgba(60,0,0,.6)}
+.ph-n{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:70px;height:18px;border-radius:999px;background:#000;z-index:2}
+.ph-h{display:flex;align-items:center;gap:10px;background:#fff;border-radius:28px 28px 0 0;padding:40px 16px 12px;text-align:left;border-bottom:1px solid var(--line)}
+.ph-a{width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:700;font-family:var(--display)}
+.ph-h b{display:block;font-size:14px;color:var(--ink);line-height:1.2}
+.ph-h small{display:block;font-size:11.5px;color:var(--muted)}
+.ph-b{background:#F4F8F8;border-radius:0 0 28px 28px;padding:14px 14px 20px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.ph-m{align-self:flex-start;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px 14px 14px 4px;padding:10px 12px;font-size:12.5px;line-height:1.4;color:var(--ink);margin:0}
+.ph-q{width:170px!important;height:170px!important;background:#fff;border-radius:14px;padding:8px}
+.ph-c{font-size:12.5px;font-weight:600;color:var(--red-t);margin:0}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-t{grid-template-columns:1fr;justify-items:center}.st-t .ph{opacity:1!important;width:250px!important}}
+.st-t .eyebrow{white-space:nowrap;justify-self:center}
+.st-tx{display:flex;flex-direction:column;align-items:center}
+@media (max-width:560px){.st-t .eyebrow{font-size:12px!important;letter-spacing:.14em;padding:7px 14px}}
+/* título a la izquierda (con celular) */
+.st-t{text-align:left!important;transform-origin:0 0!important}
+.st-tx{align-items:flex-start!important}
+.st-t .eyebrow{justify-self:start}
+.st-t h1,.st-t .mk-lead{margin-left:0!important;margin-right:0!important}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-t{justify-items:start!important}.st-t .ph{justify-self:center}}
+/* título al hacer scroll: una línea grande */
+.st-t h1{transition:font-size .7s cubic-bezier(.2,.7,.2,1)}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{top:20px!important;transform:none!important}
+.st-stage[data-s="2"] .st-t h1,.st-stage[data-s="3"] .st-t h1{font-size:clamp(34px,4.2vw,60px)!important;margin-top:10px!important}
+.st-stage[data-s="2"] .st-t h1 br,.st-stage[data-s="3"] .st-t h1 br{display:none}
+.st-stage[data-s="2"] .st-t .mk-lead,.st-stage[data-s="3"] .st-t .mk-lead{display:none}
+.st-stage[data-s="2"] .st-t .eyebrow,.st-stage[data-s="3"] .st-t .eyebrow{font-size:12px!important;padding:6px 14px}
+.st-g{top:150px!important}
+.st-g .hx-s{height:calc(100vh - 42px - 200px)!important}
+.st-stage[data-s="3"] .st-g .hx-s{height:calc(100vh - 42px - 315px)!important}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-g .hx-s,.st-stage[data-s="3"] .st-g .hx-s{height:auto!important}}
+.st-stage[data-s="2"] .st-t .ph,.st-stage[data-s="3"] .st-t .ph{display:none}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{align-items:start}
+/* el reto: reducir llamadas */
+.rt{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr) minmax(0,1fr);gap:20px;margin-top:28px;align-items:stretch}
+.rt>div{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}
+.rt small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-t);margin-bottom:12px}
+.rt-hoy{background:var(--red-soft)!important;border-color:transparent!important}
+.rt-hoy b{display:block;font-family:var(--display);font-weight:600;font-size:56px;line-height:1;color:var(--red)}
+.rt-hoy span{display:block;margin-top:8px;font-size:16px;color:var(--ink)}
+.rt-como ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:rt}
+.rt-como li{counter-increment:rt;display:grid;grid-template-columns:28px 1fr;column-gap:12px}
+.rt-como li::before{content:counter(rt);grid-row:span 2;width:28px;height:28px;border-radius:50%;background:var(--red-soft);color:var(--red-t);font-weight:600;font-size:13px;display:grid;place-items:center}
+.rt-como b{font-family:var(--display);font-weight:600;font-size:16.5px;line-height:1.25;color:var(--ink)}
+.rt-como span{font-size:14px;line-height:1.4;color:var(--muted);margin-top:2px}
+.rt-bars{display:flex;align-items:flex-end;gap:10px;height:150px}
+.rt-bars div{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px}
+.rt-bars i{display:block;width:100%;background:#FF8A91;border-radius:8px 8px 3px 3px;order:2}
+.rt-bars .ok i{background:#0F8A5F}
+.rt-bars b{font-family:var(--display);font-weight:600;font-size:13px;color:var(--ink);order:1}
+.rt-bars em{font-style:normal;font-size:12px;color:var(--muted);order:3}
+.rt-ramp p{margin-top:10px;font-size:12.5px;color:var(--muted)}
+@media (max-width:900px){.rt{grid-template-columns:1fr}}
+.rq{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.rq li{display:grid;grid-template-columns:78px 1fr 104px;gap:10px;align-items:center}
+.rq em{font-style:normal;font-size:12.5px;color:var(--muted)}
+.rq-b{display:block;height:12px;border-radius:999px;background:#F1F5F5;overflow:hidden}
+.rq-b i{display:block;height:100%;background:#FF8A91;border-radius:999px}
+.rq .ok .rq-b i{background:#0F8A5F}
+.rq b{font-family:var(--display);font-weight:600;font-size:13.5px;color:var(--ink)}
+.rt-hoy .rt-n{margin-top:14px;font-size:13px;color:var(--muted)}
+.rq .hoy .rq-b i{background:var(--red)}
+.rq li{grid-template-columns:112px 1fr 92px}
+.rq .ok b{font-size:12.5px;color:#0F8A5F;line-height:1.2}
+/* el reto: ejemplo concreto */
+.rf{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.rf-r{border:1px solid var(--line);border-radius:20px;padding:20px 22px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px 16px;background:#fff}
+.rf-r small{grid-column:1/-1;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.rf-r.ok small{color:#0F8A5F}
+.rf-r ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;font-size:14.5px;color:var(--ink)}
+.rf-r li:not(:last-child)::after{content:"→";margin:0 8px;color:var(--muted)}
+.rf-t{font-family:var(--display);font-weight:600;font-size:22px;color:var(--red);white-space:nowrap}
+.rf-r.ok .rf-t{color:#0F8A5F}
+.rf-r:not(.ok){background:var(--red-soft);border-color:transparent}
+.rx{margin-top:18px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.rx table{width:100%;border-collapse:collapse}
+.rx th,.rx td{text-align:left;padding:12px 18px;border-bottom:1px solid var(--line);vertical-align:middle;font-size:14.5px}
+.rx thead th{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:#F8FBFB}
+.rx thead th span{text-transform:none;letter-spacing:0}
+.rx tbody th{font-weight:600;color:var(--ink);white-space:nowrap}
+.rx td b{display:block;font-weight:600;color:var(--ink)}
+.rx td span{display:block;color:var(--muted);font-size:13.5px;margin-top:1px}
+.rx-n{font-family:var(--display);font-weight:600;font-size:18px!important;color:var(--red)}
+.rx-z{font-family:var(--display);font-weight:600;font-size:18px!important;color:#0F8A5F;text-align:center!important}
+.rx tfoot th,.rx tfoot td{border-bottom:0;background:#F1FAF6;font-weight:600;color:var(--ink)}
+.rx-s{margin:0;padding:12px 18px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:900px){.rf{grid-template-columns:1fr}.rx{overflow-x:auto}.rx table{min-width:720px}}
+/* el reto: datos verificables */
+.rf-r{grid-template-columns:1fr!important}
+.rd{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,2fr);gap:18px;margin-top:18px}
+.rd>div{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}
+.rd small{display:block}
+.rd-k>small{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-t);margin-bottom:10px}
+.rd-k b{display:block;font-family:var(--display);font-weight:600;font-size:60px;line-height:1;color:var(--ink)}
+.rd-k span{display:block;margin-top:8px;font-size:15.5px;color:var(--ink)}
+.rd-k em{display:block;margin-top:10px;font-style:normal;font-size:12.5px;color:var(--muted)}
+.rd-h{margin:0 0 14px;font-family:var(--display);font-size:22px;font-weight:500;color:var(--ink)}
+.rd-h b{color:#0F8A5F;font-weight:700}
+.rd-h span{font-size:16px;color:var(--muted);font-weight:400}
+.rd-bar{display:flex;height:34px;border-radius:12px;overflow:hidden;gap:3px}
+.rd-bar i{display:flex;align-items:center;padding-left:12px;font-style:normal}
+.rd-bar b{font-size:13px;font-weight:700;color:#fff}
+.rd-bar .a,.rd-l .a{background:#0F8A5F}.rd-bar .b,.rd-l .b{background:#5FB894}.rd-bar .c,.rd-l .c{background:#DCE6E7}
+.rd-bar .c b{color:var(--ink)}
+.rd-l{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.rd-l li{display:flex;gap:10px;align-items:flex-start}
+.rd-l span{flex:none;width:12px;height:12px;border-radius:4px;margin-top:4px}
+.rd-l b{display:block;font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.3}
+.rd-l small{font-size:13px;color:var(--muted);margin-top:2px;line-height:1.4}
+.rd-s{margin:16px 0 0;font-size:12px;color:var(--muted)}
+@media (max-width:900px){.rd{grid-template-columns:1fr}.rd-l{grid-template-columns:1fr}}
+/* infografía 4 de 10 */
+.ri-w{margin-top:18px;border:1px solid var(--line);border-radius:24px;padding:32px 32px 28px;background:#fff}
+.ri-w .rd-h{font-size:clamp(24px,2.6vw,34px);margin:0 0 26px}
+.ri-g{display:grid;grid-template-columns:3fr 1fr 6fr;gap:22px;align-items:start}
+.ri-row{display:flex;gap:10px;padding-bottom:14px;border-bottom:3px solid currentColor}
+.g3{color:#0F8A5F}.g1{color:#5FB894}.g6{color:#B9C8CA}
+.ri{flex:1;max-width:72px;aspect-ratio:1;border-radius:18px;display:grid;place-items:center;opacity:0;transform:translateY(10px);animation:riIn .5s ease forwards}
+.ri svg{width:52%;height:52%;fill:currentColor}
+.ri.a{background:#E7F6EF;color:#0F8A5F}.ri.b{background:#EEF8F3;color:#5FB894}.ri.c{background:#F1F5F5;color:#9FB2B5}
+.ri.a,.ri.b{position:relative}
+.ri.a::after,.ri.b::after{content:"";position:absolute;width:70%;height:3px;background:currentColor;transform:rotate(-45deg);border-radius:2px}
+@keyframes riIn{to{opacity:1;transform:none}}
+.ri-lb{padding-top:12px}
+.ri-lb b{display:block;font-family:var(--display);font-weight:700;font-size:34px;line-height:1}
+.ri-lb.a b{color:#0F8A5F}.ri-lb.b b{color:#5FB894}.ri-lb.c b{color:var(--ink)}
+.ri-lb span{display:block;margin-top:6px;font-size:15px;font-weight:600;color:var(--ink);line-height:1.3}
+.ri-lb small{display:block;margin-top:2px;font-size:13px;color:var(--muted);line-height:1.4}
+@media (max-width:900px){.ri-g{grid-template-columns:1fr}.ri{max-width:56px}}
+@media (prefers-reduced-motion:reduce){.ri{animation:none;opacity:1;transform:none}}
+.ri-g{display:flex!important;gap:28px;flex-wrap:wrap}
+.ri-grp{flex:none}
+.ri{flex:none!important;width:64px;max-width:none!important}
+.ri-row{width:max-content}
+.g1{min-width:170px}
+.g1 .ri-row{width:auto}
+@media (max-width:900px){.ri{width:48px}.ri-g{flex-direction:column}}
+@media (max-width:560px){.ri-w{padding:22px 18px}.ri{width:38px;border-radius:12px}.ri-row{gap:6px}}
+/* flujos visuales hoy vs agentes */
+.fl{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.fl-r{border-radius:24px;padding:24px 22px 26px}
+.fl-r.hoy{background:var(--red-soft)}
+.fl-r.ag{background:#E7F6EF}
+.fl-t{margin:0 0 20px;font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase}
+.hoy .fl-t{color:var(--red-t)}.ag .fl-t{color:#0F8A5F}
+.fl-r ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.fl-r ol::before{content:"";position:absolute;left:12.5%;right:12.5%;top:31px;height:2px;background:currentColor;opacity:.35}
+.hoy ol{color:var(--red)}.ag ol{color:#0F8A5F}
+.fl-r li{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;position:relative}
+.fi{width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;border:2px solid currentColor}
+.fi svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.hoy li:nth-child(2) .fi svg{fill:currentColor;stroke:none}
+.fl-r li b{font-size:14px;font-weight:600;color:var(--ink);line-height:1.3;max-width:13ch}
+.ag li:last-child .fi{background:#0F8A5F;color:#fff}
+.hoy li:last-child .fi{background:var(--red);color:#fff}
+.rd1{margin-top:18px;border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}
+@media (max-width:900px){.fl{grid-template-columns:1fr}.fi{width:50px;height:50px}.fl-r ol::before{top:25px}.fl-r li b{font-size:12.5px}}
+/* casos específicos por agente */
+.rd-bar .d,.rk .d{background:#9ED4BC}
+.rd-bar .d b{color:var(--ink)}
+.rk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+.rk-c{border-radius:16px;background:#F6FBF9;padding:16px}
+.rk-c.m{background:#F4F7F7}
+.rk-c p{margin:0 0 10px;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink)}
+.rk-c p span{width:12px;height:12px;border-radius:4px;flex:none}
+.rk-c p b{font-weight:700}
+.rk .a{background:#0F8A5F}.rk .b{background:#5FB894}.rk .c{background:#DCE6E7}
+.rk-c ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.rk-c li{display:flex;justify-content:space-between;gap:8px;font-size:13.5px;color:var(--ink);border-bottom:1px dashed var(--line);padding-bottom:5px}
+.rk-c li em{font-style:normal;font-weight:600;color:var(--muted)}
+.rk-c small{display:block;margin-top:10px;font-size:12.5px;color:var(--muted);line-height:1.4}
+.rd1 .rd-s{margin-top:14px}
+@media (max-width:900px){.rk{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.rk{grid-template-columns:1fr}}
+.rk-c p{white-space:nowrap}
+.rd-l4{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.rd-l .d{background:#9ED4BC}
+.t5{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.t5 p{margin:0 0 12px;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.t5 ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:t5}
+.t5 li{counter-increment:t5;background:#F6FBF9;border-radius:14px;padding:14px 16px;position:relative}
+.t5 li::before{content:counter(t5);position:absolute;top:12px;right:14px;font-size:12px;font-weight:700;color:#9FB2B5}
+.t5 b{display:block;font-family:var(--display);font-weight:700;font-size:24px;color:var(--ink);line-height:1}
+.t5 span{display:block;margin-top:6px;font-size:13.5px;color:var(--muted);line-height:1.3}
+@media (max-width:900px){.rd-l4{grid-template-columns:1fr 1fr!important}.t5 ol{grid-template-columns:1fr 1fr}}
+.h2-2l{max-width:none!important}
 /* indicadores */
 .kpi2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
 .kg{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px}
@@ -1769,7 +1962,7 @@ h3{font-size:18px}
     <nav class="nav" aria-label="Secciones">
       <a href="#hero">Inicio</a>
       <a href="#como">Cómo funciona</a>
-      <a href="#casos">Casos</a>
+      <a href="#casos">El reto</a>
       <a href="#monitor">Trazabilidad</a>
       <a href="#control">Qué medimos</a>
     </nav>
@@ -1780,17 +1973,25 @@ h3{font-size:18px}
 <!-- HERO -->
 <section class="mk-hero st" id="hero">
   <div class="st-stage" id="stStage" data-s="1">
-    <div class="st-t">
+    <div class="st-t"><div class="st-tx">
       <p class="eyebrow">Centinel · Mesa agéntica</p>
-      <h1>Un <em class="kw">orquestador</em><br>y un equipo<br>de agentes</h1>
+      <h1>Un <em class="kw">orquestador</em> <br>y un equipo <br>de agentes</h1>
       <p class="mk-lead">La estación interactúa como quiera y siempre la atiende un agente.</p>
     </div>
-    <div class="st-g"><svg viewBox="0 58 650 330" class="hx-s" role="img" aria-label="La estación escribe, toma una foto, envía audios o llama, según lo que necesite; Centinel orquesta cinco agentes especializados y el caso queda resuelto.">
+    <div class="ph" aria-label="Escanea el código con tu celular para probar Centinel">
+      <div class="ph-f"><div class="ph-n"></div>
+        <div class="ph-h"><span class="ph-a">C</span><div><b>Centinel</b><small>Canal oficial Terpel</small></div></div>
+        <div class="ph-b"><p class="ph-m">Hola, soy Centinel. Escanea el código y cuéntame qué pasa en tu EDS.</p>
+          <div class="qrx ph-q" aria-label="Código QR para probar Centinel"></div>
+          <p class="ph-c">Escanea y envía «Hola»</p></div>
+      </div></div>
+    </div>
+    <div class="st-g"><svg viewBox="0 58 650 330" preserveAspectRatio="xMidYMin meet" class="hx-s" role="img" aria-label="La estación escribe, toma una foto, envía audios o llama, según lo que necesite; Centinel orquesta cinco agentes especializados y el caso queda resuelto.">
 <defs><path id="hx1" d="M226 210 L367 210"/><path id="hx3" d="M453 210 L596 210"/></defs>
 <g fill="none" stroke="#DCEBEC" stroke-width="1.6"><use href="#hx1"/><use href="#hx3"/></g>
-<rect x="16" y="106" width="210" height="208" rx="20" fill="#fff" stroke="#DCEBEC"/>
-<text font-size="14.5" font-weight="700" fill="#B50000"><tspan x="34" y="136">Usa la que más se ajuste</tspan><tspan x="34" y="155">a la necesidad de tu EDS</tspan></text>
-<g font-size="14.5" fill="#132023"><circle cx="42" cy="181" r="3" fill="#F5B5B9"/><text x="54" y="186">Escribir</text><circle cx="42" cy="213" r="3" fill="#F5B5B9"/><text x="54" y="218">Tomar foto</text><circle cx="42" cy="245" r="3" fill="#F5B5B9"/><text x="54" y="250">Enviar audios</text><circle cx="42" cy="277" r="3" fill="#F5B5B9"/><text x="54" y="282">Hacer llamadas</text></g>
+<rect x="16" y="104" width="210" height="218" rx="20" fill="#fff" stroke="#DCEBEC"/>
+<text font-size="14" font-weight="700" fill="#B50000"><tspan x="34" y="132">Por los canales oficiales</tspan><tspan x="34" y="150">de Terpel puedes hacer</tspan><tspan x="34" y="168">tus solicitudes:</tspan></text>
+<g font-size="14.5" fill="#132023"><circle cx="42" cy="193" r="3" fill="#F5B5B9"/><text x="54" y="198">Escribiendo</text><circle cx="42" cy="223" r="3" fill="#F5B5B9"/><text x="54" y="228">Tomando una foto</text><circle cx="42" cy="253" r="3" fill="#F5B5B9"/><text x="54" y="258">Enviando audios</text><circle cx="42" cy="283" r="3" fill="#F5B5B9"/><text x="54" y="288">Haciendo una llamada</text></g>
 <circle cx="410" cy="210" r="122" fill="none" stroke="#F5B5B9" stroke-width="1.2" stroke-dasharray="3 6"/>
 <g stroke="#FBD3D6" stroke-width="1.2"><line x1="410" y1="210" x2="324" y2="124"/><line x1="410" y1="210" x2="410" y2="88"/><line x1="410" y1="210" x2="496" y2="124"/><line x1="410" y1="210" x2="349" y2="316"/><line x1="410" y1="210" x2="471" y2="316"/></g>
 <g fill="#fff" stroke="#FF0818" stroke-width="1.6"><circle cx="324" cy="124" r="8"/><circle cx="410" cy="88" r="8"/><circle cx="496" cy="124" r="8"/><circle cx="349" cy="316" r="8"/><circle cx="471" cy="316" r="8"/></g>
@@ -1943,14 +2144,24 @@ h3{font-size:18px}
 <!-- CASOS -->
 <section class="mk-sec" id="casos">
   <div class="wrap">
-    <p class="eyebrow">Por qué funciona</p>
-    <h2>Los casos que más se repiten: <em class="kw">ahí entran los agentes</em></h2>
-    <div class="fb">
-      <div class="fb-bar" role="img" aria-label="Casos de octubre por familia: fallas del POS 25 %, dudas de uso 15 %, turnos 9 %, reportes y conciliación 8 %, facturación electrónica 5 %, otros 39 %."><i style="flex:25;background:#FF0818" title="Fallas del POS 25 %"></i><i style="flex:15;background:#FF5A64" title="Dudas de uso 15 %"></i><i style="flex:9;background:#FF8A91" title="Turnos 9 %"></i><i style="flex:8;background:#FFB3B8" title="Reportes y conciliación 8 %"></i><i style="flex:5;background:#FFD3D6" title="Facturación electrónica 5 %"></i><i style="flex:39;background:#E3ECED" title="Otros 39 %"></i></div>
-      <ul class="fb-l"><li><span style="background:#FF0818"></span><b>Fallas del POS</b><em>25&nbsp;%</em><small>Agente Técnico POS</small></li><li><span style="background:#FF5A64"></span><b>Dudas de uso</b><em>15&nbsp;%</em><small>Agente Guía de uso</small></li><li><span style="background:#FF8A91"></span><b>Turnos</b><em>9&nbsp;%</em><small>Agente Procesos</small></li><li><span style="background:#FFB3B8"></span><b>Reportes y conciliación</b><em>8&nbsp;%</em><small>Agente Procesos</small></li><li><span style="background:#FFD3D6"></span><b>Facturación electrónica</b><em>5&nbsp;%</em><small>Agente Procesos</small></li><li><span style="background:#E3ECED"></span><b>Otros casos</b><em>39&nbsp;%</em><small>Orquestador de agentes</small></li></ul>
-      
+    <p class="eyebrow">El reto</p>
+    <h2 class="h2-2l"><em class="kw">Autogestión con ayuda agéntica:</em><br>menos llamadas a la mesa</h2>
+    <div class="fl">
+      <div class="fl-r hoy"><p class="fl-t">Hoy</p><ol><li><span class="fi"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="12" rx="2"/><path d="M8 21h8M12 15v6"/><path d="M12 7v3M12 12.5v.01"/></svg></span><b>Falla el POS</b></li><li><span class="fi"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg></span><b>Llama a la mesa</b></li><li><span class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>Espera en fila</b></li><li><span class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/><path d="M3 10v2M21 10v2"/></svg></span><b>Un asesor lo resuelve</b></li></ol></div>
+      <div class="fl-r ag"><p class="fl-t">Con los agentes · autogestión</p><ol><li><span class="fi"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="12" rx="2"/><path d="M8 21h8M12 15v6"/><path d="M12 7v3M12 12.5v.01"/></svg></span><b>Falla el POS</b></li><li><span class="fi"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg></span><b>Escribe, manda foto o audio</b></li><li><span class="fi"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6"/></svg></span><b>Un agente reinicia o guía</b></li><li><span class="fi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></span><b>La estación lo resuelve</b></li></ol></div>
     </div>
-        <details class="cs-more"><summary>Ver qué resolvería cada agente y el detalle de los casos</summary>
+      <div class="rd1">
+        <p class="rd-h">De cada 10 llamadas, la mesa dejaría de recibir <b>unas 6</b></p>
+        <div class="rd-bar" role="img" aria-label="Agente Técnico POS 25 %, Agente Guía de uso 15 %, Agente Procesos 21 %, casos especializados que siguen con la mesa 39 %."><i class="a" style="flex:25"><b>25&nbsp;%</b></i><i class="b" style="flex:15"><b>15&nbsp;%</b></i><i class="d" style="flex:21"><b>21&nbsp;%</b></i><i class="c" style="flex:39"><b>39&nbsp;%</b></i></div>
+        <ul class="rd-l rd-l4">
+          <li><span class="a"></span><div><b>Fallas del POS</b><small>Agente Técnico POS</small></div></li>
+          <li><span class="b"></span><div><b>Dudas de uso</b><small>Agente Guía de uso</small></div></li>
+          <li><span class="d"></span><div><b>Turnos, reportes y facturación</b><small>Agente Procesos</small></div></li>
+          <li><span class="c"></span><div><b>Casos especializados</b><small>Siguen con la mesa: hardware, precios, mangueras…</small></div></li>
+        </ul>
+      </div>
+    
+            <details class="cs-more"><summary>Ver por qué casos empezamos</summary>
     <div class="rs"><div class="rs-hd"><span>Lo que levanta la estación</span><span></span><span>Agente</span><span></span><span>Cómo lo resolvería</span><span></span><span>Resultado</span></div><div class="rs-r pos"><div class="rs-c"><div class="rs-n"><b>Fallas del POS</b><em>25&nbsp;%</em></div><div class="rs-bar"><i style="width:64%"></i></div><span>«La isla no vende» · «El POS está lento»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Técnico POS</span></div><span class="rs-ar">→</span><p class="rs-how">Lee el LOG y reinicia los servicios o el POS en remoto</p><span class="rs-ar">→</span><p class="rs-ok">✓ La isla vuelve a vender</p></div><div class="rs-r uso"><div class="rs-c"><div class="rs-n"><b>Dudas de uso</b><em>15&nbsp;%</em></div><div class="rs-bar"><i style="width:38%"></i></div><span>«¿Cómo reimprimo el cierre?»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Guía de uso</span></div><span class="rs-ar">→</span><p class="rs-how">Explica paso a paso, con audio e imágenes</p><span class="rs-ar">→</span><p class="rs-ok">✓ La estación lo hace sola</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Turnos</b><em>9&nbsp;%</em></div><div class="rs-bar"><i style="width:23%"></i></div><span>«No cierra el turno»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Revisa el turno y lo cierra o lo corrige</p><span class="rs-ar">→</span><p class="rs-ok">✓ Turno cerrado</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Reportes y conciliación</b><em>8&nbsp;%</em></div><div class="rs-bar"><i style="width:21%"></i></div><span>«La tirilla no cuadra»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Compara el POS con los reportes y encuentra la diferencia</p><span class="rs-ar">→</span><p class="rs-ok">✓ Diferencia aclarada</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Facturación electrónica</b><em>5&nbsp;%</em></div><div class="rs-bar"><i style="width:13%"></i></div><span>«La factura no sale»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Revisa el estado y reenvía la factura</p><span class="rs-ar">→</span><p class="rs-ok">✓ Factura enviada</p></div><div class="rs-r orq"><div class="rs-c"><div class="rs-n"><b>Otros casos</b><em>39&nbsp;%</em></div><div class="rs-bar"><i style="width:100%"></i></div><span>Todo lo demás</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Orquestador</span></div><span class="rs-ar">→</span><p class="rs-how">Lo analiza y lo asigna al agente indicado</p><span class="rs-ar">→</span><p class="rs-ok">✓ Resuelto por el equipo de agentes</p></div><div class="rs-all">En todos los casos, <b>Registro y seguimiento</b> tipifica el caso y deja la trazabilidad completa.</div></div>
     
     
