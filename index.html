@@ -1019,6 +1019,536 @@ h3{font-size:18px}
 .m-src{margin-top:10px}
 @media (max-width:1000px){.m4{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.m4{grid-template-columns:1fr}.m-next{flex-direction:column;align-items:flex-start}}
+/* intro */
+.mi{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.mi-t{display:flex;flex-direction:column;gap:12px}
+.mi-t h2{font-size:clamp(28px,3.4vw,42px)}
+.mi-t .lead{font-size:17px}
+.mi-t .lead b{color:var(--ink);font-weight:700}
+.mi-l{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.mi-l li{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:14px;padding:14px 18px;display:flex;flex-direction:column;gap:2px}
+.mi-l b{font-family:var(--display);font-size:17px}
+.mi-l span{font-size:14.5px;color:var(--muted)}
+@media (max-width:920px){.mi{grid-template-columns:1fr;gap:20px}}
+/* one pager */
+.op .op-h{display:flex;flex-direction:column;gap:10px;margin-bottom:24px;max-width:900px}
+.op .op-h h2{font-size:clamp(26px,3vw,38px)}
+.op .op-h .lead{font-size:17px;max-width:none}
+.op .op-h .lead b{color:var(--ink);font-weight:700}
+.op4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.oc{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--line-2);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.oc small{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
+.oc .big{font-family:var(--display);font-size:44px;font-weight:800;line-height:1}
+.oc span{font-size:14px;color:var(--muted);line-height:1.4}
+.oc ul{margin:0;padding-left:18px;font-size:14.5px;line-height:1.45;display:flex;flex-direction:column;gap:6px}
+.oc p{font-size:14px;line-height:1.45;margin-top:auto}
+.oc h3{font-size:19px}
+.o1{border-top-color:var(--ink-2)}.o1 small{color:var(--ink-2)}.o1 .big{color:var(--ink)}
+.o2{background:var(--ink);border-color:var(--ink)}.o2 small{color:var(--yellow)}.o2 h3{color:#fff}.o2 ul{color:#C9D6D7}.o2 ul b{color:#fff}
+.o3{border-top-color:var(--ok)}.o3 small,.o3 .big{color:var(--ok)}
+.o4{border-top-color:#FDB913}.o4 small{color:#8A6200}
+.oc ul.ot{list-style:none;padding:0;gap:8px}
+.oc ul.ot li{display:flex;flex-direction:column;padding-left:12px;border-left:3px solid #FDB913;font-size:14.5px}
+.oc ul.ot em{font-style:normal;font-family:var(--mono);font-size:11.5px;color:#8A6200}
+.op-ctl{margin-top:14px;background:var(--yellow-soft);border-radius:14px;padding:12px 18px;font-size:14.5px}
+@media (max-width:1000px){.op4{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.op4{grid-template-columns:1fr}}
+/* virtudes */
+.vwrap{display:grid;grid-template-columns:340px 1fr;gap:28px;align-items:center}
+.vphone{background:#EFE7DE;border-radius:34px;border:10px solid #1B1D1F;overflow:hidden;box-shadow:0 40px 80px -30px rgba(60,0,0,.7);font-family:-apple-system,"Helvetica Neue",var(--body)}
+.vp-top{display:flex;align-items:center;gap:10px;background:#F6F5F3;padding:12px 14px;border-bottom:1px solid #E2DED8}
+.vp-top b{display:block;font-size:14px;color:#111B21}.vp-top small{font-size:12px;color:#667781}
+.vp-av{width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-weight:700}
+.vp-body{padding:14px 12px 18px;display:flex;flex-direction:column;gap:8px;background-image:radial-gradient(rgba(0,0,0,.035) 1.2px,transparent 1.3px);background-size:20px 20px}
+.vb{max-width:86%;padding:8px 10px;border-radius:10px;font-size:13.5px;line-height:1.4;color:#111B21;box-shadow:0 1px .5px rgba(0,0,0,.13)}
+.vb.u{align-self:flex-end;background:#D9FDD3;border-top-right-radius:2px}
+.vb.a{align-self:flex-start;background:#fff;border-top-left-radius:2px}
+.vb.ok{background:#E7F6EF;color:var(--ok);font-weight:700}
+.vb.voice{display:flex;align-items:center;gap:8px;min-width:200px}
+.vp-play{color:#54656F;font-size:12px}
+.vp-wave{display:flex;align-items:center;gap:2px;flex:1;height:24px}
+.vp-wave i{display:block;width:3px;border-radius:2px;background:#54656F}
+.vb.voice small{font-size:11px;color:#667781}
+.vp-btns{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.vp-btns span{display:block;text-align:center;border-top:1px solid #E9EDEF;padding-top:6px;color:#027EB5;font-weight:600}
+.virt{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.vt{background:#fff;border-radius:18px;padding:18px 20px;display:flex;flex-direction:column;gap:4px;color:var(--ink);box-shadow:0 24px 48px -30px rgba(80,0,0,.6)}
+.vi{width:42px;height:42px;border-radius:12px;background:var(--red-soft);display:grid;place-items:center;margin-bottom:6px}
+.vi svg{width:22px;height:22px;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vt .vk{font-family:var(--display);font-size:30px;font-weight:800;line-height:1;color:var(--red)}
+.vt .vh{font-family:var(--display);font-size:17px;font-weight:700;line-height:1.25}
+.vt p{font-size:14px;color:var(--muted);line-height:1.4}
+.virt-n{margin-top:18px;color:#fff;font-size:15px;font-weight:600}
+@media (max-width:1000px){.vwrap{grid-template-columns:1fr}.vphone{max-width:340px;margin-inline:auto}}
+@media (max-width:920px){.virt{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.virt{grid-template-columns:1fr}}
+.o5{border-top-color:var(--ok)}.o5 small,.o5 .big{color:var(--ok)}
+.oc ul.ev{list-style:none;padding:0;gap:8px;margin-top:auto}
+.oc ul.ev li{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line);padding-bottom:6px;font-size:14px}
+.oc ul.ev li span{font-size:14px;color:var(--muted)}
+.oc ul.ev b{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--ok);white-space:nowrap}
+.o3{border-top-color:#FDB913}.o3 small{color:#8A6200}.o3 .big{color:var(--ink)}
+.oc ol.os{list-style:none;margin:0;padding:0;counter-reset:os;display:flex;flex-direction:column;gap:8px}
+.oc ol.os li{counter-increment:os;display:grid;grid-template-columns:24px 1fr;column-gap:8px;font-size:14px;color:#C9D6D7;line-height:1.35}
+.oc ol.os li::before{content:counter(os);grid-row:span 2;width:22px;height:22px;border-radius:50%;background:var(--red);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+.oc ol.os b{color:#fff;font-weight:700}
+.o2 .on{color:var(--yellow);font-weight:600;font-size:14px}
+.op3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.t1{border-top-color:var(--ink-2)}.t1 small{color:var(--ink-2)}
+.t2{background:var(--ink);border-color:var(--ink)}.t2 small{color:var(--yellow)}.t2 h3{color:#fff}.t2 ul{color:#C9D6D7}
+.t3{border-top-color:var(--ok)}.t3 small,.t3 .big{color:var(--ok)}
+.op3 .oc h3{font-size:20px;line-height:1.25}
+.op3 .oc ul{font-size:15px}
+.oc .tk{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line-2);display:flex;flex-direction:column;gap:2px}
+.t2 .tk{border-top-color:#2A4248}
+.oc .tk span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.t2 .tk span{color:var(--yellow)}
+.oc .tk p{font-size:14px;margin:0;color:var(--muted)}
+.t2 .tk p{color:#C9D6D7}
+.oc.t3 ul.ot li{border-left-color:var(--ok)}.oc.t3 ul.ot em{color:var(--ok)}
+.trail{margin-top:16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.trail span{font-family:var(--mono);font-size:12.5px;padding:6px 12px;border-radius:999px;background:var(--card);border:1px solid var(--line-2);color:var(--ink-2)}
+.trail span.on{background:var(--ok);border-color:var(--ok);color:#fff}
+.trail i{flex:1;min-width:16px;height:2px;background:var(--line-2)}
+@media (max-width:920px){.op3{grid-template-columns:1fr}.trail i{display:none}}
+.op3 .oc{padding:26px;gap:12px}
+.op3 .oc h3{font-size:24px}
+.oc p.sp{font-size:16px;line-height:1.45;color:var(--muted);margin:0}
+.t2 p.sp{color:#C9D6D7}
+/* poc + indicadores v2 */
+.pz{padding-block:48px}
+.p1{border-top-color:var(--ink-2)}.p1 small{color:var(--ink-2)}
+.p2{border-top-color:#FDB913}.p2 small{color:#8A6200}
+.p3{border-top-color:var(--ok)}.p3 small{color:var(--ok)}
+.pz .oc ul{font-size:15px;gap:8px}
+.pz .op-h .lead b{color:var(--ink)}
+.det-head .lead{font-size:17px;margin-top:10px;max-width:none}
+.tinfo.cx{margin-top:22px}
+.kmain{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;background:var(--ink);color:#fff;border-radius:20px;padding:26px 28px;flex-wrap:wrap}
+.kmain small{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow)}
+.kmain b{display:block;font-family:var(--display);font-size:56px;font-weight:800;line-height:1.05;margin-top:6px}
+.kmain p{color:#C9D6D7;font-size:16px;max-width:60ch}
+.kmain .kdir{font-family:var(--mono);font-size:14px;color:#5BD6A2}
+.ksup{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.ksup div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:4px}
+.ksup b{font-size:16px}
+.ksup p{font-size:14px;color:var(--muted)}
+@media (max-width:920px){.ksup{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.ksup{grid-template-columns:1fr}}
+.why{margin-top:22px}
+.why-k{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--red-t);margin-bottom:10px}
+.why-k.ck{margin-top:28px;margin-bottom:0}
+.why3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.why3 div{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--red);border-radius:16px;padding:18px 20px;display:flex;flex-direction:column;gap:4px}
+.why3 b{font-family:var(--display);font-size:40px;font-weight:800;line-height:1;color:var(--ink)}
+.why3 span{font-size:15px;color:var(--muted);line-height:1.4}
+@media (max-width:920px){.why3{grid-template-columns:1fr}}
+/* ecosistema */
+.eco-w svg{display:block;width:100%;min-width:760px;height:auto;font-family:var(--display)}
+.eco .dr{stroke-dasharray:1200;animation:ecodr 1.6s ease-out}
+@keyframes ecodr{from{stroke-dashoffset:1200}}
+.eco .fd{animation:ecofd .7s both}
+@keyframes ecofd{from{opacity:0}}
+.eco .pulse{animation:ecopu 2.4s ease-in-out infinite}
+.eco .orbit{animation:orbm 1.2s linear infinite}
+@keyframes orbm{to{stroke-dashoffset:-36}}
+@keyframes ecopu{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion: reduce){.eco .dr,.eco .fd,.eco .pulse,.eco .orbit{animation:none}}
+.eco-cta{display:flex;align-items:center;gap:18px;margin-top:16px;background:var(--ink);color:#fff;border-radius:16px;padding:16px 22px;flex-wrap:wrap}
+.eco-cta p{flex:1;min-width:260px;color:#C9D6D7;font-size:15.5px}
+.eco-cta p b{color:#fff}
+.eco-btn{background:var(--red);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:12px 22px;white-space:nowrap}
+.eco-btn:hover{background:#D9000F}
+.rm-meta{margin-top:10px;background:var(--yellow-soft);border-radius:12px;padding:10px 14px;font-size:14px;max-width:none}
+.rm-meta b{color:var(--ink)}
+/* ===== marketing ===== */
+.mk-hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;padding-block:72px 64px}
+.mk-hero::before{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(255,8,24,.45),rgba(255,8,24,0) 70%)}
+.mk-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--franja)}
+.mk-hg{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;position:relative}
+.mk-ht .eyebrow{color:var(--yellow)}
+.mk-ht h1{color:#fff;font-size:clamp(38px,5vw,64px);font-weight:800;letter-spacing:-.02em;margin-top:12px}
+.mk-lead{font-size:19px;color:#C9D6D7;margin-top:18px;max-width:52ch}
+.mk-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.mk-btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;border-radius:999px;padding:13px 24px;transition:transform .15s}
+.mk-btn:hover{transform:translateY(-2px)}
+.mk-btn.gh{background:transparent;border:2px solid rgba(255,255,255,.4)}
+.mk-chips{list-style:none;padding:0;margin:26px 0 0;display:flex;gap:8px;flex-wrap:wrap}
+.mk-chips li{font-family:var(--mono);font-size:12.5px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);color:#E7F0F1}
+.mk-qr{background:#fff;color:var(--ink);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:14px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+.mk-qr .qrx{width:180px;height:180px;align-self:center}
+.qrx svg{width:100%;height:100%;display:block}
+.mk-qr b{font-family:var(--display);font-size:20px}
+.mk-qr ol{margin:8px 0;padding-left:20px;font-size:14.5px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.mk-qr a{font-size:13.5px;color:var(--red-t)}
+.mk-sec{padding-block:72px}
+.mk-alt{background:var(--bg-2)}
+.mk-sec h2{font-size:clamp(28px,3.2vw,40px);margin-top:10px;max-width:30ch}
+.tz-g .lead{margin-top:14px}
+.cs{margin-top:28px;display:flex;flex-direction:column}
+.cs-h,.cs-r{display:grid;grid-template-columns:minmax(0,1.4fr) 1.2fr 90px 190px;gap:18px;align-items:center}
+.cs-h{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:10px;border-bottom:1px solid var(--line)}
+.cs-r{padding:16px 0;border-bottom:1px solid var(--line)}
+.cs-t b{display:block;font-family:var(--display);font-size:19px}
+.cs-t span{font-size:14px;color:var(--muted)}
+.cs-b{height:12px;background:var(--line);border-radius:6px;overflow:hidden}
+.cs-b i{display:block;height:100%;background:var(--red);border-radius:6px;animation:csg 1s ease-out both}
+@keyframes csg{from{width:0}}
+.cs-p{font-family:var(--display);font-size:26px;font-weight:800;text-align:right}
+.cs-a{font-size:13px;font-weight:600;color:var(--ink-2);background:var(--bg-2);border-radius:999px;padding:6px 12px;justify-self:start}
+.cs-more{margin-top:18px}
+.cs-more summary{cursor:pointer;font-weight:600;color:var(--red-t)}
+.cs-tb{margin-top:12px;border-collapse:collapse;width:100%;max-width:520px;font-size:14.5px}
+.cs-tb th,.cs-tb td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left}
+.cs-tb td:last-child,.cs-tb th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.mo{margin-top:28px;background:#0C1719;border-radius:24px;padding:20px;color:#fff;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.mo-top{display:flex;align-items:center;gap:10px}
+.mo-dot{width:10px;height:10px;border-radius:50%;background:#5BD6A2;animation:mop 1.6s infinite}
+@keyframes mop{50%{opacity:.3}}
+.mo-tag{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:#A9BBBD}
+.mo-k{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+.mo-k div{background:#172A2E;border-radius:14px;padding:14px}
+.mo-k small{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#A9BBBD}
+.mo-k b{display:block;font-family:var(--display);font-size:32px;color:#fff;margin-top:4px}
+.mo-k b.w{color:var(--yellow)}
+.mo-g{display:grid;grid-template-columns:1fr 1.25fr;gap:12px;margin-top:12px}
+.mo-h{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#A9BBBD;margin-bottom:8px}
+.mo-list{background:#172A2E;border-radius:14px;padding:14px}
+.mo-r{display:grid;grid-template-columns:1fr auto auto;gap:10px;align-items:center;padding:10px 0;border-top:1px solid #2A4248}
+.mo-r:first-of-type{border-top:0}
+.mo-r b{display:block;font-size:14px}.mo-r div span{font-size:13px;color:#A9BBBD}
+.mo-ag{font-size:12px;color:#C9D6D7;background:#22383D;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.mo-st{font-family:var(--mono);font-size:11px;border-radius:999px;padding:4px 10px;white-space:nowrap}
+.mo-st.ok{background:rgba(91,214,162,.15);color:#5BD6A2}.mo-st.wait{background:rgba(255,229,0,.15);color:var(--yellow)}.mo-st.run{background:rgba(255,255,255,.08);color:#C9D6D7}.mo-st.n2{background:rgba(255,8,24,.18);color:#FF6B73}
+.mo-ap{background:#2A2410;border:1px solid #6B5A12;border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.mo-ap b{font-family:var(--display);font-size:18px}
+.mo-ap p{font-size:14px;color:#E6DDBA}
+.mo-ap ul{margin:0;padding-left:18px;font-size:13.5px;color:#E6DDBA}
+.mo-btns{display:flex;gap:8px;margin-top:6px}
+.mo-ok,.mo-no{border:0;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer}
+.mo-ok{background:#5BD6A2;color:#0C1719}.mo-no{background:transparent;color:#fff;border:1px solid #6B5A12}
+.mo-ok:disabled,.mo-no:disabled{opacity:.5;cursor:default}
+.mo-res{font-weight:600;font-size:14px}.mo-res.ok{color:#5BD6A2}.mo-res.no{color:#FF6B73}
+.tz-g{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
+.tz-b{margin:18px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;color:var(--ink-2)}
+.tz{background:#0C1719;border-radius:22px;padding:18px;color:#fff;box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+.tz-top{display:flex;justify-content:space-between;gap:10px;font-size:14px;padding-bottom:10px;border-bottom:1px solid #2A4248}
+.tz-top span{font-family:var(--mono);font-size:11.5px;color:#A9BBBD}
+.tz ol{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.tz li{display:grid;grid-template-columns:70px 150px 1fr;gap:10px;font-family:var(--mono);font-size:12px;background:#172A2E;border-radius:10px;padding:8px 10px;animation:tzin .5s both}
+@keyframes tzin{from{opacity:0;transform:translateY(6px)}}
+.tz time{color:#638287}.tz-a{color:var(--yellow)}.tz li.tzr .tz-a{color:#FF6B73}.tz-m{color:#E7F0F1}
+.mk-final{background:var(--red);background-image:linear-gradient(160deg,#FF0818 0%,#D9000F 100%);color:#fff;padding-block:64px}
+.mk-fg{display:grid;grid-template-columns:1fr 220px;gap:40px;align-items:center}
+.mk-final .eyebrow{color:#fff;opacity:.85}.mk-final h2{color:#fff;font-size:clamp(28px,3.4vw,42px);margin-top:10px}
+.mk-final p{color:#FFE5E7;margin-top:12px;font-size:17px}
+.mk-final .mk-btn{background:#fff;color:var(--red-t);margin-top:22px}
+.qrx.big{width:220px;height:220px;background:#fff;border-radius:20px;padding:12px}
+@media (max-width:920px){.mk-hg,.tz-g,.mk-fg,.mo-g{grid-template-columns:1fr}.mo-k{grid-template-columns:1fr 1fr}.cs-h{display:none}.cs-r{grid-template-columns:1fr 70px}.cs-b,.cs-a{grid-column:1 / -1}.tz li{grid-template-columns:62px 1fr}.tz-m{grid-column:1 / -1}}
+@media (prefers-reduced-motion: reduce){.cs-b i,.tz li,.mo-dot{animation:none}}
+/* sankey + light theme */
+.sk-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.sk-chips span{background:var(--bg-2);border-radius:999px;padding:8px 14px;font-size:14.5px;color:var(--ink-2)}
+.sk-chips b{font-family:var(--display);color:var(--red-t)}
+.sk-w{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;overflow-x:auto}
+.sk{display:block;width:100%;min-width:820px;height:auto;font-family:var(--display)}
+.sk .skn{font-size:16px;font-weight:700;fill:#132023}
+.sk .sks{font-size:12.5px;fill:#46646B;font-family:var(--body)}
+.sk .skk{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;fill:#B50000}
+.sk .skb{font-size:10px;font-weight:700;fill:#fff;letter-spacing:.5px}
+.sk .skf{animation:skin .9s ease-out both}
+@keyframes skin{from{opacity:0}}
+.cs-more{margin-top:20px;border:1px solid var(--line);border-radius:16px;padding:14px 18px;background:#fff}
+.cs-more[open]{padding-bottom:22px}
+.cs-in{margin-top:12px;font-weight:600}
+/* hero claro */
+.mk-hero{background:linear-gradient(135deg,#FFFFFF 0%,#EDF9F9 60%,#FFEDEE 100%);color:var(--ink)}
+.mk-hero::before{background:radial-gradient(circle,rgba(255,8,24,.18),rgba(255,8,24,0) 70%)}
+.mk-ht .eyebrow{color:var(--red-t)}
+.mk-ht h1{color:var(--ink)}
+.mk-lead{color:var(--muted)}
+.mk-btn.gh{border-color:var(--ink);color:var(--ink)}
+.mk-chips li{background:#fff;border:1px solid var(--line);color:var(--ink-2)}
+.mk-qr{border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(19,32,35,.35)}
+/* monitor claro */
+.mo{background:#fff;border:1px solid var(--line);color:var(--ink);box-shadow:0 30px 60px -36px rgba(19,32,35,.4)}
+.mo-tag{color:var(--muted)}
+.mo-dot{background:var(--ok)}
+.mo-k div{background:var(--bg-2)}
+.mo-k small,.mo-h{color:var(--muted)}
+.mo-k b{color:var(--ink)}.mo-k b.w{color:#B07D00}
+.mo-list{background:var(--bg-2)}
+.mo-r{border-top-color:var(--line-2)}
+.mo-r div span{color:var(--muted)}
+.mo-ag{background:#fff;color:var(--ink-2);border:1px solid var(--line)}
+.mo-st.ok{background:var(--ok-soft);color:var(--ok)}.mo-st.wait{background:var(--yellow-soft);color:#8A6200}.mo-st.run{background:#fff;color:var(--muted);border:1px solid var(--line)}.mo-st.n2{background:var(--red-soft);color:var(--red-t)}
+.mo-ap{background:var(--yellow-soft);border-color:#F2D27A;color:var(--ink)}
+.mo-ap p,.mo-ap ul{color:var(--ink-2)}
+.mo-ok{background:var(--ok);color:#fff}.mo-no{color:var(--ink);border-color:#E0B94A}
+.mo-res.ok{color:var(--ok)}.mo-res.no{color:var(--red-t)}
+/* traza clara */
+.tz{background:#fff;border:1px solid var(--line);color:var(--ink);box-shadow:0 30px 60px -36px rgba(19,32,35,.4)}
+.tz-top{border-bottom-color:var(--line)}.tz-top span{color:var(--muted)}
+.tz li{background:var(--bg-2)}
+.tz time{color:var(--muted)}.tz-a{color:var(--red-t)}.tz li.tzr{background:var(--yellow-soft)}.tz li.tzr .tz-a{color:#8A6200}.tz-m{color:var(--ink)}
+/* casos: resolución */
+.rs{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.rs-hd,.rs-r{display:grid;grid-template-columns:minmax(0,1.35fr) 22px 190px 22px minmax(0,1.3fr) 22px minmax(0,1fr);gap:10px;align-items:center}
+.rs-hd{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:0 16px}
+.rs-r{background:#fff;border:1px solid var(--line);border-left:6px solid var(--c);border-radius:16px;padding:14px 16px;animation:rsin .5s both}
+.rs-r:nth-child(3){animation-delay:.08s}.rs-r:nth-child(4){animation-delay:.16s}.rs-r:nth-child(5){animation-delay:.24s}.rs-r:nth-child(6){animation-delay:.32s}.rs-r:nth-child(7){animation-delay:.4s}
+@keyframes rsin{from{opacity:0;transform:translateX(-8px)}}
+.rs-r.pos{--c:#FF0818}.rs-r.uso{--c:#E0A100}.rs-r.pro{--c:#0F8A5F}.rs-r.orq{--c:#46646B}
+.rs-n{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.rs-n b{font-family:var(--display);font-size:17px}
+.rs-n em{font-style:normal;font-family:var(--display);font-weight:800;font-size:20px;color:var(--c)}
+.rs-bar{height:6px;background:var(--line);border-radius:3px;margin:6px 0}
+.rs-bar i{display:block;height:100%;background:var(--c);border-radius:3px}
+.rs-c>span{font-size:13px;color:var(--muted)}
+.rs-ar{color:var(--line-2);font-size:20px;text-align:center}
+.rs-ag span{display:inline-block;background:var(--c);color:#fff;font-weight:700;font-size:13.5px;border-radius:999px;padding:7px 12px}
+.rs-how{font-size:14px;color:var(--ink-2);margin:0}
+.rs-ok{font-size:14px;font-weight:700;color:var(--ok);background:var(--ok-soft);border-radius:12px;padding:8px 12px;margin:0}
+.rs-all{margin-top:6px;background:var(--bg-2);border-radius:14px;padding:12px 16px;font-size:14.5px}
+@media (max-width:1000px){.rs-hd{display:none}.rs-r{grid-template-columns:1fr}.rs-ar{display:none}}
+/* monitor unificado */
+#monitor .mo-r{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"eds st" "ag ag";gap:6px 10px;color:var(--ink);align-items:start}
+#monitor .mo-r>div{grid-area:eds;min-width:0}
+#monitor .mo-r>div b{display:block;font-size:15px;font-weight:700;color:var(--ink);white-space:normal}
+#monitor .mo-r>div span{display:block;font-size:13.5px;color:var(--muted)}
+#monitor .mo-r .mo-st{grid-area:st;justify-self:end}
+#monitor .mo-r .mo-ag{grid-area:ag;justify-self:start}
+.mo-lead{margin-top:10px}
+.mo-k b.g{color:var(--ok)}
+.mo-r{appearance:none;width:100%;text-align:left;font:inherit;background:transparent;border:0;border-top:1px solid var(--line-2);cursor:pointer;border-radius:10px;padding:10px 8px}
+.mo-r:hover{background:#fff}
+.mo-r.on{background:#fff;box-shadow:inset 4px 0 0 var(--red)}
+.mo-g .tz{box-shadow:none}
+/* waffle 80 % */
+.wf-g{display:grid;grid-template-columns:420px 1fr;gap:48px;align-items:center;margin-top:28px}
+.wf{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:7px;min-width:0;background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px}
+.wf i{display:block;width:100%;min-width:0;aspect-ratio:1;border-radius:7px;animation:wfin .4s both}
+.wf i.wr{background:var(--red)}.wf i.wg{background:var(--line-2)}
+@keyframes wfin{from{opacity:0;transform:scale(.4)}}
+.wf-big{display:block;font-family:var(--display);font-size:clamp(72px,9vw,120px);font-weight:800;line-height:.9;color:var(--red)}
+.wf-p{font-size:20px;margin-top:12px;color:var(--ink-2);max-width:34ch}
+.wf-p b{color:var(--ink)}
+.wf-l{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-direction:column;gap:10px}
+.wf-l li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--muted)}
+.wf-l li i{flex:none;width:16px;height:16px;border-radius:4px;margin-top:3px}
+.wf-l li i.wr{background:var(--red)}.wf-l li i.wg{background:var(--line-2)}
+.wf-l b{color:var(--ink)}
+.wf-k{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.wf-k div{background:var(--bg-2);border-radius:14px;padding:12px 14px}
+.wf-k b{display:block;font-family:var(--display);font-size:26px;font-weight:800}
+.wf-k span{font-size:13px;color:var(--muted)}
+@media (max-width:920px){.wf-g{grid-template-columns:1fr}.wf{max-width:360px}}
+@media (prefers-reduced-motion: reduce){.wf i{animation:none}}
+.ma-def{background:#fff;border-radius:18px;padding:18px 22px;margin-bottom:18px;color:var(--ink);box-shadow:0 24px 48px -30px rgba(80,0,0,.6)}
+.ma-def p{font-size:16px;color:var(--ink-2)}
+.ma-def p b{color:var(--ink)}
+.ma-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.ma-flow span{font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:999px;background:var(--bg-2);color:var(--ink-2)}
+.ma-flow span.o{background:var(--red);color:#fff}
+.ma-flow span.ar{background:none;color:var(--muted);padding:0 2px;font-size:18px}
+/* beneficios v2 */
+.vt.bf{gap:10px;padding:20px}
+.bf-h{display:flex;align-items:center;gap:12px}
+.bf-h .vi{margin:0;flex:none}
+.bf-h b{font-family:var(--display);font-size:19px;font-weight:800;line-height:1.2;color:var(--ink)}
+.bf-hoy,.bf-con{font-size:14px;line-height:1.4;margin:0;display:flex;flex-direction:column;gap:2px}
+.bf-hoy{color:var(--muted)}
+.bf-con{color:var(--ink);font-weight:600;border-top:1px solid var(--line);padding-top:8px;margin-top:auto}
+.bf-hoy span,.bf-con span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
+.bf-hoy span{color:var(--muted)}.bf-con span{color:var(--ok)}
+/* 80 % ligero */
+.w8{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:26px;padding:24px 28px;border-radius:20px;background:var(--bg-2)}
+.w8-n b{display:block;font-family:var(--display);font-size:64px;font-weight:800;line-height:1;color:var(--red)}
+.w8-n span{display:block;font-size:16px;color:var(--ink-2);margin-top:6px;max-width:22ch}
+.w8-n span b{display:inline;font-size:inherit;color:var(--ink);font-weight:700}
+.w8-d{display:flex;gap:10px}
+.w8-d i{width:34px;height:34px;border-radius:50%;animation:wfin .35s both}
+.w8-d i.wr{background:#FF5A64}.w8-d i.wg{background:var(--line-2)}
+.w8-v p{margin-top:14px;font-size:14px;color:var(--muted);display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.w8-v .lr,.w8-v .lg{display:inline-block;width:10px;height:10px;border-radius:50%}
+.w8-v .lr{background:#FF5A64}.w8-v .lg{background:var(--line-2)}
+@media (max-width:760px){.w8{grid-template-columns:1fr;gap:16px}.w8-d i{width:24px;height:24px}}
+/* fold 2 infográfico */
+.hw{display:grid;grid-template-columns:1fr 34px 1fr 34px 1fr 34px 1fr 34px 1fr;align-items:stretch;gap:0}
+.hw-s{background:#fff;border-radius:20px;padding:20px 16px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;color:var(--ink);box-shadow:0 24px 48px -30px rgba(80,0,0,.6);animation:fi2 .5s both}
+@keyframes fi2{from{opacity:0;transform:translateY(10px)}}
+.hw-i{position:relative;width:64px;height:64px;border-radius:50%;background:var(--red-soft);display:grid;place-items:center;margin-bottom:6px}
+.hw-i svg{width:30px;height:30px;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.hw-i em{position:absolute;top:-4px;right:-6px;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-style:normal;font-size:12px;font-weight:700;display:grid;place-items:center}
+.hw-s b{font-family:var(--display);font-size:17px;font-weight:800;line-height:1.2}
+.hw-s span{font-size:13.5px;color:var(--muted);line-height:1.35}
+.hw-s i{font-style:normal;margin-top:auto;font-size:12.5px;font-weight:700;background:var(--yellow);color:var(--ink);border-radius:999px;padding:5px 12px}
+.hw-a{align-self:center;height:3px;margin:0 4px;background:repeating-linear-gradient(90deg,#fff 0 8px,transparent 8px 14px);background-size:28px 3px;animation:hwa 1s linear infinite;position:relative}
+.hw-a::after{content:"";position:absolute;right:-2px;top:-5px;border:6.5px solid transparent;border-left:9px solid #fff;border-right:0}
+@keyframes hwa{to{background-position:28px 0}}
+.hw-n{margin-top:16px;color:#FFE5E7;font-size:15px;text-align:center}
+.hw-kp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.hw-k{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:16px;padding:14px 16px;color:#fff}
+.hw-k small{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#FFD9DB}
+.hw-k b{display:block;font-family:var(--display);font-size:28px;font-weight:800;line-height:1.1}
+.hw-k span{font-size:13px;color:#FFE5E7}
+.hw-k p{margin-top:8px;font-weight:700;font-size:14.5px;color:#fff}
+@media (max-width:1000px){.hw{grid-template-columns:1fr;gap:10px}.hw-a{display:none}.hw-kp{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion: reduce){.hw-s,.hw-a{animation:none}}
+.f2eco{background:#fff;border-radius:24px;padding:22px;overflow-x:auto;box-shadow:0 30px 60px -36px rgba(80,0,0,.6)}
+.f2p{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+.f2p span{background:var(--yellow);color:var(--ink);font-weight:700;font-size:14px;border-radius:999px;padding:7px 14px}
+/* fold 2 conceptual */
+.cpt-g{display:grid;grid-template-columns:520px 1fr;gap:40px;align-items:center}
+.cpt-v{background:#fff;border-radius:50%;aspect-ratio:1;display:grid;place-items:center;box-shadow:0 40px 80px -40px rgba(80,0,0,.7)}
+.cpt{width:92%;height:auto;font-family:var(--display)}
+.cpt .corb{animation:orbm 1.4s linear infinite}
+.cpt .cpu{animation:ecopu 2.4s ease-in-out infinite}
+.cpt .csat{animation:fi2 .6s both}
+.cpt .csat text{paint-order:stroke;stroke:#fff;stroke-width:6px;stroke-linejoin:round}
+.cpt-t{display:flex;flex-direction:column;gap:14px}
+.cpt-i{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:18px;padding:18px 20px;color:var(--ink);box-shadow:0 24px 48px -30px rgba(80,0,0,.6)}
+.cpt-i em{font-style:normal;flex:none;width:40px;height:40px;border-radius:50%;background:var(--yellow);font-family:var(--display);font-weight:800;font-size:18px;display:grid;place-items:center}
+.cpt-i b{display:block;font-family:var(--display);font-size:21px;font-weight:800}
+.cpt-i span{font-size:15px;color:var(--muted)}
+.cpt-n{color:#FFE5E7;font-size:14.5px;margin-top:4px}
+@media (max-width:1000px){.cpt-g{grid-template-columns:1fr}.cpt-v{max-width:420px;margin-inline:auto;width:100%}}
+@media (prefers-reduced-motion: reduce){.cpt .corb,.cpt .cpu,.cpt .csat{animation:none}}
+/* fold 2 diagramación */
+#agente{position:relative;overflow:hidden}
+.cpt-g{position:relative;grid-template-columns:minmax(0,560px) 1fr;gap:56px;margin-top:8px}
+.cpt-v{position:relative;z-index:1;border:10px solid rgba(255,255,255,.35);background-clip:padding-box}
+.cpt-t{position:relative;z-index:1;gap:18px}
+.cpt-n{display:flex;align-items:center;gap:10px;margin-left:72px;background:rgba(255,255,255,.14);border:1px dashed rgba(255,255,255,.55);border-radius:14px;padding:10px 14px;color:#fff}
+.cpt-n span{flex:none;background:#fff;color:var(--red-t);font-weight:800;border-radius:8px;padding:3px 8px;font-size:13px}
+@media (max-width:1000px){.cpt-i:nth-child(2),.cpt-i:nth-child(3),.cpt-n{margin-left:0}.cpt-i::before{display:none}.cpt-wm{display:none}.cpt-band{top:20%}}
+/* escala tipográfica de títulos */
+.mk-ht h1{font-size:clamp(44px,5.6vw,76px);line-height:1.02;letter-spacing:-.03em}
+.mk-sec h2,#agente h1{font-family:var(--display);font-size:clamp(34px,4.2vw,56px);font-weight:800;line-height:1.05;letter-spacing:-.025em;max-width:22ch}
+#agente h1{color:#fff}
+#agente h1 .kw{font-style:normal;color:var(--yellow)}
+.mk-sec h2 .kw{font-style:normal;color:var(--red)}
+.mk-final h2{font-size:clamp(34px,4.4vw,58px);font-weight:800;letter-spacing:-.025em;line-height:1.05}
+.eyebrow{letter-spacing:.18em}
+.mk-ht h1 .kw{font-style:normal;color:var(--red)}
+/* sin sombras + sin botón WhatsApp en fold 2 */
+#agente .wa-cta{display:none}
+.mk-qr,.cpt-v,.cpt-i,.mo,.tz,.f2eco,.vt,.mk-btn,.ecta,.sk-w,.rs-r,.w8,.cs-more{box-shadow:none!important}
+.mk-qr{border:1px solid var(--line-2)}
+.cpt-v{border:0}
+.mo,.tz{border:1px solid var(--line-2)}
+/* trazabilidad E2E */
+.e2{margin-top:34px;position:relative}
+.e2-line{position:absolute;left:10%;right:10%;top:38px;height:4px;background:var(--line);border-radius:2px}
+.e2-line i{position:absolute;inset:0;background:var(--red);transform-origin:left;animation:e2l 1.6s ease-out both}
+@keyframes e2l{from{transform:scaleX(0)}}
+.e2-line::after{content:"";position:absolute;top:-6px;width:16px;height:16px;border-radius:50%;background:var(--yellow);border:2px solid #fff;animation:e2d 3.2s linear infinite}
+@keyframes e2d{from{left:0}to{left:100%}}
+.e2-ns{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;position:relative}
+.e2-n{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;animation:fi2 .5s both;animation-delay:var(--d)}
+.e2-c{width:80px;height:80px;border-radius:50%;background:#fff;border:3px solid var(--red);display:grid;place-items:center;margin-bottom:8px}
+.e2-c svg{width:34px;height:34px;fill:none;stroke:var(--red);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.e2-n b{font-family:var(--display);font-size:19px;font-weight:800}
+.e2-n span{font-family:var(--mono);font-size:12px;color:var(--ink-2);background:#fff;border:1px solid var(--line-2);border-radius:999px;padding:5px 10px}
+.e2-id{margin:28px auto 0;max-width:760px;text-align:center;font-size:16px;color:var(--ink-2);display:flex;flex-direction:column;align-items:center;gap:10px}
+.e2-id span{font-family:var(--mono);font-size:14px;font-weight:600;color:#fff;background:var(--ink);border-radius:8px;padding:6px 12px;letter-spacing:.06em}
+.mo-more{margin-top:28px}
+.mo-more .mo{margin-top:16px}
+@media (max-width:920px){.e2-line{display:none}.e2-ns{grid-template-columns:1fr 1fr}}
+@media (prefers-reduced-motion: reduce){.e2-line i,.e2-line::after,.e2-n{animation:none}}
+/* ===== modo ligero: menos peso visual ===== */
+.mk-ht h1{font-size:clamp(40px,4.8vw,64px);font-weight:600;letter-spacing:-.02em;line-height:1.05}
+.mk-sec h2,#agente h1{font-size:clamp(30px,3.4vw,44px);font-weight:600;letter-spacing:-.015em;line-height:1.1}
+.mk-final h2{font-size:clamp(30px,3.6vw,46px);font-weight:600}
+.eyebrow{font-weight:400}
+.cpt-i b,.e2-n b,.hw-s b,.w8-n span b,.rs-n b,.cs-t b{font-weight:600}
+.cpt-i em{font-weight:600}
+.w8-n b{font-weight:600;font-size:56px}
+.mo-k b{font-weight:600}
+.mk-qr b{font-weight:600}
+/* líneas más finas */
+.e2-line{height:2px;top:39px;background:var(--line)}
+.e2-line i{background:#FF5A64}
+.e2-line::after{width:12px;height:12px;top:-5px;border-width:2px}
+.e2-c{border-width:1.5px;width:72px;height:72px}
+.e2-c svg{stroke-width:1.6;width:30px;height:30px}
+.e2-n span{border-color:var(--line)}
+.cpt .corb{stroke-width:1.5;stroke-dasharray:4 7}
+.cpt .csat circle{stroke-width:1.5}
+.cpt .csat g{stroke-width:1.6}
+.cpt path[id^="cp"]{stroke-width:1.2}
+.mk-btn.gh{border-width:1px}
+.mk-qr,.mo,.tz,.cs-more,.sk-w{border-color:var(--line)!important}
+.cpt-v{background:#fff}
+.mo-r{border-top-color:var(--line)}
+.w8-d i{width:28px;height:28px}
+/* ===== más aire ===== */
+.mk-hero{padding-block:104px 96px}
+.mk-hg{gap:72px}
+.mk-ht h1{margin-top:18px}
+.mk-lead{margin-top:26px;line-height:1.6}
+.mk-ctas{margin-top:36px;gap:14px}
+.mk-chips{margin-top:30px}
+.mk-qr{padding:28px;gap:18px}
+#agente.live{padding-block:104px 112px!important}
+#agente .demo-head{margin-bottom:56px!important}
+.cpt-g{gap:80px}
+.cpt-t{gap:22px}
+.cpt-i{padding:24px 26px;gap:20px}
+.cpt-i span{display:block;margin-top:6px;line-height:1.5}
+.mk-sec{padding-block:112px}
+.mk-sec .eyebrow{margin-bottom:6px}
+.mk-sec h2{margin-top:14px;margin-bottom:8px}
+.w8{margin-top:48px;padding:36px 40px;gap:56px}
+.w8-v p{margin-top:20px}
+.cs-more{margin-top:32px;padding:18px 24px}
+.e2{margin-top:64px}
+.e2-ns{gap:20px}
+.e2-n{gap:10px}
+.e2-id{margin-top:44px}
+.mo-more{margin-top:44px}
+.mk-final{padding-block:96px}
+.mk-fg{gap:72px}
+.mk-final p{margin-top:18px;line-height:1.6}
+.mk-final .mk-btn{margin-top:30px}
+@media (max-width:920px){.mk-hero{padding-block:72px 64px}.mk-sec{padding-block:80px}#agente.live{padding-block:72px!important}.cpt-g{gap:40px}.w8{padding:24px;gap:24px}}
+/* medición y control */
+.mc-g{display:grid;grid-template-columns:.9fr 1.6fr;gap:28px;margin-top:48px;align-items:stretch}
+.mc-k{background:var(--bg-2);border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:10px}
+.mc-k small{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red-t);margin-top:6px}
+.mc-k b{font-family:var(--display);font-size:34px;font-weight:600;line-height:1.1}
+.mc-k p{color:var(--ink-2);font-size:16px}
+.mc-k ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:15px;display:flex;flex-direction:column;gap:6px}
+.mc-n{margin-top:auto;padding-top:14px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+.ct{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.ct-i{border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:8px}
+.ct-i b{font-family:var(--display);font-size:18px;font-weight:600}
+.ct-i span{font-size:14.5px;color:var(--muted);line-height:1.5}
+.ct-c{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--red);display:grid;place-items:center;margin-bottom:6px}
+.ct-c svg{width:22px;height:22px;fill:none;stroke:var(--red);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:1000px){.mc-g{grid-template-columns:1fr}.ct{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.ct{grid-template-columns:1fr}}
+/* fold 2 rojo sin parches */
+#agente .cpt-v{background:none!important;border:0}
+#agente .cpt .corb{stroke:rgba(255,255,255,.7)}
+#agente .cpt path[id^="cp"]{stroke:rgba(255,255,255,.35)}
+#agente .cpt circle[r="6"]{fill:var(--yellow)}
+#agente .cpt .cpu{fill:#F2222E}
+#agente .cpt circle[r="86"]{fill:#F53A44;stroke:#fff;stroke-width:1.5}
+#agente .cpt text{fill:#fff}
+#agente .cpt .csat circle{fill:#E30613;stroke:#fff}
+#agente .cpt .csat g{stroke:#fff}
+#agente .cpt .csat text{stroke:#EC0A17;stroke-width:8px}
+#agente .cpt-i{background:none!important;border:0;border-top:1px solid rgba(255,255,255,.35);border-radius:0;padding:22px 4px 6px;color:#fff}
+#agente .cpt-i span{color:rgba(255,255,255,.82)}
+#agente .cpt-i em{background:none;border:1.5px solid var(--yellow);color:var(--yellow)}
+/* fold 2 parches rojo oscuro */
+#agente .cpt-v{background:#B8000C!important}
+#agente .cpt .csat circle{fill:#B8000C}
+#agente .cpt .csat text{stroke:#B8000C}
+#agente .cpt .cpu{fill:#CC0412}
+#agente .cpt circle[r="86"]{fill:#FF0818}
+#agente .cpt-i{background:#B8000C!important;border:0!important;border-radius:18px;padding:24px 26px}
 /* indicadores */
 .kpi2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
 .kg{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px}
@@ -1039,6 +1569,7 @@ h3{font-size:18px}
 .kstep p{font-size:14px;color:var(--muted)}
 @media (max-width:920px){.kpi2{grid-template-columns:1fr}.kstep{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.kstep{grid-template-columns:1fr}.ktab tbody th{width:auto}}
+.ti-x rect{fill:#fff;stroke:#C9D6D7;stroke-dasharray:6 5}
 /* nav compacto */
 .top .wrap{gap:14px}
 .brand img{height:22px}
@@ -1057,68 +1588,71 @@ h3{font-size:18px}
   <div class="wrap">
     <div class="brand"><img src="data:image/png;base64,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" alt="Terpel"><span>Centinel Response</span></div>
     <nav class="nav" aria-label="Secciones">
-      <a href="#mesa">La mesa hoy</a>
-      <a href="#agente">Probar</a>
-      <a href="#detalle">Detalle del plan</a>
+      <a href="#hero">Inicio</a>
+      <a href="#agente">Cómo funciona</a>
+      <a href="#casos">Casos</a>
+      <a href="#monitor">Trazabilidad</a>
+      <a href="#control">Control</a>
     </nav>
   </div>
   <div class="progress" id="progress"></div>
 </header>
 
-<!-- LA MESA HOY -->
-<section class="mesa" id="mesa">
+<!-- HERO -->
+<section class="mk-hero" id="hero">
+  <div class="wrap mk-hg">
+    <div class="mk-ht">
+      <p class="eyebrow">Centinel · Mesa agéntica para TerpelPOS</p>
+      <h1>Un equipo de agentes para resolver la mesa de <em class="kw">TerpelPOS</em></h1>
+      <p class="mk-lead">Atiende sin fila, actúa sobre el POS y deja trazabilidad de cada paso. La estación escribe, habla, llama o manda una foto: siempre la atiende un agente.</p>
+      <div class="mk-ctas"><a class="mk-btn" href="#prueba">Probar Centinel ↓</a><a class="mk-btn gh" href="#monitor">Ver el monitor ↓</a></div>
+      <ul class="mk-chips"><li>Orquestador + 5 agentes</li><li>N1 y N2</li><li>Trazabilidad total</li></ul>
+    </div>
+    <div class="mk-qr">
+      <div class="qrx" aria-label="Código QR para probar Centinel"></div>
+      <div><b>Escanea y prueba Centinel</b><ol><li>Envía el «Hola» que aparece listo.</li><li>Cuenta tu caso en un audio o escríbelo.</li><li>Mira cómo los agentes lo resuelven.</li></ol><a href="https://wa.me/18164517011?text=Hola" target="_blank" rel="noopener">o ábrelo en WhatsApp Web</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUÉ PROBAMOS EN LA POC -->
+<section class="mesa pz" id="poc" hidden>
   <div class="wrap">
-    <div class="head mh">
-      <p class="eyebrow">La mesa de ayuda hoy</p>
-      <h2>Dónde estamos, qué estamos haciendo y qué ya mejoró</h2>
+    <div class="op-h">
+      <p class="eyebrow">La POC</p>
+      <h2>Qué queremos probar en la POC</h2>
+      <p class="lead"><b>Hipótesis:</b> es viable que un equipo de agentes resuelva los niveles N1 y N2 de la mesa de TerpelPOS.</p>
     </div>
-    <div class="m4">
-      <article class="mc m-d">
-        <small>1 · Diagnóstico</small>
-        <h3>En qué estamos mal</h3>
-        <div class="mk"><b>76,8 %</b><span>nivel de servicio en septiembre. La meta es 95 % y van 9 de 9 meses por debajo</span></div>
+    <div class="op3">
+      <article class="oc p1">
+        <small>Qué probamos</small>
         <ul>
-          <li><b>23,2 %</b> de las llamadas sin atender</li>
-          <li><b>60,5 %</b> de los casos de N2 fuera de ANS</li>
-          <li><b>48 %</b> de las llamadas sin tipificar en Wolkvox</li>
-          <li>Casos escalados a desarrollo <b>sin ANS</b></li>
+          <li>3 tipos de caso: servicios detenidos, bloqueo de interfaz y dudas de uso</li>
+          <li>Entender audios, fotos y texto de la estación</li>
+          <li>Resolver N1 guiando paso a paso</li>
+          <li>Pasar a N2 con el caso armado y la acción propuesta</li>
+          <li>Registrar y tipificar cada caso</li>
         </ul>
       </article>
-      <article class="mc m-i">
-        <small>2 · Iniciativas en marcha</small>
-        <h3>Lo que ya estamos haciendo</h3>
-        <div class="mk"><b>52</b><span>actividades cerradas de 234 · 49 % del corto plazo</span></div>
+      <article class="oc p2">
+        <small>Qué todavía no</small>
         <ul>
-          <li><b>Consultoría experta</b> en mesas de servicio, desde el 20 oct</li>
-          <li><b>Turnos por franja horaria</b>, calculados con la demanda real, y cobertura de ausencias</li>
-          <li><b>Checklist de diagnóstico</b> para 17 tipificaciones y criterio de cierre</li>
-          <li><b>Una sola fuente</b> Wolkvox–Salesforce y tablero único</li>
+          <li>Acciones reales sobre el POS: se simulan hasta tener acceso remoto</li>
+          <li>Integración en vivo con Salesforce, Wolkvox y SAP</li>
+          <li>Todos los tipos de caso: llegan por semanas desde enero</li>
         </ul>
       </article>
-      <article class="mc m-t">
-        <small>3 · Impacto esperado al 30 nov</small>
-        <h3>Lo que queda en firme</h3>
-        <ul class="tl3">
-          <li><em>13 nov</em>Tablero único y línea base oficial</li>
-          <li><em>20 nov</em>Turnos ajustados en operación</li>
-          <li><em>27 nov – 4 dic</em>Metas de ANS por nivel, ANS de N3 firmado y meta de resolución en primer contacto</li>
+      <article class="oc p3">
+        <small>Cómo sabremos que funcionó</small>
+        <ul>
+          <li>Casos resueltos en N1 sin la mesa</li>
+          <li>Escalamiento correcto a N2</li>
+          <li>Tipificación correcta</li>
+          <li>Entiende el audio o la foto a la primera</li>
         </ul>
-        <p class="mn">Las metas numéricas salen de la línea base: no se fijan antes de medir.</p>
-      </article>
-      <article class="mc m-e">
-        <small>4 · Evidencias</small>
-        <h3>Ya se ve la mejora</h3>
-        <div class="mk"><b>82,5 %</b><span>nivel de servicio del 26 al 29 oct: +5,7 pp frente a septiembre</span></div>
-        <ul class="dl">
-          <li><span>Abandono</span><b>23,2 % → 17,5 %</b></li>
-          <li><span>Espera</span><b>8:55 → 3:40 min</b></li>
-          <li><span>Atención</span><b>17,8 → 13,7 min</b></li>
-          <li><span>Correos en ≤ 60 min</span><b>26 % → 78 %</b></li>
-        </ul>
+        <p class="mn">Las metas se fijan con la línea base.</p>
       </article>
     </div>
-    <a class="m-next" href="#agente"><span>Sobre esta base: la mesa agéntica</span><b>Prueba Centinel ↓</b></a>
-    <p class="note m-src">Fuente: status de la Mesa de Servicio TerpelPOS, corte al 29 oct 2026. Por validar con el equipo de la mesa.</p>
   </div>
 </section>
 
@@ -1126,7 +1660,7 @@ h3{font-size:18px}
 <section class="live" id="agente">
   <div class="wrap">
     <div class="demo-head">
-      <div><p class="eyebrow">Centinel Response · Soporte TerpelPOS</p><h1>Pruébalo como si fueras una estación</h1></div>
+      <div><p class="eyebrow">Cómo funciona</p><h1>Un <em class="kw">orquestador</em> que dirige a un equipo de agentes</h1></div>
       <div class="wa-cta">
         <a class="wa-btn" id="waBtn" href="https://wa.me/18164517011?text=Hola" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6.5-.1 1.5-.6 1.7-1.2s.2-1.1.1-1.2z"/></svg>Pruébalo en tu WhatsApp</a>
         <div class="wa-pop" id="waPop" hidden>
@@ -1139,12 +1673,23 @@ h3{font-size:18px}
         </div>
       </div>
     </div>
-    <div class="demo">
+    <div class="cpt-g">
+      <div class="cpt-v"><svg class="cpt" viewBox="0 0 520 540" role="img" aria-label="Centinel, el orquestador, en el centro dirige a cinco agentes especializados: diagnóstico, técnico POS, procesos, guía de uso y registro."><circle cx="260" cy="260" r="180" fill="none" stroke="#FF0818" stroke-width="2.5" stroke-dasharray="8 8" class="corb"/><path id="cp0" d="M260 260 L260 80" stroke="#F5B5B9" stroke-width="2"/><circle r="6" fill="#FF0818"><animateMotion dur="2.2s" begin="0.00s" repeatCount="indefinite"><mpath href="#cp0"/></animateMotion></circle><path id="cp1" d="M260 260 L431 204" stroke="#F5B5B9" stroke-width="2"/><circle r="6" fill="#FF0818"><animateMotion dur="2.2s" begin="-0.44s" repeatCount="indefinite"><mpath href="#cp1"/></animateMotion></circle><path id="cp2" d="M260 260 L366 406" stroke="#F5B5B9" stroke-width="2"/><circle r="6" fill="#FF0818"><animateMotion dur="2.2s" begin="-0.88s" repeatCount="indefinite"><mpath href="#cp2"/></animateMotion></circle><path id="cp3" d="M260 260 L154 406" stroke="#F5B5B9" stroke-width="2"/><circle r="6" fill="#FF0818"><animateMotion dur="2.2s" begin="-1.32s" repeatCount="indefinite"><mpath href="#cp3"/></animateMotion></circle><path id="cp4" d="M260 260 L89 204" stroke="#F5B5B9" stroke-width="2"/><circle r="6" fill="#FF0818"><animateMotion dur="2.2s" begin="-1.76s" repeatCount="indefinite"><mpath href="#cp4"/></animateMotion></circle><circle cx="260" cy="260" r="104" fill="#FFDADD" class="cpu"/><circle cx="260" cy="260" r="86" fill="#FF0818"/><text x="260" y="256" text-anchor="middle" font-size="28" font-weight="800" fill="#fff">Centinel</text><text x="260" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#FFE5E7">orquesta</text><g class="csat"><circle cx="260" cy="80" r="44" fill="#fff" stroke="#132023" stroke-width="2.5"/><g transform="translate(244 64) scale(1.35)" fill="none" stroke="#132023" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></g><text x="260" y="144" text-anchor="middle" font-size="15" font-weight="800" fill="#132023">Diagnóstico</text></g><g class="csat"><circle cx="431" cy="204" r="44" fill="#fff" stroke="#132023" stroke-width="2.5"/><g transform="translate(415 188) scale(1.35)" fill="none" stroke="#132023" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></g><text x="431" y="268" text-anchor="middle" font-size="15" font-weight="800" fill="#132023">Técnico POS</text></g><g class="csat"><circle cx="366" cy="406" r="44" fill="#fff" stroke="#132023" stroke-width="2.5"/><g transform="translate(350 390) scale(1.35)" fill="none" stroke="#132023" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="M8 11h8M8 15h6"/></g><text x="366" y="470" text-anchor="middle" font-size="15" font-weight="800" fill="#132023">Procesos</text></g><g class="csat"><circle cx="154" cy="406" r="44" fill="#fff" stroke="#132023" stroke-width="2.5"/><g transform="translate(138 390) scale(1.35)" fill="none" stroke="#132023" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4z"/><path d="M9 10h6"/></g><text x="154" y="470" text-anchor="middle" font-size="15" font-weight="800" fill="#132023">Guía de uso</text></g><g class="csat"><circle cx="89" cy="204" r="44" fill="#fff" stroke="#132023" stroke-width="2.5"/><g transform="translate(73 188) scale(1.35)" fill="none" stroke="#132023" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11l3 3v13H5z"/><path d="m8.5 13 2.5 2.5 5-5"/></g><text x="89" y="268" text-anchor="middle" font-size="15" font-weight="800" fill="#132023">Registro</text></g></svg></div>
+      <div class="cpt-t">
+        <div class="cpt-i"><em>1</em><div><b>Entiende cualquier canal</b><span>Chat, audio, foto o llamada: siempre lo atiende un agente.</span></div></div>
+        <div class="cpt-i"><em>2</em><div><b>Elige al especialista</b><span>Cada caso va al agente que sabe resolverlo.</span></div></div>
+        <div class="cpt-i"><em>3</em><div><b>Resuelve y deja huella</b><span>Actúa en el POS y registra cada paso.</span></div></div>
+        
+      </div>
+    </div>
+    
+    
+    <div class="demo" hidden>
       <p class="cases-l">Elige un caso o escribe el tuyo</p>
       <ol class="cases" id="chips" aria-label="Casos de prueba">
         <li><button class="chip case" type="button" data-step="0" data-msg="La isla 3 de la EDS 4021 no está vendiendo"><small>Se resuelve en el chat</small><b>«La isla 3 de la EDS 4021 no está vendiendo»</b></button></li>
         <li><button class="chip case" type="button" data-step="1" data-msg="En la EDS 2290 la isla 2 sigue bloqueada, ya reinicié la interfaz y nada"><small>Tú apruebas como técnico</small><b>«La isla 2 sigue bloqueada, ya reinicié y nada»</b></button></li>
-        <li><button class="chip case" type="button" data-step="2" data-msg="Quiero hablar con un asesor"><small>Pasa a una persona</small><b>«Quiero hablar con un asesor»</b></button></li>
+        <li><button class="chip case" type="button" data-step="2" data-msg="Quiero que me ayude una persona"><small>Pasa a un técnico</small><b>«Quiero que me ayude una persona»</b></button></li>
         <li><button class="chip case" type="button" data-msg="¿Cómo hago el cierre de turno?"><small>Explica un procedimiento</small><b>«¿Cómo hago el cierre de turno?»</b></button></li>
         <li><button class="chip case" type="button" data-msg="En la EDS 3350 no hay internet"><small>Escala al proveedor</small><b>«En la EDS 3350 no hay internet»</b></button></li>
         <li><button class="chip case" type="button" data-msg="En la EDS 1187 el conciliador no cuadra con SAP"><small>Pasa a una persona</small><b>«El conciliador no cuadra con SAP»</b></button></li>
@@ -1194,90 +1739,132 @@ h3{font-size:18px}
       </div>
       </div>
     </div>
-    <p class="disclaimer">Datos ficticios para la demo. Estaciones: 4021 Los Almendros · 1187 Puerto Sol · 3350 La Ceiba · 2290 El Mirador.</p>
+    
   </div>
 </section>
+
+<!-- CASOS -->
+<section class="mk-sec" id="casos">
+  <div class="wrap">
+    <p class="eyebrow">Por qué funciona</p>
+    <h2>El <em class="kw">80&nbsp;%</em> de los casos se repite: ahí entran los agentes</h2>
+    <div class="w8">
+      <div class="w8-n"><b>80&nbsp;%</b><span>de los casos se repite en <b>30 patrones</b></span></div>
+      <div class="w8-v"><div class="w8-d" role="img" aria-label="8 de cada 10 casos se repiten"><i class="wr" style="animation-delay:0.00s"></i><i class="wr" style="animation-delay:0.06s"></i><i class="wr" style="animation-delay:0.12s"></i><i class="wr" style="animation-delay:0.18s"></i><i class="wr" style="animation-delay:0.24s"></i><i class="wr" style="animation-delay:0.30s"></i><i class="wr" style="animation-delay:0.36s"></i><i class="wr" style="animation-delay:0.42s"></i><i class="wg" style="animation-delay:0.48s"></i><i class="wg" style="animation-delay:0.54s"></i></div>
+        <p><span class="lr"></span>8 de cada 10: los resolverían los agentes &nbsp;·&nbsp; <span class="lg"></span>2 de cada 10: casos distintos que el orquestador analiza y asigna</p></div>
+    </div>
+    <details class="cs-more"><summary>Ver qué resolvería cada agente y el detalle de los casos</summary>
+    <div class="rs"><div class="rs-hd"><span>Lo que levanta la estación</span><span></span><span>Agente</span><span></span><span>Cómo lo resolvería</span><span></span><span>Resultado</span></div><div class="rs-r pos"><div class="rs-c"><div class="rs-n"><b>Fallas del POS</b><em>25&nbsp;%</em></div><div class="rs-bar"><i style="width:64%"></i></div><span>«La isla no vende» · «El POS está lento»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Técnico POS</span></div><span class="rs-ar">→</span><p class="rs-how">Lee el LOG y reinicia los servicios o el POS en remoto</p><span class="rs-ar">→</span><p class="rs-ok">✓ La isla vuelve a vender</p></div><div class="rs-r uso"><div class="rs-c"><div class="rs-n"><b>Dudas de uso</b><em>15&nbsp;%</em></div><div class="rs-bar"><i style="width:38%"></i></div><span>«¿Cómo reimprimo el cierre?»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Guía de uso</span></div><span class="rs-ar">→</span><p class="rs-how">Explica paso a paso, con audio e imágenes</p><span class="rs-ar">→</span><p class="rs-ok">✓ La estación lo hace sola</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Turnos</b><em>9&nbsp;%</em></div><div class="rs-bar"><i style="width:23%"></i></div><span>«No cierra el turno»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Revisa el turno y lo cierra o lo corrige</p><span class="rs-ar">→</span><p class="rs-ok">✓ Turno cerrado</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Reportes y conciliación</b><em>8&nbsp;%</em></div><div class="rs-bar"><i style="width:21%"></i></div><span>«La tirilla no cuadra»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Compara el POS con los reportes y encuentra la diferencia</p><span class="rs-ar">→</span><p class="rs-ok">✓ Diferencia aclarada</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Facturación electrónica</b><em>5&nbsp;%</em></div><div class="rs-bar"><i style="width:13%"></i></div><span>«La factura no sale»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Revisa el estado y reenvía la factura</p><span class="rs-ar">→</span><p class="rs-ok">✓ Factura enviada</p></div><div class="rs-r orq"><div class="rs-c"><div class="rs-n"><b>Otros casos</b><em>39&nbsp;%</em></div><div class="rs-bar"><i style="width:100%"></i></div><span>Todo lo demás</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Orquestador</span></div><span class="rs-ar">→</span><p class="rs-how">Lo analiza y lo asigna al agente indicado</p><span class="rs-ar">→</span><p class="rs-ok">✓ Resuelto por el equipo de agentes</p></div><div class="rs-all">En todos los casos, <b>Registro y seguimiento</b> tipifica el caso y deja la trazabilidad completa.</div></div>
+    
+    
+    <p class="cs-in">Empezamos por lo que más se repite: 6 de cada 10 casos del mes.</p>
+    <div class="cs">
+      <div class="cs-h"><span>Tipo de caso</span><span></span><span>De los casos</span><span>Lo atiende</span></div>
+      <div class="cs-r"><div class="cs-t"><b>Fallas del POS</b><span>Servicios detenidos, lentitud, salto de lectura, bloqueos, reimpresión</span></div><div class="cs-b"><i style="width:100%"></i></div><div class="cs-p">25&nbsp;%</div><div class="cs-a">Técnico POS</div></div><div class="cs-r"><div class="cs-t"><b>Dudas de uso del POS</b><span>«¿Cómo hago…?» en el día a día</span></div><div class="cs-b"><i style="width:60%"></i></div><div class="cs-p">15&nbsp;%</div><div class="cs-a">Guía de uso</div></div><div class="cs-r"><div class="cs-t"><b>Turnos</b><span>Apertura, cierre y configuración</span></div><div class="cs-b"><i style="width:35%"></i></div><div class="cs-p">9&nbsp;%</div><div class="cs-a">Procesos y facturación</div></div><div class="cs-r"><div class="cs-t"><b>Reportes y conciliación</b><span>Tirilla vs. reportes y conciliador</span></div><div class="cs-b"><i style="width:31%"></i></div><div class="cs-p">8&nbsp;%</div><div class="cs-a">Procesos y facturación</div></div><div class="cs-r"><div class="cs-t"><b>Facturación electrónica</b><span>Facturas que no salen o no llegan</span></div><div class="cs-b"><i style="width:19%"></i></div><div class="cs-p">5&nbsp;%</div><div class="cs-a">Procesos y facturación</div></div>
+    </div>
+    
+      <table class="cs-tb"><thead><tr><th>Tipo de caso</th><th>Casos en octubre</th></tr></thead><tbody>
+        <tr><td>Servicios detenidos</td><td>520</td></tr><tr><td>Lentitud del sistema</td><td>392</td></tr><tr><td>Salto de lectura</td><td>384</td></tr><tr><td>Bloqueo de interfaz</td><td>315</td></tr><tr><td>Reimpresión de reportes</td><td>290</td></tr><tr><td>Interfaz cerrada</td><td>135</td></tr><tr><td>Dudas de uso del POS</td><td>1.212</td></tr><tr><td>Turnos</td><td>722</td></tr><tr><td>Tirilla vs. reportes</td><td>426</td></tr><tr><td>Conciliador</td><td>209</td></tr><tr><td>Facturación electrónica</td><td>389</td></tr>
+      </tbody></table>
+      <p class="note">Fuente: Salesforce, octubre 2026. Base: 8.244 casos del mes, sin llamadas caídas o mudas. Cada tipo incluye sus casos escalados.</p>
+    </details>
+  </div>
+</section>
+
+<!-- MONITOR + TRAZABILIDAD -->
+<section class="mk-sec mk-alt" id="monitor">
+  <div class="wrap">
+    <p class="eyebrow">Trazabilidad de punta a punta</p>
+    <h2>Cada caso deja <em class="kw">huella</em> de principio a fin</h2>
+    
+    <div class="e2">
+      <div class="e2-line" aria-hidden="true"><i></i></div>
+      <div class="e2-ns"><div class="e2-n" style="--d:0.00s"><div class="e2-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/></svg></div><b>Entra el caso</b></div><div class="e2-n" style="--d:0.25s"><div class="e2-c"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="3.5" r="1.5"/><circle cx="20" cy="16" r="1.5"/><circle cx="4" cy="16" r="1.5"/><path d="M12 9V5M14.6 13.5l4 1.8M9.4 13.5l-4 1.8"/></svg></div><b>El orquestador decide</b></div><div class="e2-n" style="--d:0.50s"><div class="e2-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><b>El agente actúa</b></div><div class="e2-n" style="--d:0.75s"><div class="e2-c"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div><b>La estación confirma</b></div><div class="e2-n" style="--d:1.00s"><div class="e2-c"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></div><b>Queda registrado</b></div></div>
+      <p class="e2-id">En cada paso se registra qué agente actuó, qué hizo, a qué hora y por qué.</p>
+    </div>
+    <details class="cs-more mo-more"><summary>Ver un ejemplo del monitor de agentes</summary>
+    <div class="mo">
+      <div class="mo-top"><span class="mo-dot"></span><b>Monitor Centinel</b><span class="mo-tag">en vivo · datos de ejemplo</span></div>
+      <div class="mo-k">
+        <div><small>Sesiones hoy</small><b>45</b></div>
+        <div><small>Resueltas por los agentes</small><b class="g">41</b></div>
+        <div><small>En curso</small><b>4</b></div>
+        <div><small>Registradas en Salesforce</small><b>45</b></div>
+      </div>
+      <div class="mo-g">
+        <div class="mo-list"><p class="mo-h">Sesiones</p><button type="button" class="mo-r on" data-s="s1"><div><b>2290 · El Mirador</b><span>El POS está bloqueado</span></div><span class="mo-ag">Técnico POS</span><span class="mo-st ok">Resuelto</span></button><button type="button" class="mo-r" data-s="s2"><div><b>4021 · Los Almendros</b><span>La isla 3 no vende</span></div><span class="mo-ag">Técnico POS</span><span class="mo-st ok">Resuelto</span></button><button type="button" class="mo-r" data-s="s3"><div><b>1187 · Puerto Sol</b><span>¿Cómo reimprimo el cierre?</span></div><span class="mo-ag">Guía de uso</span><span class="mo-st ok">Resuelto</span></button><button type="button" class="mo-r" data-s="s4"><div><b>3350 · La Ceiba</b><span>No cierra el turno</span></div><span class="mo-ag">Procesos y facturación</span><span class="mo-st run">En curso</span></button><button type="button" class="mo-r" data-s="s5"><div><b>4021 · Los Almendros</b><span>La factura no sale</span></div><span class="mo-ag">Procesos y facturación</span><span class="mo-st ok">Resuelto</span></button></div>
+        <div class="tz" id="tz"></div>
+      </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<!-- MEDICIÓN Y CONTROL -->
+<section class="mk-sec" id="control">
+  <div class="wrap">
+    <p class="eyebrow">Medición y control</p>
+    <h2>Medido contra la línea base y siempre <em class="kw">bajo control</em></h2>
+    <div class="mc-g">
+      <div class="mc-k">
+        <div class="ct-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16a8 8 0 1 1 16 0"/><path d="m12 16 4-5"/></svg></div>
+        <small>Lo que medimos</small>
+        <b>Menos fricción</b>
+        <p>Casos que la estación resuelve sin llamar ni esperar.</p>
+        <ul><li>Casos resueltos por los agentes</li><li>Tiempo hasta resolver</li><li>Satisfacción de la estación</li></ul>
+        <span class="mc-n">Todo contra la línea base oficial de la mesa.</span>
+      </div>
+      <div class="ct"><div class="ct-i"><div class="ct-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></svg></div><b>Catálogo cerrado</b><span>Solo ejecutan las acciones que Terpel aprueba</span></div><div class="ct-i"><div class="ct-c"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 6l3 3"/></svg></div><b>Acceso propio y mínimo</b><span>Una cuenta de servicio, sin permisos de más</span></div><div class="ct-i"><div class="ct-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><b>Todo visible</b><span>Cada acción queda en el monitor de agentes</span></div><div class="ct-i"><div class="ct-c"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v9"/><path d="M6.3 7.5a8 8 0 1 0 11.4 0"/></svg></div><b>Un clic los apaga</b><span>La mesa retoma el control cuando quiera</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRUEBA FINAL -->
+<section class="mk-final" id="prueba">
+  <div class="wrap mk-fg">
+    <div><p class="eyebrow">Pruébalo ahora</p><h2>Escríbele a Centinel como si fueras una estación</h2><p>Manda un audio, una foto o un texto, y mira cómo el equipo de agentes resuelve el caso.</p><a class="mk-btn" href="https://wa.me/18164517011?text=Hola" target="_blank" rel="noopener">Abrir en WhatsApp ↗</a></div>
+    <div class="qrx big" aria-label="Código QR para probar Centinel"></div>
+  </div>
+</section>
+
+
 
 
 
 <!-- DETALLE -->
-<section class="det" id="detalle">
+<section class="det" id="detalle" hidden>
   <div class="wrap">
     <div class="det-head">
-      <p class="eyebrow">Detalle del plan</p>
-      <h2>Por qué Centinel y cómo llegamos</h2>
+      <h2>Por qué Centinel: un equipo de agentes y cómo funcionan</h2>
     </div>
-    <div class="hz">
-      <div><b class="num">9.114</b><span>casos en octubre; el motivo n.º 1 son las dudas de uso del POS (1.212)</span></div>
-      <div><b class="num">80 %</b><span>de los casos se concentra en 30 patrones repetitivos</span></div>
-      <div><b class="num">521 h</b><span>al mes registrando cada caso dos veces (Salesforce y Wolkvox)</span></div>
+    <div class="why">
+      <p class="why-k">Por qué</p>
+      <div class="why3">
+        <div><b>99,9&nbsp;%</b><span>de los casos llega por llamada: la estación tiene que llamar y esperar</span></div>
+        <div><b>80&nbsp;%</b><span>de los casos se repite en 30 patrones: se puede agentizar</span></div>
+        <div><b>29&nbsp;%</b><span>se resuelve con un reinicio: un agente lo hace en remoto</span></div>
+      </div>
     </div>
+    <p class="why-k ck">Cómo funcionan: un orquestador y un equipo de agentes</p>
+    <div class="tinfo cx eco-w"><svg class="eco" viewBox="0 0 900 500" width="100%" role="img" aria-label="Ecosistema de agentes: la estación habla, manda una foto o escribe; Centinel orquesta un equipo de cinco agentes especializados conectados al sistema Terpel; si el caso necesita una persona, un técnico de N2 lo recibe armado, y la llamada es el último recurso."><defs><marker id="infa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#46646B"/></marker></defs><text x="0" y="232" font-size="11" font-weight="800" letter-spacing="1.4" fill="#B50000">LA ESTACIÓN</text><text x="330" y="18" font-size="11" font-weight="800" letter-spacing="1.4" fill="#B50000">CENTINEL · ORQUESTADOR + AGENTES</text><text x="730" y="70" font-size="11" font-weight="800" letter-spacing="1.4" fill="#B50000">SISTEMA TERPEL</text><ellipse cx="430" cy="235" rx="200" ry="170" fill="none" stroke="#FF0818" stroke-width="3" stroke-dasharray="10 8" stroke-linecap="round" class="orbit"/><line x1="430" y1="235" x2="430" y2="65" stroke="#F5B5B9" stroke-width="2" class="dr"/><line x1="430" y1="235" x2="620" y2="182" stroke="#F5B5B9" stroke-width="2" class="dr"/><line x1="430" y1="235" x2="548" y2="373" stroke="#F5B5B9" stroke-width="2" class="dr"/><line x1="430" y1="235" x2="312" y2="373" stroke="#F5B5B9" stroke-width="2" class="dr"/><line x1="430" y1="235" x2="240" y2="182" stroke="#F5B5B9" stroke-width="2" class="dr"/><g class="fd"><rect x="0" y="242" width="140" height="118" rx="14" fill="#FFFFFF" stroke="#C9D6D7" stroke-width="1.5"/><text x="14" y="270" font-size="15" font-weight="800" fill="#132023">La estación</text><text x="14" y="292" font-size="11.5" fill="#46646B">Habla, manda</text><text x="14" y="308" font-size="11.5" fill="#46646B">una foto o escribe</text><text x="14" y="340" font-size="11.5" font-weight="700" fill="#FF0818">Sin llamar</text></g><path d="M140 290 C 230 290, 260 250, 348 243" fill="none" stroke="#46646B" stroke-width="2.2" marker-end="url(#infa)" class="dr"/><circle cx="430" cy="235" r="96" fill="#FFDADD" class="pulse"/><g class="fd"><circle cx="430" cy="235" r="80" fill="#FF0818"/><text x="430" y="225" text-anchor="middle" font-size="24" font-weight="800" fill="#FFFFFF">Centinel</text><text x="430" y="247" text-anchor="middle" font-size="12" font-weight="700" fill="#FFE5E7">Orquestador</text><text x="430" y="267" text-anchor="middle" font-size="10.5" fill="#FFE5E7">entiende · asigna</text><text x="430" y="281" text-anchor="middle" font-size="10.5" fill="#FFE5E7">aplica las reglas</text></g><g class="fd"><rect x="338" y="38" width="184" height="54" rx="12" fill="#132023" stroke="#132023" stroke-width="1.5"/><circle cx="356" cy="65" r="6" fill="#FF0818"/><text x="370" y="61" font-size="13" font-weight="800" fill="#FFFFFF">Recepción y diagnóstico</text><text x="370" y="78" font-size="10.5" fill="#C9D6D7">Clasifica y diagnostica</text></g><g class="fd"><rect x="528" y="155" width="184" height="54" rx="12" fill="#132023" stroke="#132023" stroke-width="1.5"/><circle cx="546" cy="182" r="6" fill="#FF0818"/><text x="560" y="178" font-size="13" font-weight="800" fill="#FFFFFF">Técnico POS</text><text x="560" y="195" font-size="10.5" fill="#C9D6D7">Repara y reinicia en remoto</text></g><g class="fd"><rect x="456" y="346" width="184" height="54" rx="12" fill="#132023" stroke="#132023" stroke-width="1.5"/><circle cx="474" cy="373" r="6" fill="#FF0818"/><text x="488" y="369" font-size="13" font-weight="800" fill="#FFFFFF">Procesos y facturación</text><text x="488" y="386" font-size="10.5" fill="#C9D6D7">Turnos, facturas, reportes</text></g><g class="fd"><rect x="220" y="346" width="184" height="54" rx="12" fill="#132023" stroke="#132023" stroke-width="1.5"/><circle cx="238" cy="373" r="6" fill="#FF0818"/><text x="252" y="369" font-size="13" font-weight="800" fill="#FFFFFF">Guía de uso</text><text x="252" y="386" font-size="10.5" fill="#C9D6D7">Enseña paso a paso</text></g><g class="fd"><rect x="148" y="155" width="184" height="54" rx="12" fill="#132023" stroke="#132023" stroke-width="1.5"/><circle cx="166" cy="182" r="6" fill="#FF0818"/><text x="180" y="178" font-size="13" font-weight="800" fill="#FFFFFF">Registro y seguimiento</text><text x="180" y="195" font-size="10.5" fill="#C9D6D7">Tipifica y deja trazabilidad</text></g><g class="fd"><rect x="730" y="82" width="170" height="64" rx="12" fill="#FFFFFF" stroke="#C9D6D7" stroke-width="1.5"/><rect x="730" y="82" width="6" height="64" rx="3" fill="#FF0818"/><text x="746" y="109" font-size="13" font-weight="800" fill="#132023">POS de la estación</text><text x="746" y="127" font-size="10.5" fill="#46646B">LOG, estado, acciones</text></g><g class="fd"><rect x="730" y="162" width="170" height="64" rx="12" fill="#FFFFFF" stroke="#C9D6D7" stroke-width="1.5"/><rect x="730" y="162" width="6" height="64" rx="3" fill="#FF0818"/><text x="746" y="189" font-size="13" font-weight="800" fill="#132023">Base de estaciones</text><text x="746" y="207" font-size="10.5" fill="#46646B">Quién es y qué POS tiene</text></g><g class="fd"><rect x="730" y="242" width="170" height="64" rx="12" fill="#FFFFFF" stroke="#C9D6D7" stroke-width="1.5"/><rect x="730" y="242" width="6" height="64" rx="3" fill="#FF0818"/><text x="746" y="269" font-size="13" font-weight="800" fill="#132023">Salesforce y Wolkvox</text><text x="746" y="287" font-size="10.5" fill="#46646B">Registro del caso</text></g><g class="fd"><rect x="730" y="322" width="170" height="64" rx="12" fill="#FFFFFF" stroke="#C9D6D7" stroke-width="1.5"/><rect x="730" y="322" width="6" height="64" rx="3" fill="#FF0818"/><text x="746" y="349" font-size="13" font-weight="800" fill="#132023">SAP</text><text x="746" y="367" font-size="10.5" fill="#46646B">Ventas y conciliación</text></g><path d="M712 182 C 726 182, 712 114, 728 114" fill="none" stroke="#46646B" stroke-width="1.8" marker-end="url(#infa)" class="dr"/><path d="M712 182 C 726 182, 712 194, 728 194" fill="none" stroke="#46646B" stroke-width="1.8" marker-end="url(#infa)" class="dr"/><path d="M640 373 C 654 373, 712 274, 728 274" fill="none" stroke="#46646B" stroke-width="1.8" marker-end="url(#infa)" class="dr"/><path d="M640 373 C 654 373, 712 354, 728 354" fill="none" stroke="#46646B" stroke-width="1.8" marker-end="url(#infa)" class="dr"/><path d="M430 315 L430 428" stroke="#46646B" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#infa)"/><g class="fd"><rect x="290" y="432" width="280" height="60" rx="12" fill="#FFF6DC" stroke="#F2D27A" stroke-width="1.5"/><text x="304" y="456" font-size="13" font-weight="800" fill="#132023">Si el caso necesita una persona</text><text x="304" y="476" font-size="11" fill="#46646B">Un técnico de N2 lo recibe armado</text></g><path d="M570 462 L616 462" stroke="#46646B" stroke-width="1.8" stroke-dasharray="5 5" marker-end="url(#infa)"/><g class="fd"><rect x="620" y="432" width="150" height="60" rx="12" fill="none" stroke="#C9D6D7" stroke-width="1.5" stroke-dasharray="6 5"/><text x="634" y="456" font-size="13" font-weight="800" fill="#46646B">Llamada</text><text x="634" y="476" font-size="11" fill="#46646B">Último recurso</text></g></svg></div>
+    <div class="eco-cta"><p><b>Un orquestador y un equipo de agentes:</b> la estación no llama. Los agentes resuelven y, si un caso necesita a una persona, un técnico de N2 lo recibe armado.</p><a class="eco-btn" href="https://wa.me/18164517011?text=Hola" target="_blank" rel="noopener">Probar Centinel ↗</a></div>
   </div>
 </section>
-<div class="panes" id="panes">
+<div class="panes" id="panes" hidden>
   <div class="tabbar"><div class="wrap">
       <div class="tabs" role="tablist" aria-label="Detalle del plan">
-      <button class="tab on" type="button" role="tab" id="t-solucion" aria-controls="solucion" aria-selected="true">Cómo funciona</button>
-      <button class="tab" type="button" role="tab" id="t-impacto" aria-controls="impacto" aria-selected="false">Cifras</button>
+      <button class="tab on" type="button" role="tab" id="t-impacto" aria-controls="impacto" aria-selected="true">Cifras</button>
       <button class="tab" type="button" role="tab" id="t-roadmap" aria-controls="roadmap" aria-selected="false">Roadmap</button>
       <button class="tab" type="button" role="tab" id="t-recursos" aria-controls="recursos" aria-selected="false" hidden>Recursos</button>
-      <button class="tab" type="button" role="tab" id="t-tecnologia" aria-controls="tecnologia" aria-selected="false">Tecnología</button>
       <button class="tab" type="button" role="tab" id="t-indicadores" aria-controls="indicadores" aria-selected="false">Indicadores</button>
       <button class="tab" type="button" role="tab" id="t-decisiones" aria-controls="decisiones" aria-selected="false" hidden>Para decidir</button>
       </div>
   </div></div>
 <!-- SOLUCION -->
-<section class="sec pane" id="solucion" role="tabpanel" aria-labelledby="t-solucion">
-  <div class="wrap">
-    <div class="head j-head">
-      <p class="eyebrow">La solución</p>
-      <h2>Así se atendería el caso con Centinel</h2>
-      <p class="lead">Centinel resuelve en el chat los niveles 1 y 2. Si el caso sigue abierto, pasa a una llamada con una persona de la mesa, que ya tiene todo el contexto.</p>
-    </div>
-    <div class="jr">
-      <div class="zone zc"><span>En el chat · WhatsApp · Centinel</span></div>
-      <div class="zone zp"><span>Con personas · llamada y equipos técnicos</span></div>
 
-      <div class="jn" tabindex="0" style="grid-column:1">
-        <div class="jc"><span class="jt">Inicio</span><b>La estación escribe</b><p>El promotor o el administrador reporta el problema por WhatsApp. Centinel reconoce la estación por su número.</p></div>
-        <div class="pop"><b>Cómo llega</b><ul><li>Por WhatsApp, a cualquier hora.</li><li>Centinel reconoce la estación por el número.</li></ul></div>
-      </div>
-      <div class="jn j1 dn" tabindex="0" style="grid-column:2">
-        <div class="jc"><span class="jt">N1</span><b>Centinel guía la solución</b><p>Revisa la estación y da los pasos al promotor.</p></div>
-        <div class="pop"><b>Qué hace</b><ul><li>Revisa el POS de la isla.</li><li>Guía con los procedimientos aprobados.</li><li>Responde dudas de uso.</li></ul></div>
-      </div>
-      <div class="jn j1 dn" tabindex="0" style="grid-column:3">
-        <div class="jc"><span class="jt">N2</span><span class="cond">si N1 no lo resuelve</span><b>Centinel propone la solución</b><p>Diagnostica y propone el reinicio remoto.</p><span class="who">Aquí interviene el técnico N2: la aprueba con un clic desde su consola</span></div>
-        <div class="pop"><b>Qué hace</b><ul><li>Diagnostica la falla con los datos del POS.</li><li>Propone reinicio o reactivación remota.</li><li>Solo se ejecuta si un técnico la aprueba.</li></ul><b>El técnico N2</b><ul><li>Ve el diagnóstico y lo que ya se intentó.</li><li>Aprueba o rechaza desde la consola, sin llamar a la estación.</li><li>Si rechaza, el caso pasa a una llamada.</li></ul></div>
-      </div>
-      <div class="jn jh dn" tabindex="0" style="grid-column:4">
-        <div class="jc"><span class="jt">Llamada</span><span class="cond">si sigue abierto o pide una persona</span><b>Un especialista atiende con el caso armado</b><p>No vuelve a preguntar lo que ya se hizo.</p></div>
-        <div class="pop pr"><b>Cuándo pasa</b><ul><li>La falla sigue después de N2.</li><li>La estación pide hablar con alguien.</li><li>El tema es de precios, saldos o datos personales.</li></ul><b>Cómo ayuda Centinel</b><ul><li>Le muestra la estación, el diagnóstico y los pasos ya hechos.</li><li>Le sugiere la solución.</li><li>Deja el caso tipificado y registrado.</li></ul></div>
-      </div>
-      <div class="jn j3 dn" tabindex="0" style="grid-column:5">
-        <div class="jc"><span class="jt">N3</span><span class="cond">si es una falla de fondo</span><b>Desarrollo o proveedor corrige la causa</b><p>Recibe la evidencia lista.</p></div>
-        <div class="pop pr"><b>Qué recibe</b><ul><li>Las fallas repetidas, agrupadas en un solo problema.</li><li>La evidencia de cada estación.</li></ul><b>Después</b><ul><li>Se avisa a las estaciones afectadas.</li></ul></div>
-      </div>
-
-      <div class="jn jk" tabindex="0" style="grid-column:2 / 6">
-        <div class="jc"><b>✓ Caso cerrado y registrado</b><p>Puede cerrarse en cualquier paso. Queda en Wolkvox y Salesforce, y la estación recibe la confirmación por WhatsApp.</p></div>
-      </div>
-    </div>
-    <p class="note j-hint">Pasa el cursor o toca cada paso para ver el detalle.</p>
-    <div class="plan-mds">
-      <h3>Encaja con el plan de optimización de la mesa</h3>
-      <p class="note">Centinel pone en marcha tres iniciativas que ya están en el plan de la mesa.</p>
-      <div class="trig">
-        <div><small>WhatsApp centralizado</small><b>Un solo número para todas las estaciones</b><p>Centinel atiende ahí, y cada caso queda medido y registrado.</p></div>
-        <div><small>IVR cognitivo</small><b>La llamada entiende qué pasa</b><p>La voz de Centinel resuelve lo frecuente y pasa al analista con el contexto.</p></div>
-        <div><small>Buscador de scripts</small><b>El script correcto en segundos</b><p>Centinel propone el script; el técnico N2 lo aprueba.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- CIFRAS -->
-<section class="sec pane" id="impacto" role="tabpanel" aria-labelledby="t-impacto" hidden>
+<section class="sec pane" id="impacto" role="tabpanel" aria-labelledby="t-impacto">
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Dónde empezamos</p>
@@ -1308,38 +1895,18 @@ h3{font-size:18px}
   <div class="wrap">
     <div class="head">
       <p class="eyebrow">Cómo lo medimos</p>
-      <h2>Los indicadores de Centinel</h2>
-      <p class="lead">Todo se mide contra la línea base oficial del 13 nov. Las metas salen de esa medición, no antes.</p>
+      <h2>Un indicador principal: la fricción</h2>
+      <p class="lead">Medimos cuánto le cuesta a la estación resolver. Las metas salen de la línea base.</p>
     </div>
-    <div class="kpi2">
-      <div class="kg">
-        <h3><em>1</em>Resultados de la mesa</h3>
-        <p class="note">Lo que debe mejorar para las estaciones.</p>
-        <table class="ktab"><thead><tr><th scope="col">Indicador</th><th scope="col">Qué mide</th><th scope="col">Hoy</th></tr></thead><tbody>
-<tr><th scope="row">Deflexión de N1</th><td>Casos que Centinel cierra sin un asesor</td><td class="kz">0 %</td></tr>
-<tr><th scope="row">Resolución en primer contacto</th><td>Casos resueltos sin reabrir ni escalar</td><td class="kp">Por medir · meta entre el 27 nov y el 4 dic</td></tr>
-<tr><th scope="row">Tiempo de resolución (MTTR)</th><td>Desde que la estación reporta hasta que se resuelve</td><td class="kp">Por medir</td></tr>
-<tr><th scope="row">Cumplimiento de ANS</th><td>Casos cerrados dentro del tiempo pactado</td><td class="kr">60,5 % de los casos de N2 fuera de ANS</td></tr>
-<tr><th scope="row">Satisfacción (CSAT)</th><td>Calificación de la estación al cerrar el caso</td><td class="kp">Por medir</td></tr>
-        </tbody></table>
-      </div>
-      <div class="kg">
-        <h3><em>2</em>Calidad de Centinel</h3>
-        <p class="note">Lo que revisamos en el piloto antes de darle más casos.</p>
-        <table class="ktab"><thead><tr><th scope="col">Indicador</th><th scope="col">Qué mide</th></tr></thead><tbody>
-<tr><th scope="row">Tipificación correcta</th><td>Coincide con la revisión de una persona</td></tr>
-<tr><th scope="row">Escalamiento correcto</th><td>Pasa a N2 o a una llamada cuando debe</td></tr>
-<tr><th scope="row">Aprobaciones de N2</th><td>Propuestas que el técnico acepta o rechaza</td></tr>
-<tr><th scope="row">Primera respuesta</th><td>Tiempo hasta que Centinel contesta</td></tr>
-<tr><th scope="row">Doble registro eliminado</th><td>Horas que la mesa deja de registrar dos veces</td></tr>
-        </tbody></table>
-      </div>
+    <div class="kmain">
+      <div><small>KPI principal · fricción</small><b>99,9&nbsp;%</b><p>de los casos de octubre llegaron por llamada. Queremos que la estación resuelva sin llamar ni esperar.</p></div>
+      <p class="kdir">↓ Meta: que baje</p>
     </div>
-    <div class="kstep">
-      <div><small>13 nov</small><b>Línea base oficial</b><p>Tablero único de la mesa.</p></div>
-      <div><small>Canary</small><b>Primera medición</b><p>Una persona revisa cada caso de Centinel.</p></div>
-      <div><small>Masificación</small><b>Seguimiento semanal</b><p>En el comité operativo de los lunes.</p></div>
-      <div><small>26 feb</small><b>Entrega a la operación</b><p>Metas firmadas y tablero en línea.</p></div>
+    <div class="ksup">
+      <div><b>Casos resueltos por los agentes</b><p>Sin pasar por la mesa. Hoy: 0&nbsp;%.</p></div>
+      <div><b>Tiempo hasta resolver</b><p>Desde que la estación avisa hasta que vuelve a operar.</p></div>
+      <div><b>Paso correcto a N2</b><p>Llega al técnico solo lo que debe llegar.</p></div>
+      <div><b>Satisfacción de la estación</b><p>Una pregunta al cerrar el caso.</p></div>
     </div>
   </div>
 </section>
@@ -1350,40 +1917,34 @@ h3{font-size:18px}
     <div class="head g-head">
       <p class="eyebrow">Roadmap</p>
       <h2>De la demo a la solución</h2>
-      <p class="lead">Cada semana Centinel empieza a atender nuevos tipos de caso. Los canales avanzan en paralelo.</p>
+      <p class="lead">Cada semana los agentes atienden un porcentaje mayor de los casos N1 y N2. En febrero, todos.</p>
+      <p class="rm-meta"><b>Cómo leer la meta:</b> es el porcentaje de los casos de N1 y N2 que los agentes resuelven de punta a punta, sin pasar a una persona. Son metas que propone Periferia; las confirmamos con Terpel sobre la línea base oficial de la mesa (13 nov).</p>
     </div>
     <div class="g-scroll">
       <div class="gantt">
         <div class="g-ov" aria-hidden="true">
           <i class="g-m" style="left:4.76%"></i><i class="g-m" style="left:28.57%"></i><i class="g-m" style="left:53.17%"></i><i class="g-m" style="left:77.78%"></i>
-          <i class="g-ms" style="left:14.29%"></i><i class="g-ms y" style="left:19.84%"></i><i class="g-ms k" style="left:25.4%"></i><i class="g-ms g" style="left:76.19%"></i><i class="g-ms g" style="left:97.62%"></i>
+          <i class="g-ms g" style="left:76.19%"></i>
         </div>
         <div class="g-row g-hd"><div class="g-l"><small>Etapa</small></div><div class="g-t">
           <span style="left:4.76%">nov</span><span style="left:28.57%">dic</span><span style="left:53.17%">ene 2027</span><span style="left:77.78%">feb</span></div></div>
-<div class="g-row g-st"><div class="g-l"><b><em>1</em>POC</b></div><div class="g-t"><i class="g-b" style="left:1.59%;width:19.04%"><span class="out">28 oct → 20 nov · 3 tipos de caso · datos ficticios</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>1</em>POC</b></div><div class="g-t"><i class="g-b" style="left:1.59%;width:19.04%"><span class="out">28 oct → 20 nov · validar con casos reales</span></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Diagnosticar <em>28–31 oct</em></span></div><div class="g-t"><i class="g-b s" style="left:1.59%;width:3.17%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Diseñar y arrancar <em>3–6 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:6.35%;width:3.17%"></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Audios e imágenes <em>3–13 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:6.35%;width:8.73%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Construir <em>9–13 nov</em></span></div><div class="g-t"><i class="g-b s" style="left:11.11%;width:3.97%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Margen y ensayos <em>17–20 nov</em></span></div><div class="g-t"><i class="g-b s m" style="left:17.46%;width:3.17%"></i></div></div>
-<div class="g-row g-st"><div class="g-l"><b><em>2</em>Canary</b></div><div class="g-t"><i class="g-b" style="left:27.78%;width:15.08%"><span class="out">30 nov → 18 dic · 3–5 tipos de caso · una persona revisa cada uno</span></i></div></div>
-<div class="g-row g-st"><div class="g-l"><b><em>3</em>Masificación</b></div><div class="g-t"><i class="g-b" style="left:61.9%;width:15.08%"><span class="lft">cada semana se suman tipos de caso</span><span class="out">12 → 29 ene</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Semana 1 · 3 tipos <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"><span class="lft">dudas de uso · turnos · servicios detenidos</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Semana 2 · 4 tipos más <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"><span class="lft">lentitud · salto de lectura · bloqueo · reimpresión</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Semana 3 · 2 tipos más <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"><span class="lft">facturación electrónica · interfaz cerrada</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>2</em>Canary</b></div><div class="g-t"><i class="g-b" style="left:27.78%;width:15.08%"><span class="out">30 nov → 18 dic · 20 % de los casos N1 y N2</span></i></div></div>
+<div class="g-row g-st"><div class="g-l"><b><em>3</em>Masificación</b></div><div class="g-t"><i class="g-b" style="left:61.9%;width:15.08%"><span class="lft">cada semana sube el % de casos</span><span class="out">12 → 29 ene</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Semana 1 · 50 % <em>12–15 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:61.9%;width:3.97%"><span class="lft">la mitad de los casos N1 y N2</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Semana 2 · 75 % <em>19–22 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:67.46%;width:3.97%"><span class="lft">tres de cada cuatro casos</span></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Semana 3 · 100 % <em>26–29 ene</em></span></div><div class="g-t"><i class="g-b s" style="left:73.02%;width:3.96%"><span class="lft">todos los casos N1 y N2</span></i></div></div>
 <div class="g-row g-st"><div class="g-l"><b><em>4</em>Estabilización</b></div><div class="g-t"><i class="g-b" style="left:77.78%;width:19.84%"><span class="lft">medir, ajustar y entregar</span><span>1 → 26 feb</span></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Medir vs. línea base <em>1–12 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:77.78%;width:11.11%"></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Ajustes y nuevos casos <em>9–20 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:84.13%;width:11.11%"></i></div></div>
+<div class="g-row g-sub"><div class="g-l"><span>Ajustes <em>9–20 feb</em></span></div><div class="g-t"><i class="g-b s" style="left:84.13%;width:11.11%"></i></div></div>
 <div class="g-row g-sub"><div class="g-l"><span>Entrega a la operación <em>23–26 feb</em></span></div><div class="g-t"><i class="g-b s m" style="left:94.44%;width:3.17%"></i></div></div>
-<div class="g-row g-st g-ch"><div class="g-l"><b><em>≡</em>Canales en paralelo</b></div><div class="g-t"></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>WhatsApp oficial <em>desde la POC</em></span></div><div class="g-t"><i class="g-b s c1" style="left:1.59%;width:96.03%"><span>en vivo → canary → masificación</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Llamadas con voz <em>desde 10 nov</em></span></div><div class="g-t"><i class="g-b s c2" style="left:11.9%;width:85.72%"><span>demo 20 nov (si pasa el 12 nov) → canary → masificación</span></i></div></div>
-<div class="g-row g-sub"><div class="g-l"><span>Paso a la mesa (Wolkvox) <em>desde 30 nov</em></span></div><div class="g-t"><i class="g-b s c3" style="left:27.78%;width:69.84%"><span>integración con el tercero que la opera</span></i></div></div>
-        <div class="g-row g-mr"><div class="g-l"><small>Hitos</small></div><div class="g-t">
-          <span class="g-tag" style="left:14.29%;top:4px"><i></i>13 nov · demo lista</span>
-          <span class="g-tag y" style="left:19.84%;top:22px"><i></i>20 nov · muestra de POC</span>
-          <span class="g-tag k" style="left:25.4%;top:40px"><i></i>27 nov · aprobación Terpel</span>
-          <span class="g-tag g gl" style="left:76.19%;top:4px"><i></i>29 ene · todos los tipos de caso priorizados</span>
-          <span class="g-tag g gl" style="left:97.62%;top:22px"><i></i>26 feb · entregado a la operación</span>
+<div class="g-row g-mr"><div class="g-l"><small>Hito</small></div><div class="g-t">
+          <span class="g-tag g gl" style="left:76.19%;top:8px"><i></i>29 ene · 100 % de N1 y N2 con agentes</span>
         </div></div>
       </div>
     </div>
@@ -1445,27 +2006,7 @@ h3{font-size:18px}
 </section>
 
 <!-- TECNOLOGIA -->
-<section class="sec pane" id="tecnologia" role="tabpanel" aria-labelledby="t-tecnologia" hidden>
-  <div class="wrap">
-    <div class="head">
-      <p class="eyebrow">Tecnología y control</p>
-      <h2>Cómo se conecta todo: chat, llamadas y sistemas</h2>
-    </div>
-<div class="tinfo"><svg viewBox="0 0 1120 560" role="img" aria-label="Cómo se conecta Centinel: la estación escribe por WhatsApp o llama; Centinel atiende, identifica la EDS en la base de datos de estaciones, consulta el POS, registra el caso en Salesforce y pasa a la mesa por Wolkvox; un técnico N2 aprueba las acciones remotas."><defs><marker id="tah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#46646B"/></marker></defs><text x="0" y="36" class="ti-k">ORIGEN</text><text x="210" y="36" class="ti-k">CANALES</text><text x="500" y="36" class="ti-k">CENTINEL</text><text x="780" y="36" class="ti-k">DATOS Y SISTEMAS DE TERPEL</text><text x="500" y="446" class="ti-k">PERSONAS</text><path id="p1" d="M160 205 C 185 205, 185 125, 208 125" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p2" d="M160 245 C 185 245, 185 305, 208 305" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p3" d="M440 125 C 470 125, 470 200, 498 200" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p4" d="M440 305 C 470 305, 470 300, 498 300" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p5" d="M720 175 C 750 175, 750 125, 778 125" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p6" d="M720 250 C 750 250, 750 245, 778 245" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p7" d="M720 325 C 750 325, 750 365, 778 365" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p9" d="M610 392 L610 458" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><path id="p10" d="M950 410 L950 458" class="ti-ln" marker-end="url(#tah)" marker-start="url(#tah)"/><g class="mv"><circle r="5" class="ti-dot"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.8s" repeatCount="indefinite"><mpath href="#p4"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#p6"/></animateMotion></circle><circle r="5" class="ti-dot"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#p7"/></animateMotion></circle></g><g class="ti-o"><rect x="0" y="150" width="160" height="140" rx="16"/><text x="16" y="180" class="ti-h">Estación</text><text x="16" y="202" class="ti-s">Promotor o</text><text x="16" y="220" class="ti-s">administrador</text></g><g class="ti-c"><rect x="210" y="80" width="230" height="90" rx="16"/><text x="226" y="110" class="ti-h">WhatsApp</text><text x="226" y="132" class="ti-s">Número oficial de soporte</text></g><g class="ti-c"><rect x="210" y="260" width="230" height="90" rx="16"/><text x="226" y="290" class="ti-h">Llamada</text><text x="226" y="312" class="ti-s">Línea de soporte con voz</text></g><g class="ti-core"><rect x="500" y="110" width="220" height="282" rx="20"/><text x="524" y="172" class="ti-hh">Centinel</text><line x1="524" y1="188" x2="696" y2="188" stroke="#F5B5B9" stroke-width="1.5"/><circle cx="530" cy="213" r="4" class="ti-b"/><text x="544" y="218" class="ti-s2">Motor Perxia</text><circle cx="530" cy="243" r="4" class="ti-b"/><text x="544" y="248" class="ti-s2">Identifica la EDS</text><circle cx="530" cy="273" r="4" class="ti-b"/><text x="544" y="278" class="ti-s2">Diagnostica y guía</text><circle cx="530" cy="303" r="4" class="ti-b"/><text x="544" y="308" class="ti-s2">Escala con reglas fijas</text><circle cx="530" cy="333" r="4" class="ti-b"/><text x="544" y="338" class="ti-s2">Registra cada paso</text></g><g class="ti-y"><rect x="780" y="80" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 113 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="113" rx="12" ry="5"/><path d="M798 122 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="116" class="ti-h">Base de datos de estaciones</text><text x="836" y="138" class="ti-s">Identifica la EDS por el número que escribe</text></g><g class="ti-y"><rect x="780" y="200" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 233 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="233" rx="12" ry="5"/><path d="M798 242 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="236" class="ti-h">POS de la estación</text><text x="836" y="258" class="ti-s">Estado de la isla y acción remota</text></g><g class="ti-y"><rect x="780" y="320" width="340" height="90" rx="16"/><g class="ti-db"><path d="M798 353 v18 a12 5 0 0 0 24 0 v-18"/><ellipse cx="810" cy="353" rx="12" ry="5"/><path d="M798 362 a12 5 0 0 0 24 0" fill="none"/></g><text x="836" y="356" class="ti-h">Salesforce y Wolkvox</text><text x="836" y="378" class="ti-s">Registro del caso y paso a la mesa</text></g><g class="ti-p"><rect x="500" y="460" width="220" height="80" rx="16"/><text x="516" y="490" class="ti-h">Técnico N2</text><text x="516" y="512" class="ti-s">Aprueba acciones remotas</text><text x="516" y="530" class="ti-s">desde la consola</text></g><g class="ti-p"><rect x="820" y="460" width="260" height="80" rx="16"/><text x="836" y="490" class="ti-h">Especialista de la mesa</text><text x="836" y="512" class="ti-s">Atiende la llamada con</text><text x="836" y="530" class="ti-s">el caso armado</text></g></svg></div>
-    <p class="note" style="margin-top:10px">Un solo agente para todos los canales: el caso es el mismo si empieza en WhatsApp y termina en una llamada.</p>
-    <div class="tcx">
-      <div class="tcol ctl">
-        <h3>Bajo control</h3>
-        <ul class="tl2">
-          <li><b>Aprobación</b><span>Ninguna acción remota sin la aprobación de un técnico.</span></li>
-          <li><b>Registro</b><span>Cada paso queda registrado y se puede revisar.</span></li>
-          <li><b>Apagado</b><span>Un clic apaga a Centinel y todo vuelve a la mesa.</span></li>
-          <li><b>Demo</b><span>Sin datos reales de Terpel.</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- DECISIONES -->
 <section class="sec pane" id="decisiones" role="tabpanel" aria-labelledby="t-decisiones" hidden>
@@ -1574,7 +2115,7 @@ h3{font-size:18px}
   function setTx(d,t){var x=d.querySelector('.tx');if(x)x.textContent=t;else d.textContent=t;msgs.scrollTop=msgs.scrollHeight;}
   function log(kind,txt,cls){var e=trace.querySelector('.empty');if(e)e.remove();var d=document.createElement('div');d.className='tr'+(cls?' '+cls:'');var a=document.createElement('span');a.className='tt';a.textContent=now();var b=document.createElement('span');b.className='tk';b.textContent=kind;var c=document.createElement('span');c.textContent=txt;d.append(a,b,c);trace.appendChild(d);trace.scrollTop=trace.scrollHeight;}
   function closeCase(tip,dest){caseClosed=true;$('mTip').textContent=String(tip||'—').replace(/\s*\(ESCALADO\)/,'');$('mEst').textContent=dest;clearInterval(clockI);}
-  function handoff(motivo,resumen){var id='CAS-'+String(Math.floor(100000+Math.random()*899999));closeCase($('mTip').textContent==='—'?'Pendiente de tipificar':$('mTip').textContent,'llamada con especialista');log('transferencia','pasa a una persona · motivo: '+String(motivo).slice(0,120),'rule');log('transferencia','pasa a llamada con un especialista de la mesa (Wolkvox) · caso armado en pantalla','ok');log('registro',id+' · resumen entregado al asesor','ok');return {destino:'asesor N1',caso:id,nota:'El asesor recibe el resumen; no debe volver a preguntar.'};}
+  function handoff(motivo,resumen){var id='CAS-'+String(Math.floor(100000+Math.random()*899999));closeCase($('mTip').textContent==='—'?'Pendiente de tipificar':$('mTip').textContent,'técnico de la mesa');log('transferencia','pasa a una persona · motivo: '+String(motivo).slice(0,120),'rule');log('transferencia','pasa a un técnico de la mesa por dentro · caso armado','ok');log('registro',id+' · resumen entregado al técnico','ok');return {destino:'técnico de la mesa',caso:id,nota:'El técnico recibe el resumen; no debe volver a preguntar.'};}
   function cod(x){return String(x||'').replace(/\D/g,'').slice(0,4);}
 
   var TOOLS=[
@@ -1594,11 +2135,11 @@ h3{font-size:18px}
         delete tokens[tk];log('acción','ejecutando '+t.acc+' · EDS '+c+' isla '+n);return new Promise(function(res){setTimeout(function(){EDS[c].islas[n]={pos:'ok',ultima_venta:'hace instantes'};log('acción','POS en línea · venta de prueba OK','ok');res({resultado:'ok',estado_pos:'ok'});},1600);});}},
     {name:'registrar_caso',description:'Cierra un caso RESUELTO por el agente. tipificacion exacta del catálogo; confianza de 0 a 1.',inputSchema:{type:'object',properties:{codigo:{type:'string'},tipificacion:{type:'string'},resumen:{type:'string'},confianza:{type:'number'}},required:['tipificacion','resumen','confianza']},
       execute:function(i){var tip=String(i.tipificacion||'').trim(),conf=Number(i.confianza);if(CATALOGO.indexOf(tip)<0){log('regla','tipificación fuera del catálogo: rechazada','rule');throw new Error('Tipificación inválida. Usa una exacta del catálogo.');}
-        if(!(conf>=0.8)){log('regla','confianza '+(isNaN(conf)?'?':conf.toFixed(2))+' < 0,80 → no se cierra: pasa a asesor N1','rule');return handoff('confianza baja',String(i.resumen||''));}
+        if(!(conf>=0.8)){log('regla','confianza '+(isNaN(conf)?'?':conf.toFixed(2))+' < 0,80 → no se cierra: pasa a un técnico','rule');return handoff('confianza baja',String(i.resumen||''));}
         var id='CAS-'+String(Math.floor(100000+Math.random()*899999));closeCase(tip,'resuelto por el agente');
         log('registro',id+' · Wolkvox ✓ · Salesforce ✓','ok');log('registro','resuelto · confianza '+conf.toFixed(2)+' · trabajo posterior 0:00','ok');
         return {caso:id,estado:'resuelto',registrado_en:['Wolkvox','Salesforce']};}},
-    {name:'transferir_asesor_n1',description:'Pasa la conversación a un asesor N1 humano con el resumen. Úsala si el caso es de N1 pero no pudiste resolverlo, no estás seguro, o el tema está prohibido para ti.',inputSchema:{type:'object',properties:{motivo:{type:'string'},resumen:{type:'string'}},required:['motivo','resumen']},
+    {name:'transferir_asesor_n1',description:'Pasa el caso por dentro a un técnico de la mesa con el resumen; la estación no llama. Úsala si el caso es de N1 pero no pudiste resolverlo, no estás seguro, o el tema está prohibido para ti.',inputSchema:{type:'object',properties:{motivo:{type:'string'},resumen:{type:'string'}},required:['motivo','resumen']},
       execute:function(i){return handoff(String(i.motivo||''),String(i.resumen||''));}},
     {name:'escalar_n2',description:'Crea un ticket para un técnico N2 con el caso armado. Úsala si no hay procedimiento, la falla sigue tras los pasos, el catálogo marca ESCALADO o hay incidente masivo. prioridad: critica, alta, media o baja.',inputSchema:{type:'object',properties:{codigo:{type:'string'},tipificacion:{type:'string'},resumen:{type:'string'},pasos_intentados:{type:'string'},prioridad:{type:'string',enum:['critica','alta','media','baja']}},required:['tipificacion','resumen','prioridad']},
       execute:function(i){var tip=String(i.tipificacion||'').trim();if(CATALOGO.indexOf(tip)<0){log('regla','tipificación fuera del catálogo: rechazada','rule');throw new Error('Tipificación inválida. Usa una exacta del catálogo (preferir la versión ESCALADO).');}
@@ -1615,8 +2156,8 @@ h3{font-size:18px}
     text=String(text||'').trim();if(!text||busy||killed)return;
     if(caseClosed){caseClosed=false;caseTurns=0;t0=null;$('mClock').textContent='0:00';$('mAns').style.width='0';$('mTip').textContent='—';$('mEst').textContent='en curso';}
     startClock();addMsg('u',text);turns.push({role:'user',content:text});caseTurns++;
-    if(/\b(asesor|humano|persona|alguien|operador|agente humano)\b/i.test(text)&&/(hablar|pasar|comunicar|quiero|necesito)/i.test(text)){log('regla','el promotor pidió una persona → pasa a llamada','rule');handoff('el promotor pidió una persona','Promotor solicita atención humana.');var m='Claro. Te paso a una llamada con un especialista de la mesa. Ya tiene el resumen de lo que hablamos.';addMsg('a',m);turns.push({role:'assistant',content:m});caseTurns=0;return;}
-    if(caseTurns>=5){log('regla','5 mensajes sin cerrar el caso → asesor N1','rule');handoff('sin avance tras varios intentos','Conversación sin avance.');var m2='Para no hacerte perder tiempo, te paso a una llamada con un especialista que ya tiene todo el contexto.';addMsg('a',m2);turns.push({role:'assistant',content:m2});caseTurns=0;return;}
+    if(/\b(asesor|humano|persona|alguien|operador|agente humano)\b/i.test(text)&&/(hablar|pasar|comunicar|quiero|necesito)/i.test(text)){log('regla','el promotor pidió una persona → pasa a un técnico','rule');handoff('el promotor pidió una persona','Promotor solicita atención humana.');var m='Claro. Un técnico de la mesa toma tu caso con todo lo que hablamos y te escribe por aquí.';addMsg('a',m);turns.push({role:'assistant',content:m});caseTurns=0;return;}
+    if(caseTurns>=5){log('regla','5 mensajes sin cerrar el caso → técnico','rule');handoff('sin avance tras varios intentos','Conversación sin avance.');var m2='Para no hacerte perder tiempo, un técnico toma tu caso con todo el contexto y te escribe por aquí.';addMsg('a',m2);turns.push({role:'assistant',content:m2});caseTurns=0;return;}
     if(!sample){replay(text);return;}
     setBusy(true);var bub=addMsg('a think','escribiendo…');ctl=new AbortController();
     var input=[{role:'user',content:CTX}].concat(turns.slice(-12));
@@ -1646,7 +2187,7 @@ h3{font-size:18px}
       ['a','Como ya reiniciaste la interfaz, pido a un técnico aprobar el reinicio remoto. Te aviso en un momento.',['conocimiento','PROC-02 · bloqueo de interfaz'],['aprobación','solicitada: reiniciar_interfaz · EDS 2290 isla 2','rule']],
       {approve:{txt:'Centinel pide reiniciar la interfaz en la EDS 2290, isla 2. El promotor ya la reinició sin éxito.',
         ok:[['a','Listo, la isla 2 ya responde. Dejé el caso registrado.',['acción','reinicio remoto · isla 2 en línea','ok'],['registro','CAS-517204 · Wolkvox ✓ · Salesforce ✓','ok'],{tip:'(POS) Bloqueo de interfaz',dest:'resuelto con aprobación'}]],
-        no:[['a','El técnico prefiere revisarlo contigo. Te paso a una llamada con un especialista; ya tiene el resumen.',['transferencia','pasa a llamada con un especialista de la mesa · caso armado en pantalla','ok'],{tip:'(POS) Bloqueo de interfaz (ESCALADO)',dest:'llamada con especialista'}]]}}
+        no:[['a','El técnico prefiere revisarlo él mismo. Ya tiene el resumen y te escribe por aquí.',['transferencia','pasa a un técnico de la mesa por dentro · caso armado','ok'],{tip:'(POS) Bloqueo de interfaz (ESCALADO)',dest:'técnico de la mesa'}]]}}
     ],
     turno:[
       ['a','Te explico el cierre de turno:\n1. Verifica que no haya ventas en curso.\n2. En el POS: Turnos › Cerrar turno.\n3. Confirma el promotor y revisa el resumen.\n4. Imprime la tirilla de cierre.',['conocimiento','PROC-03 · cierre de turno']],
@@ -1659,7 +2200,7 @@ h3{font-size:18px}
     ],
     sap:[
       ['a','Reviso la EDS 1187.',['consulta','estación 1187 · Puerto Sol']],
-      ['a','Para el conciliador no tengo un procedimiento aprobado. Te paso a una llamada con un especialista; ya tiene el resumen.',['regla','sin procedimiento aprobado → pasa a una persona','rule'],['transferencia','pasa a llamada con un especialista de la mesa · caso armado en pantalla','ok'],{tip:'Conciliador vs. SAP (ESCALADO)',dest:'llamada con especialista'}]
+      ['a','Para el conciliador no tengo un procedimiento aprobado. Un técnico toma tu caso con el resumen y te escribe por aquí.',['regla','sin procedimiento aprobado → pasa a una persona','rule'],['transferencia','pasa a un técnico de la mesa por dentro · caso armado','ok'],{tip:'Conciliador vs. SAP (ESCALADO)',dest:'técnico de la mesa'}]
     ],
     otro:[['a','Para ayudarte, dime el código de la estación (EDS), la isla y qué está pasando.']]
   };
@@ -1682,9 +2223,9 @@ h3{font-size:18px}
 
   $('form').addEventListener('submit',function(e){e.preventDefault();var v=$('inp').value;$('inp').value='';ask(v);});
     var INS=[
-    ['✓ Resuelto en el chat, sin asesor',['Se ahorran ~14 min de un asesor N1 (hay 520 casos así al mes).','Registrado solo en Wolkvox y Salesforce: cero doble digitación.','Cerrado dentro del ANS de 45 min.']],
+    ['✓ Resuelto en el chat, sin asesor',['Se ahorran ~14 min de un asesor (hay 520 casos así al mes).','Registrado solo en Wolkvox y Salesforce: cero doble digitación.','Cerrado dentro del ANS de 45 min.']],
     ['✓ Resuelto con tu aprobación, sin llamada',['El técnico aprobó con un clic; la acción remota no corre sin él.','Registrado solo en Wolkvox y Salesforce.','Cada paso queda en la traza para auditoría.']],
-    ['→ Pasó a una persona con el caso armado',['El especialista ve estación, diagnóstico y pasos ya hechos.','La estación no repite su historia.','El caso queda tipificado para medirlo.']]];
+    ['→ Pasó a un técnico, sin llamadas',['El técnico ve estación, diagnóstico y pasos ya hechos.','La estación no llama ni repite su historia.','El caso queda tipificado para medirlo.']]];
   function waitIdle(){return new Promise(function(r){(function c(){if(!busy&&!approvalRes)r();else setTimeout(c,250);})();});}
   function markSteps(cur,done){document.querySelectorAll('.guion .step').forEach(function(b){var k=+b.getAttribute('data-step');b.classList.toggle('run',k===cur);if(k===done)b.classList.add('done');});}
   function onChip(e){var b=e.target.closest('.chip');if(!b||b.disabled)return;var st=b.getAttribute('data-step');var k=st===null?null:+st;$('insight').hidden=true;
@@ -1698,7 +2239,7 @@ h3{font-size:18px}
   $('stop').addEventListener('click',function(){if(ctl)ctl.abort();});
   $('apOk').addEventListener('click',function(){if(approvalRes)approvalRes(true);});
   $('apNo').addEventListener('click',function(){if(approvalRes)approvalRes(false);});
-  $('kill').addEventListener('click',function(){killed=!killed;this.classList.toggle('on',killed);this.setAttribute('aria-pressed',killed?'true':'false');this.textContent=killed?'Encender agente':'Apagar agente';if(killed){if(ctl)ctl.abort();log('regla','agente apagado: conversaciones pasan a asesor N1','rule');addMsg('s','El agente está apagado. Un asesor N1 te atenderá.');}else{log('sistema','agente encendido','ok');}setState();});
+  $('kill').addEventListener('click',function(){killed=!killed;this.classList.toggle('on',killed);this.setAttribute('aria-pressed',killed?'true':'false');this.textContent=killed?'Encender agente':'Apagar agente';if(killed){if(ctl)ctl.abort();log('regla','agente apagado: conversaciones pasan a un técnico','rule');addMsg('s','El agente está apagado. Un técnico de la mesa te atenderá por aquí.');}else{log('sistema','agente encendido','ok');}setState();});
 
   (function tick(){var el=$('sbTime');if(el)el.textContent=hhmm();setTimeout(tick,30000);})();
   setBusy(false);
@@ -1721,13 +2262,13 @@ h3{font-size:18px}
     var steps=$('waSteps'),items=[];
     if(WA_JOIN)items.push('Envía el mensaje que aparece listo (<code>'+WA_JOIN.replace(/</g,'&lt;')+'</code>) para activar el número.');
     if(!WA_JOIN)items.push('Envía el «Hola» que aparece listo.');
-    items.push('Escribe tu caso, por ejemplo: «La isla 3 de la EDS 4021 no está vendiendo».');
-    items.push('Si te pide aprobación, responde como técnico N2.');
+    items.push('Cuenta tu caso en un audio o escríbelo, por ejemplo: «La isla 3 de la EDS 4021 no está vendiendo».');
+    items.push('Mira cómo los agentes lo resuelven.');
     steps.innerHTML=items.map(function(t){return '<li>'+t+'</li>';}).join('');
-    function drawQr(){if(!window.qrcode||$('waQr').firstChild)return;var q=qrcode(0,'M');q.addData(url);q.make();$('waQr').innerHTML=q.createSvgTag({cellSize:4,margin:2,scalable:true});}
+    function drawQr(){if(!window.qrcode)return;var q=qrcode(0,'M');q.addData(url);q.make();var svg=q.createSvgTag({cellSize:4,margin:2,scalable:true});if(!$('waQr').firstChild)$('waQr').innerHTML=svg;document.querySelectorAll('.qrx').forEach(function(el){if(!el.firstChild)el.innerHTML=svg;});}
     var desktop=window.matchMedia&&window.matchMedia('(min-width:921px)').matches;
+    var sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';sc.onload=drawQr;document.head.appendChild(sc);
     if(desktop){
-      var sc=document.createElement('script');sc.src='https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';sc.onload=drawQr;document.head.appendChild(sc);
       btn.addEventListener('click',function(e){e.preventDefault();var open=pop.hidden;pop.hidden=!open;btn.setAttribute('aria-expanded',open?'true':'false');drawQr();});
       document.addEventListener('click',function(e){if(!pop.hidden&&!e.target.closest('.wa-cta')){pop.hidden=true;btn.setAttribute('aria-expanded','false');}});
     }
@@ -1764,4 +2305,11 @@ h3{font-size:18px}
 </script>
 
 </body></html>
+<script>
+(function(){var D={"s1": {"t": "2290 · El Mirador · El POS está bloqueado", "log": [["08:42:05", "Orquestador", "Recibe un audio y lo transcribe"], ["08:42:07", "Recepción y diagnóstico", "Identifica la EDS 2290 y clasifica: bloqueo de interfaz"], ["08:42:09", "Técnico POS", "Lee el LOG de la isla 2: la interfaz no responde"], ["08:42:20", "Técnico POS", "Reinicia la interfaz en remoto: sigue bloqueada"], ["08:43:02", "Técnico POS", "Reinicia el POS en remoto"], ["08:44:10", "Técnico POS", "Verifica el LOG: isla 2 en línea"], ["08:44:30", "Registro y seguimiento", "Confirma con la estación, tipifica y registra en Salesforce y Wolkvox"]]}, "s2": {"t": "4021 · Los Almendros · La isla 3 no vende", "log": [["09:10:11", "Orquestador", "Recibe una foto de la pantalla"], ["09:10:13", "Recepción y diagnóstico", "Clasifica: servicios detenidos"], ["09:10:15", "Técnico POS", "Lee el LOG: servicio de surtidor detenido"], ["09:10:40", "Técnico POS", "Reactiva los servicios en remoto"], ["09:11:20", "Técnico POS", "Confirma una venta de prueba"], ["09:11:35", "Registro y seguimiento", "Cierra el caso con la estación y lo registra"]]}, "s3": {"t": "1187 · Puerto Sol · ¿Cómo reimprimo el cierre?", "log": [["09:25:02", "Orquestador", "Recibe un audio y lo transcribe"], ["09:25:04", "Guía de uso", "Envía los pasos con imágenes"], ["09:27:30", "Guía de uso", "La estación confirma que reimprimió"], ["09:27:35", "Registro y seguimiento", "Tipifica como duda de uso y lo registra"]]}, "s4": {"t": "3350 · La Ceiba · No cierra el turno", "log": [["10:02:15", "Orquestador", "Recibe un mensaje de texto"], ["10:02:17", "Procesos y facturación", "Revisa el turno abierto en el POS"], ["10:02:40", "Procesos y facturación", "Detecta una manguera descolgada y guía a la estación"]]}, "s5": {"t": "4021 · Los Almendros · La factura no sale", "log": [["10:15:08", "Orquestador", "Recibe un audio y lo transcribe"], ["10:15:12", "Procesos y facturación", "Revisa la factura: rechazada por la DIAN"], ["10:15:30", "Procesos y facturación", "Corrige el dato del cliente y reenvía: factura aceptada"], ["10:15:40", "Registro y seguimiento", "Confirma con la estación y registra el caso"]]}};var tz=document.getElementById('tz');if(!tz)return;
+function show(id){var s=D[id];var h='<div class="tz-top"><b>Log de la sesión</b><span>'+s.t+'</span></div><ol>';
+s.log.forEach(function(l,i){h+='<li style="animation-delay:'+(i*0.08)+'s"><time>'+l[0]+'</time><span class="tz-a">'+l[1]+'</span><span class="tz-m">'+l[2]+'</span></li>';});tz.innerHTML=h+'</ol>';
+document.querySelectorAll('.mo-r').forEach(function(b){b.classList.toggle('on',b.dataset.s===id);});}
+document.querySelectorAll('.mo-r').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.s);});});show('s1');})();
+</script>
 </body></html>
