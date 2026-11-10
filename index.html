@@ -1572,6 +1572,149 @@ h3{font-size:18px}
 .hf-i span{display:block;font-size:14.5px;line-height:1.4;color:var(--muted);margin-top:2px}
 @media (max-width:900px){#hero .mk-hg{grid-template-columns:1fr!important}.hf{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.hf{grid-template-columns:1fr}}
+/* hero solo título + fold cómo funciona */
+#hero.mk-hero{padding-block:0!important;min-height:calc(100vh - 42px);display:flex;align-items:center}
+#hero .mk-ht{padding-block:64px}
+#hero .mk-ht h1{font-size:clamp(40px,5.4vw,72px);font-weight:600;line-height:1.08;max-width:16ch}
+#hero .mk-ht h1 .kw{color:var(--red)}
+#hero .mk-lead{font-size:20px;margin-top:20px;max-width:46ch}
+#hero .mk-ctas{margin-top:30px}
+.hc{background:#fff;padding-block:48px}
+.hc-g{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:48px;align-items:center}
+.hc .hx-s{width:100%;max-width:640px;height:auto;font-family:var(--display)}
+.hf{display:flex;flex-direction:column;gap:12px}
+.hf .eyebrow{margin-bottom:4px}
+.hf-i{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px}
+.hf-i em{font-style:normal;flex:none;width:30px;height:30px;border-radius:50%;background:var(--red-soft);color:var(--red-t);font-weight:600;font-size:14px;display:grid;place-items:center;font-family:var(--display)}
+.hf-i b{display:block;font-family:var(--display);font-weight:600;font-size:18px;line-height:1.25;color:var(--ink)}
+.hf-i span{display:block;font-size:15px;line-height:1.4;color:var(--muted);margin-top:2px}
+@media (max-width:900px){.hc-g{grid-template-columns:1fr}}
+#hero>.wrap{width:100%}
+#hero .mk-ht h1{max-width:20ch}
+.hc-g{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px}
+/* un solo fold: título + gráfico grande + 4 puntos */
+#hero.mk-hero{min-height:0!important;display:block!important;padding-block:40px 48px!important}
+#hero .hg{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.3fr);gap:32px;align-items:center}
+#hero .mk-ht{padding:0!important}
+#hero .mk-ht h1{font-size:clamp(32px,3.4vw,48px);max-width:none}
+#hero .mk-lead{font-size:17px;margin-top:14px}
+#hero .hx-s{width:100%;max-width:700px;height:auto;font-family:var(--display)}
+#hero .hf{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+#hero .hf-i{background:rgba(255,255,255,.75)}
+@media (max-width:900px){#hero .hg{grid-template-columns:1fr}#hero .hf{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){#hero .hf{grid-template-columns:1fr}}
+#hero .hf-i{padding:14px 16px;gap:12px}
+#hero .hf-i b{font-size:16.5px}
+#hero .hf-i span{font-size:14px}
+/* storytelling 1 título · 2 gráfico · 3 características */
+#hero.st{position:relative;height:300vh;min-height:0!important;display:block!important;padding:0!important}
+#hero.st::after{display:none}
+.st-stage{position:sticky;top:42px;height:calc(100vh - 42px);overflow:hidden;max-width:1200px;margin:0 auto;padding:0 24px}
+.st-mk{position:absolute;top:66%;height:1px;width:1px}
+.st-t,.st-g,.st-f,.st-hint{position:absolute;left:24px;right:24px;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .6s ease,top .8s cubic-bezier(.2,.7,.2,1)}
+.st-t{text-align:center;top:50%;transform:translateY(-50%);transform-origin:50% 0}
+.st-t h1{font-size:clamp(40px,5.6vw,76px);font-weight:600;line-height:1.06;margin:14px auto 0;max-width:18ch;color:var(--ink)}
+.st-t h1 .kw{color:var(--red)}
+.st-t .mk-lead{font-size:20px;margin:18px auto 0;max-width:44ch}
+.st-g{top:52%;transform:translateY(-40%) scale(.96);opacity:0;display:flex;justify-content:center;pointer-events:none}
+.st-g .hx-s{width:min(820px,100%);height:auto;max-height:56vh;font-family:var(--display)}
+.st-f{bottom:28px;top:auto;opacity:0;transform:translateY(40px);display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0!important}
+.st-f .hf-i{background:rgba(255,255,255,.8);padding:14px 16px;gap:12px}
+.st-f .hf-i b{font-size:16.5px}.st-f .hf-i span{font-size:14px}
+.st-hint{bottom:22px;text-align:center;color:var(--muted);font-size:20px;animation:sth 1.6s ease-in-out infinite}
+@keyframes sth{50%{transform:translateY(6px)}}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{top:22px;transform:translateY(0) scale(.62)}
+.st-stage[data-s="2"] .st-t .mk-lead,.st-stage[data-s="3"] .st-t .mk-lead{opacity:.9}
+.st-stage[data-s="2"] .st-g{opacity:1;transform:translateY(-44%) scale(1)}
+.st-stage[data-s="3"] .st-g{opacity:1;transform:translateY(-58%) scale(.86)}
+.st-stage[data-s="3"] .st-f{opacity:1;transform:none}
+.st-stage[data-s="3"] .st-hint{opacity:0}
+@media (max-width:900px),(prefers-reduced-motion:reduce){
+#hero.st{height:auto}.st-stage{position:static;height:auto;padding:48px 20px}
+.st-t,.st-g,.st-f,.st-hint{position:static;transform:none!important;opacity:1!important;transition:none}
+.st-g{margin:24px 0}.st-f{grid-template-columns:1fr 1fr}.st-hint{display:none}.st-g .hx-s{max-height:none}}
+@media (max-width:560px){.st-f{grid-template-columns:1fr}}
+#hero.st{overflow:clip!important}
+.st-t h1 .kw{font-style:normal}
+.st-t .eyebrow{color:var(--red-t)}
+.st-t .mk-lead{transition:opacity .4s}
+.st-stage[data-s="2"] .st-t .mk-lead,.st-stage[data-s="3"] .st-t .mk-lead{opacity:0}
+.st-stage[data-s="2"] .st-g{transform:translateY(-38%) scale(1.04)}
+.st-stage[data-s="3"] .st-g{transform:translateY(-50%) scale(.95)}
+/* fold 1 rojo + gráfico grande */
+#hero.st{background:linear-gradient(160deg,#FF0818 0%,#D9000F 100%)!important;color:#fff}
+#hero.st::before{display:none}
+.st-t .eyebrow{color:#fff!important;opacity:.85}
+.st-t h1{color:#fff!important}
+.st-t h1 .kw{color:var(--yellow)!important}
+.st-t .mk-lead{color:rgba(255,255,255,.9)!important}
+.st-hint{color:#fff}
+/* gráfico sobre rojo */
+#hero .hx-s [stroke="#DCEBEC"]{stroke:rgba(255,255,255,.45)}
+#hero .hx-s rect[fill="#fff"]{fill:rgba(255,255,255,.08);stroke:rgba(255,255,255,.55)}
+#hero .hx-s text{fill:#fff}
+#hero .hx-s text[fill="#B50000"]{fill:var(--yellow)}
+#hero .hx-s circle[fill="#F5B5B9"]{fill:var(--yellow)}
+#hero .hx-s circle[stroke="#F5B5B9"]{stroke:rgba(255,255,255,.6)}
+#hero .hx-s g[stroke="#FBD3D6"]{stroke:rgba(255,255,255,.35)}
+#hero .hx-s g[stroke="#FF0818"] circle{fill:#E30613;stroke:#fff}
+#hero .hx-s circle[r="56"]{fill:rgba(255,255,255,.18)}
+#hero .hx-s circle[r="43"]{fill:#fff}
+#hero .hx-s circle[r="43"]+text{fill:#E30613}
+#hero .hx-s g[fill="#FF0818"] circle{fill:var(--yellow)}
+#hero .hx-s circle[r="22"]{fill:#fff;stroke:#fff}
+#hero .hx-s path[stroke="#0F8A5F"]{stroke:#0F8A5F}
+#hero .hx-s circle[fill="#0F8A5F"]{fill:#fff}
+/* distribución */
+.st-g{top:118px;bottom:24px;transform:translateY(30px)!important;align-items:center}
+.st-g .hx-s{width:auto;height:100%;max-width:100%;max-height:none}
+.st-stage[data-s="1"] .st-g{opacity:0}
+.st-stage[data-s="2"] .st-g,.st-stage[data-s="3"] .st-g{transform:none!important}
+.st-stage[data-s="3"] .st-g{bottom:150px}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{top:18px;transform:scale(.5)!important}
+.st-f .hf-i{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.35)!important}
+.st-f .hf-i b{color:#fff}.st-f .hf-i span{color:rgba(255,255,255,.85)}
+.st-f .hf-i em{background:var(--yellow);color:var(--ink)}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-g{transform:none!important}.st-g .hx-s{width:100%;height:auto}}
+.st-g{display:block!important;text-align:center}
+.st-g .hx-s{display:inline-block;width:auto!important;max-width:100%;height:calc(100vh - 42px - 150px)!important;transition:height .8s cubic-bezier(.2,.7,.2,1)}
+.st-stage[data-s="3"] .st-g .hx-s{height:calc(100vh - 42px - 290px)!important}
+.st-stage[data-s="3"] .st-g{top:110px}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-g .hx-s,.st-stage[data-s="3"] .st-g .hx-s{width:100%!important;height:auto!important}}
+#hero .st-g .hx-s{max-width:100%!important}
+.st-g{top:160px!important}
+.st-g .hx-s{height:calc(100vh - 42px - 215px)!important}
+.st-stage[data-s="3"] .st-g .hx-s{height:calc(100vh - 42px - 330px)!important}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-g .hx-s,.st-stage[data-s="3"] .st-g .hx-s{height:auto!important}}
+/* título más grande */
+.st-t h1{font-size:clamp(48px,7.4vw,112px)!important;font-weight:700!important;letter-spacing:-.025em;line-height:1.02!important;max-width:15ch!important}
+.st-t .eyebrow{font-size:16px!important;letter-spacing:.22em}
+.st-t .mk-lead{font-size:22px!important}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{top:14px!important;transform:scale(.52)!important}
+.st-g{top:178px!important}
+.st-g .hx-s{height:calc(100vh - 42px - 232px)!important}
+.st-stage[data-s="3"] .st-g .hx-s{height:calc(100vh - 42px - 345px)!important}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-t h1{font-size:clamp(40px,11vw,64px)!important}.st-g .hx-s,.st-stage[data-s="3"] .st-g .hx-s{height:auto!important}}
+.st-t h1{font-size:clamp(44px,6.8vw,100px)!important;max-width:none!important}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{transform:scale(.55)!important}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-t h1{font-size:clamp(36px,10vw,64px)!important}}
+.st-t .mk-lead{max-width:60ch!important;margin-top:22px!important}
+/* título a la izquierda y más grande */
+.st-t{text-align:left!important;transform-origin:0 0!important}
+.st-t h1{font-size:clamp(52px,9vw,136px)!important;line-height:.98!important;margin-left:0!important}
+.st-t .mk-lead{margin-left:0!important;max-width:48ch!important;font-size:24px!important}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{top:16px!important;transform:scale(.4)!important}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-t h1{font-size:clamp(40px,12vw,72px)!important}.st-t .mk-lead{font-size:19px!important}}
+.st-t .mk-lead{max-width:62ch!important}
+/* título centrado + eyebrow pill negro */
+.st-t{text-align:center!important;transform-origin:50% 0!important}
+.st-t h1,.st-t .mk-lead{margin-left:auto!important;margin-right:auto!important}
+.st-t .eyebrow{display:inline-block;background:var(--ink)!important;color:#fff!important;opacity:1!important;border-radius:999px;padding:8px 18px}
+.st-stage[data-s="2"] .st-t,.st-stage[data-s="3"] .st-t{top:12px!important;transform:scale(.34)!important}
+.st-g{top:192px!important}
+.st-g .hx-s{height:calc(100vh - 42px - 240px)!important}
+.st-stage[data-s="3"] .st-g .hx-s{height:calc(100vh - 42px - 355px)!important}
+@media (max-width:900px),(prefers-reduced-motion:reduce){.st-g .hx-s,.st-stage[data-s="3"] .st-g .hx-s{height:auto!important}}
 /* indicadores */
 .kpi2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
 .kg{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px}
@@ -1622,41 +1765,38 @@ h3{font-size:18px}
 </header>
 
 <!-- HERO -->
-<section class="mk-hero" id="hero">
-  <div class="wrap">
-    <div class="mk-hg">
-    <div class="mk-ht">
-      <p class="eyebrow">Centinel · Mesa agéntica para TerpelPOS</p>
-      <h1>Un <em class="kw">orquestador</em> y un equipo de agentes para la mesa de TerpelPOS</h1>
-      <p class="mk-lead">Atiende sin fila y actúa sobre el POS. La estación interactúa como quiera y siempre la atiende un agente.</p>
-      <div class="mk-ctas"><a class="mk-btn" href="#prueba">Probar Centinel ↓</a><a class="mk-btn gh" href="#monitor">Ver el monitor ↓</a></div>
+<section class="mk-hero st" id="hero">
+  <div class="st-stage" id="stStage" data-s="1">
+    <div class="st-t">
+      <p class="eyebrow">Centinel · Mesa agéntica</p>
+      <h1>Un <em class="kw">orquestador</em><br>y un equipo<br>de agentes</h1>
+      <p class="mk-lead">La estación interactúa como quiera y siempre la atiende un agente.</p>
     </div>
-    <div class="hx" aria-label="La estación interactúa por opciones, audio o foto; Centinel orquesta cinco agentes especializados y el caso queda resuelto."><svg viewBox="0 0 540 400" class="hx-s" role="img">
-<defs><path id="hx0" d="M132 96 C200 96 200 200 258 200"/><path id="hx1" d="M132 200 L258 200"/><path id="hx2" d="M132 304 C200 304 200 200 258 200"/><path id="hx3" d="M342 200 L470 200"/></defs>
-<g fill="none" stroke="#DCEBEC" stroke-width="1.5"><use href="#hx0"/><use href="#hx1"/><use href="#hx2"/><use href="#hx3"/></g>
-<circle cx="300" cy="200" r="118" fill="none" stroke="#F5B5B9" stroke-width="1" stroke-dasharray="3 6"/>
-<g stroke="#FBD3D6" stroke-width="1"><line x1="300" y1="200" x2="217" y2="117"/><line x1="300" y1="200" x2="300" y2="82"/><line x1="300" y1="200" x2="383" y2="117"/><line x1="300" y1="200" x2="241" y2="302"/><line x1="300" y1="200" x2="359" y2="302"/></g>
-<g fill="#fff" stroke="#FF0818" stroke-width="1.5"><circle cx="217" cy="117" r="7"/><circle cx="300" cy="82" r="7"/><circle cx="383" cy="117" r="7"/><circle cx="241" cy="302" r="7"/><circle cx="359" cy="302" r="7"/></g>
-<g font-size="12.5" fill="#46646B"><text x="217" y="101" text-anchor="middle">Diagnóstico</text><text x="300" y="66" text-anchor="middle">Técnico POS</text><text x="383" y="101" text-anchor="middle">Procesos</text><text x="241" y="326" text-anchor="middle">Guía de uso</text><text x="359" y="326" text-anchor="middle">Registro</text></g>
-<circle cx="300" cy="200" r="52" fill="#FFEDEE"/><circle cx="300" cy="200" r="40" fill="#FF0818"/><text x="300" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Centinel</text>
-<g font-size="14" fill="#132023">
-<rect x="24" y="76" width="108" height="40" rx="20" fill="#fff" stroke="#DCEBEC"/><text x="78" y="101" text-anchor="middle">Opción</text>
-<rect x="24" y="180" width="108" height="40" rx="20" fill="#fff" stroke="#DCEBEC"/><text x="78" y="205" text-anchor="middle">Audio</text>
-<rect x="24" y="284" width="108" height="40" rx="20" fill="#fff" stroke="#DCEBEC"/><text x="78" y="309" text-anchor="middle">Foto</text>
-</g>
-<circle cx="490" cy="200" r="20" fill="#fff" stroke="#0F8A5F" stroke-width="1.5"/><path d="M481 200 l6 6 l12 -13" fill="none" stroke="#0F8A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="490" y="244" text-anchor="middle" font-size="13" fill="#46646B">Resuelto</text>
-<g fill="#FF0818"><circle r="3.5"><animateMotion dur="3s" begin="0s" repeatCount="indefinite"><mpath href="#hx0"/></animateMotion></circle><circle r="3.5"><animateMotion dur="3s" begin="-1s" repeatCount="indefinite"><mpath href="#hx1"/></animateMotion></circle><circle r="3.5"><animateMotion dur="3s" begin="-2s" repeatCount="indefinite"><mpath href="#hx2"/></animateMotion></circle></g>
-<circle r="3.5" fill="#0F8A5F"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#hx3"/></animateMotion></circle>
+    <div class="st-g"><svg viewBox="0 58 650 330" class="hx-s" role="img" aria-label="La estación escribe, toma una foto, envía audios o llama, según lo que necesite; Centinel orquesta cinco agentes especializados y el caso queda resuelto.">
+<defs><path id="hx1" d="M226 210 L367 210"/><path id="hx3" d="M453 210 L596 210"/></defs>
+<g fill="none" stroke="#DCEBEC" stroke-width="1.6"><use href="#hx1"/><use href="#hx3"/></g>
+<rect x="16" y="106" width="210" height="208" rx="20" fill="#fff" stroke="#DCEBEC"/>
+<text font-size="14.5" font-weight="700" fill="#B50000"><tspan x="34" y="136">Usa la que más se ajuste</tspan><tspan x="34" y="155">a la necesidad de tu EDS</tspan></text>
+<g font-size="14.5" fill="#132023"><circle cx="42" cy="181" r="3" fill="#F5B5B9"/><text x="54" y="186">Escribir</text><circle cx="42" cy="213" r="3" fill="#F5B5B9"/><text x="54" y="218">Tomar foto</text><circle cx="42" cy="245" r="3" fill="#F5B5B9"/><text x="54" y="250">Enviar audios</text><circle cx="42" cy="277" r="3" fill="#F5B5B9"/><text x="54" y="282">Hacer llamadas</text></g>
+<circle cx="410" cy="210" r="122" fill="none" stroke="#F5B5B9" stroke-width="1.2" stroke-dasharray="3 6"/>
+<g stroke="#FBD3D6" stroke-width="1.2"><line x1="410" y1="210" x2="324" y2="124"/><line x1="410" y1="210" x2="410" y2="88"/><line x1="410" y1="210" x2="496" y2="124"/><line x1="410" y1="210" x2="349" y2="316"/><line x1="410" y1="210" x2="471" y2="316"/></g>
+<g fill="#fff" stroke="#FF0818" stroke-width="1.6"><circle cx="324" cy="124" r="8"/><circle cx="410" cy="88" r="8"/><circle cx="496" cy="124" r="8"/><circle cx="349" cy="316" r="8"/><circle cx="471" cy="316" r="8"/></g>
+<g font-size="13.5" fill="#46646B"><text x="324" y="107" text-anchor="middle">Diagnóstico</text><text x="410" y="71" text-anchor="middle">Técnico POS</text><text x="496" y="107" text-anchor="middle">Procesos</text><text x="349" y="342" text-anchor="middle">Guía de uso</text><text x="471" y="342" text-anchor="middle">Registro</text></g>
+<circle cx="410" cy="210" r="56" fill="#FFEDEE"/><circle cx="410" cy="210" r="43" fill="#FF0818"/><text x="410" y="215" text-anchor="middle" font-size="16" font-weight="700" fill="#fff">Centinel</text>
+<circle cx="618" cy="210" r="22" fill="#fff" stroke="#0F8A5F" stroke-width="1.6"/><path d="M608 210 l7 7 l13 -14" fill="none" stroke="#0F8A5F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="618" y="258" text-anchor="middle" font-size="13.5" fill="#46646B">Resuelto</text>
+<g fill="#FF0818"><circle r="4"><animateMotion dur="2.4s" begin="0s" repeatCount="indefinite"><mpath href="#hx1"/></animateMotion></circle><circle r="4"><animateMotion dur="2.4s" begin="-0.8s" repeatCount="indefinite"><mpath href="#hx1"/></animateMotion></circle><circle r="4"><animateMotion dur="2.4s" begin="-1.6s" repeatCount="indefinite"><mpath href="#hx1"/></animateMotion></circle></g>
+<circle r="4" fill="#0F8A5F"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#hx3"/></animateMotion></circle>
 </svg></div>
-    </div>
-    <div class="hf" id="como">
-      <div class="hf-i"><em>1</em><div><b>Interactúa como quieras</b><span>Opciones, audio o foto.</span></div></div>
+    <div class="st-f hf">
+      <div class="hf-i"><em>1</em><div><b>Interactúa como quieras</b><span>Escribe, toma una foto, envía un audio o llama.</span></div></div>
       <div class="hf-i"><em>2</em><div><b>N1 y N2 en automático</b><span>Los agentes resolverían los casos sin pasar por la mesa.</span></div></div>
       <div class="hf-i"><em>3</em><div><b>Deja huella</b><span>Cada paso queda trazado de punta a punta.</span></div></div>
-      <div class="hf-i"><em>4</em><div><b>Se apaga desde la consola</b><span>La mesa controla a los agentes con un clic.</span></div></div>
+      <div class="hf-i"><em>4</em><div><b>Se apagan con un clic</b><span>La mesa apaga los agentes cuando quiera.</span></div></div>
     </div>
+    <div class="st-hint" aria-hidden="true">↓</div>
   </div>
+  <div class="st-mk" id="como"></div>
 </section>
 
 <!-- QUÉ PROBAMOS EN LA POC -->
@@ -2355,5 +2495,10 @@ function show(id){var s=D[id];var h='<div class="tz-top"><b>Log de la sesión</b
 s.log.forEach(function(l,i){h+='<li style="animation-delay:'+(i*0.08)+'s"><time>'+l[0]+'</time><span class="tz-a">'+l[1]+'</span><span class="tz-m">'+l[2]+'</span></li>';});tz.innerHTML=h+'</ol>';
 document.querySelectorAll('.mo-r').forEach(function(b){b.classList.toggle('on',b.dataset.s===id);});}
 document.querySelectorAll('.mo-r').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.s);});});show('s1');})();
+</script>
+<script>
+(function(){var sec=document.getElementById('hero'),st=document.getElementById('stStage');if(!sec||!st)return;
+function u(){var r=sec.getBoundingClientRect(),tot=r.height-innerHeight;var p=tot>0?Math.min(1,Math.max(0,-r.top/tot)):1;st.dataset.s=p<.22?'1':(p<.58?'2':'3');}
+addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();})();
 </script>
 </body></html>
