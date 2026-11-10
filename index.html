@@ -1715,6 +1715,19 @@ h3{font-size:18px}
 .st-g .hx-s{height:calc(100vh - 42px - 240px)!important}
 .st-stage[data-s="3"] .st-g .hx-s{height:calc(100vh - 42px - 355px)!important}
 @media (max-width:900px),(prefers-reduced-motion:reduce){.st-g .hx-s,.st-stage[data-s="3"] .st-g .hx-s{height:auto!important}}
+/* familias en lugar del 80 % */
+.fb{margin-top:28px}
+.fb-bar{display:flex;height:18px;border-radius:999px;overflow:hidden;gap:2px}
+.fb-bar i{display:block;height:100%}
+.fb-l{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.fb-l li{display:grid;grid-template-columns:10px 1fr;column-gap:8px;row-gap:2px;align-items:center}
+.fb-l span{width:10px;height:10px;border-radius:50%;grid-row:1}
+.fb-l b{font-weight:600;font-size:14.5px;color:var(--ink);line-height:1.25}
+.fb-l em{grid-column:2;font-style:normal;font-family:var(--display);font-weight:600;font-size:22px;color:var(--ink)}
+.fb-l small{grid-column:2;font-size:13px;color:var(--muted)}
+.fb-s{margin-top:14px;font-size:13px;color:var(--muted)}
+@media (max-width:900px){.fb-l{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.fb-l{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* indicadores */
 .kpi2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
 .kg{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px}
@@ -1931,13 +1944,13 @@ h3{font-size:18px}
 <section class="mk-sec" id="casos">
   <div class="wrap">
     <p class="eyebrow">Por qué funciona</p>
-    <h2>El <em class="kw">80&nbsp;%</em> de los casos se repite: ahí entran los agentes</h2>
-    <div class="w8">
-      <div class="w8-n"><b>80&nbsp;%</b><span>de los casos se repite en <b>30 patrones</b></span></div>
-      <div class="w8-v"><div class="w8-d" role="img" aria-label="8 de cada 10 casos se repiten"><i class="wr" style="animation-delay:0.00s"></i><i class="wr" style="animation-delay:0.06s"></i><i class="wr" style="animation-delay:0.12s"></i><i class="wr" style="animation-delay:0.18s"></i><i class="wr" style="animation-delay:0.24s"></i><i class="wr" style="animation-delay:0.30s"></i><i class="wr" style="animation-delay:0.36s"></i><i class="wr" style="animation-delay:0.42s"></i><i class="wg" style="animation-delay:0.48s"></i><i class="wg" style="animation-delay:0.54s"></i></div>
-        <p><span class="lr"></span>8 de cada 10: los resolverían los agentes &nbsp;·&nbsp; <span class="lg"></span>2 de cada 10: casos distintos que el orquestador analiza y asigna</p></div>
+    <h2>Los casos que más se repiten: <em class="kw">ahí entran los agentes</em></h2>
+    <div class="fb">
+      <div class="fb-bar" role="img" aria-label="Casos de octubre por familia: fallas del POS 25 %, dudas de uso 15 %, turnos 9 %, reportes y conciliación 8 %, facturación electrónica 5 %, otros 39 %."><i style="flex:25;background:#FF0818" title="Fallas del POS 25 %"></i><i style="flex:15;background:#FF5A64" title="Dudas de uso 15 %"></i><i style="flex:9;background:#FF8A91" title="Turnos 9 %"></i><i style="flex:8;background:#FFB3B8" title="Reportes y conciliación 8 %"></i><i style="flex:5;background:#FFD3D6" title="Facturación electrónica 5 %"></i><i style="flex:39;background:#E3ECED" title="Otros 39 %"></i></div>
+      <ul class="fb-l"><li><span style="background:#FF0818"></span><b>Fallas del POS</b><em>25&nbsp;%</em><small>Agente Técnico POS</small></li><li><span style="background:#FF5A64"></span><b>Dudas de uso</b><em>15&nbsp;%</em><small>Agente Guía de uso</small></li><li><span style="background:#FF8A91"></span><b>Turnos</b><em>9&nbsp;%</em><small>Agente Procesos</small></li><li><span style="background:#FFB3B8"></span><b>Reportes y conciliación</b><em>8&nbsp;%</em><small>Agente Procesos</small></li><li><span style="background:#FFD3D6"></span><b>Facturación electrónica</b><em>5&nbsp;%</em><small>Agente Procesos</small></li><li><span style="background:#E3ECED"></span><b>Otros casos</b><em>39&nbsp;%</em><small>Orquestador de agentes</small></li></ul>
+      
     </div>
-    <details class="cs-more"><summary>Ver qué resolvería cada agente y el detalle de los casos</summary>
+        <details class="cs-more"><summary>Ver qué resolvería cada agente y el detalle de los casos</summary>
     <div class="rs"><div class="rs-hd"><span>Lo que levanta la estación</span><span></span><span>Agente</span><span></span><span>Cómo lo resolvería</span><span></span><span>Resultado</span></div><div class="rs-r pos"><div class="rs-c"><div class="rs-n"><b>Fallas del POS</b><em>25&nbsp;%</em></div><div class="rs-bar"><i style="width:64%"></i></div><span>«La isla no vende» · «El POS está lento»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Técnico POS</span></div><span class="rs-ar">→</span><p class="rs-how">Lee el LOG y reinicia los servicios o el POS en remoto</p><span class="rs-ar">→</span><p class="rs-ok">✓ La isla vuelve a vender</p></div><div class="rs-r uso"><div class="rs-c"><div class="rs-n"><b>Dudas de uso</b><em>15&nbsp;%</em></div><div class="rs-bar"><i style="width:38%"></i></div><span>«¿Cómo reimprimo el cierre?»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Guía de uso</span></div><span class="rs-ar">→</span><p class="rs-how">Explica paso a paso, con audio e imágenes</p><span class="rs-ar">→</span><p class="rs-ok">✓ La estación lo hace sola</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Turnos</b><em>9&nbsp;%</em></div><div class="rs-bar"><i style="width:23%"></i></div><span>«No cierra el turno»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Revisa el turno y lo cierra o lo corrige</p><span class="rs-ar">→</span><p class="rs-ok">✓ Turno cerrado</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Reportes y conciliación</b><em>8&nbsp;%</em></div><div class="rs-bar"><i style="width:21%"></i></div><span>«La tirilla no cuadra»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Compara el POS con los reportes y encuentra la diferencia</p><span class="rs-ar">→</span><p class="rs-ok">✓ Diferencia aclarada</p></div><div class="rs-r pro"><div class="rs-c"><div class="rs-n"><b>Facturación electrónica</b><em>5&nbsp;%</em></div><div class="rs-bar"><i style="width:13%"></i></div><span>«La factura no sale»</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Procesos y facturación</span></div><span class="rs-ar">→</span><p class="rs-how">Revisa el estado y reenvía la factura</p><span class="rs-ar">→</span><p class="rs-ok">✓ Factura enviada</p></div><div class="rs-r orq"><div class="rs-c"><div class="rs-n"><b>Otros casos</b><em>39&nbsp;%</em></div><div class="rs-bar"><i style="width:100%"></i></div><span>Todo lo demás</span></div><span class="rs-ar">→</span><div class="rs-ag"><span>Orquestador</span></div><span class="rs-ar">→</span><p class="rs-how">Lo analiza y lo asigna al agente indicado</p><span class="rs-ar">→</span><p class="rs-ok">✓ Resuelto por el equipo de agentes</p></div><div class="rs-all">En todos los casos, <b>Registro y seguimiento</b> tipifica el caso y deja la trazabilidad completa.</div></div>
     
     
