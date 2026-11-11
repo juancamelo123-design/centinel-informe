@@ -1,4 +1,4 @@
-<!doctype html><html lang="es"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="es"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body class="solo">
 <title>Centinel Response</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1921,6 +1921,25 @@ h3{font-size:18px}
 .t5 span{display:block;margin-top:6px;font-size:13.5px;color:var(--muted);line-height:1.3}
 @media (max-width:900px){.rd-l4{grid-template-columns:1fr 1fr!important}.t5 ol{grid-template-columns:1fr 1fr}}
 .h2-2l{max-width:none!important}
+/* solo demo */
+body.solo>header.top,body.solo>section:not(#demo),body.solo>.panes,body.solo>footer,body.solo .progress{display:none!important}
+body.solo #demo{padding-top:40px}
+.dm-h{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px;position:relative}
+.dm-h h1{margin:0;font-family:var(--display);font-weight:700;font-size:clamp(32px,4vw,52px);color:var(--ink);letter-spacing:-.02em}
+.dm-h h1 .kw{color:var(--red);font-style:normal}
+.dm-qr{position:relative}
+.dm-qb{background:var(--red);color:#fff;border:0;border-radius:999px;padding:12px 22px;font-weight:700;font-size:15px;cursor:pointer;font-family:inherit}
+.dm-qb:hover{filter:brightness(.95)}
+.dm-qp{position:absolute;right:0;top:calc(100% + 10px);z-index:20;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;width:260px;box-shadow:0 20px 40px -20px rgba(0,0,0,.25);text-align:center}
+.dm-qp .qrx{width:200px!important;height:200px!important;margin:0 auto}
+.dm-qp p{margin:12px 0 6px;font-size:13.5px;color:var(--muted);line-height:1.4}
+.dm-qp p b{display:block;color:var(--ink);font-size:15px;margin-bottom:2px}
+.dm-qp a{font-size:13px;color:var(--red-t)}
+#chips{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+@media (max-width:900px){#chips{grid-template-columns:1fr!important}.dm-h{flex-wrap:wrap}}
+.dm-ctas{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.dm-cb{display:inline-block;border:2px solid var(--ink);color:var(--ink);text-decoration:none;border-radius:999px;padding:10px 20px;font-weight:700;font-size:15px}
+.dm-cb:hover{background:var(--ink);color:#fff}
 /* indicadores */
 .kpi2{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
 .kg{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:6px}
@@ -2082,15 +2101,27 @@ h3{font-size:18px}
     </div>
     
     
-    <div class="demo" hidden>
-      <p class="cases-l">Elige un caso o escribe el tuyo</p>
+    
+    
+  </div>
+</section>
+
+<!-- CASOS -->
+<section class="mk-sec dm" id="demo">
+  <div class="wrap">
+    <div class="demo">
+      <div class="dm-h"><h1>Centinel <em class="kw">Response</em></h1>
+        <div class="dm-ctas"><a class="dm-cb" href="https://centinelagent.vercel.app/consola" target="_blank" rel="noopener">Ver consola ↗</a>
+        <div class="dm-qr"><button class="dm-qb" id="dmQrBtn" type="button" aria-expanded="false" aria-controls="dmQrPop">Probar en tu celular</button>
+          <div class="dm-qp" id="dmQrPop" hidden><div class="qrx" aria-label="Código QR para probar Centinel"></div><p><b>Escanea con tu celular</b>Envía el «Hola» que aparece listo y cuenta tu caso.</p><a href="https://wa.me/18164517011?text=Hola" target="_blank" rel="noopener">o ábrelo en WhatsApp Web</a></div></div></div>
+      </div>
       <ol class="cases" id="chips" aria-label="Casos de prueba">
-        <li><button class="chip case" type="button" data-step="0" data-msg="La isla 3 de la EDS 4021 no está vendiendo"><small>Se resuelve en el chat</small><b>«La isla 3 de la EDS 4021 no está vendiendo»</b></button></li>
-        <li><button class="chip case" type="button" data-step="1" data-msg="En la EDS 2290 la isla 2 sigue bloqueada, ya reinicié la interfaz y nada"><small>Tú apruebas como técnico</small><b>«La isla 2 sigue bloqueada, ya reinicié y nada»</b></button></li>
-        <li><button class="chip case" type="button" data-step="2" data-msg="Quiero que me ayude una persona"><small>Pasa a un técnico</small><b>«Quiero que me ayude una persona»</b></button></li>
-        <li><button class="chip case" type="button" data-msg="¿Cómo hago el cierre de turno?"><small>Explica un procedimiento</small><b>«¿Cómo hago el cierre de turno?»</b></button></li>
-        <li><button class="chip case" type="button" data-msg="En la EDS 3350 no hay internet"><small>Escala al proveedor</small><b>«En la EDS 3350 no hay internet»</b></button></li>
-        <li><button class="chip case" type="button" data-msg="En la EDS 1187 el conciliador no cuadra con SAP"><small>Pasa a una persona</small><b>«El conciliador no cuadra con SAP»</b></button></li>
+        <li><button class="chip case" type="button" data-sc="venta" data-msg="La isla 3 de la EDS 4021 no está vendiendo"><small>Servicios detenidos · reinicio</small><b>«La isla 3 de la EDS 4021 no está vendiendo»</b></button></li>
+        <li><button class="chip case" type="button" data-sc="duda" data-msg="¿Cómo hago el cierre de turno?"><small>Duda de uso</small><b>«¿Cómo hago el cierre de turno?»</b></button></li>
+        <li><button class="chip case" type="button" data-sc="lento" data-msg="El POS de la isla 1 de la EDS 1187 está muy lento"><small>Lentitud · reinicio del POS</small><b>«El POS de la isla 1 de la EDS 1187 está muy lento»</b></button></li>
+        <li><button class="chip case" type="button" data-sc="salto" data-msg="En la EDS 2290 la lectura del surtidor 4 salta"><small>Salto de lectura</small><b>«En la EDS 2290 la lectura del surtidor 4 salta»</b></button></li>
+        <li><button class="chip case" type="button" data-sc="bloqueo" data-msg="La pantalla del POS de la isla 2 de la EDS 2290 se congeló"><small>Bloqueo de interfaz</small><b>«La pantalla del POS de la isla 2 de la EDS 2290 se congeló»</b></button></li>
+        <li><button class="chip case" type="button" data-sc="cierre" data-msg="En la EDS 3350 no se hizo el cierre automático del turno"><small>Cierre automático de turno</small><b>«En la EDS 3350 no se hizo el cierre automático del turno»</b></button></li>
       </ol>
       <div class="lab">
       <div class="iphone" aria-label="WhatsApp de una estación (simulado)">
@@ -2107,7 +2138,7 @@ h3{font-size:18px}
           <div class="wabg">
             <div class="msgs" id="msgs" aria-live="polite">
               <div class="day">Hoy</div>
-              <div class="e2e">🔒 Los mensajes y las llamadas están cifrados de extremo a extremo. Prototipo de Periferia con datos ficticios.</div>
+              <div class="e2e">🔒 Los mensajes y las llamadas están cifrados de extremo a extremo. Prototipo de Periferia.</div>
               <div class="m a"><span class="tx">Hola, soy Centinel, el agente de soporte de TerpelPOS. Cuéntame qué está pasando en tu estación.</span><span class="tm">10:13</span></div>
             </div>
           </div>
@@ -2137,11 +2168,9 @@ h3{font-size:18px}
       </div>
       </div>
     </div>
-    
   </div>
 </section>
 
-<!-- CASOS -->
 <section class="mk-sec" id="casos">
   <div class="wrap">
     <p class="eyebrow">El reto</p>
@@ -2639,6 +2668,52 @@ h3{font-size:18px}
   function onChip(e){var b=e.target.closest('.chip');if(!b||b.disabled)return;var st=b.getAttribute('data-step');var k=st===null?null:+st;$('insight').hidden=true;
     document.querySelectorAll('.cases .case').forEach(function(x){x.classList.remove('run')});b.classList.add('run');caseClosed=true;
     Promise.resolve(ask(b.getAttribute('data-msg')||b.textContent)).then(waitIdle).then(function(){b.classList.remove('run');b.classList.add('done');if(k===null)return;$('insT').textContent=INS[k][0];var L=$('insL');L.textContent='';INS[k][1].forEach(function(x){var li=document.createElement('li');li.textContent=x;L.appendChild(li);});$('insP').textContent='Tiempo de atención: '+$('mClock').textContent+' · destino: '+$('mEst').textContent;$('insight').hidden=false;});}
+
+  SC.venta=[
+    ['a','Gracias. Reviso la EDS 4021, isla 3.',['consulta','estación 4021 · Los Almendros'],['diagnóstico','isla 3 · servicios detenidos desde 06:12']],
+    ['a','La isla 3 tiene los servicios detenidos desde las 6:12. Los reinicio en remoto ahora.',['conocimiento','PROC-01 · servicios detenidos'],['acción','reinicio remoto de servicios · isla 3','ok']],
+    ['a','Listo, los servicios ya están arriba. ¿Puedes hacer una venta de prueba?',['verificación','isla 3 en línea','ok']],
+    ['u','Sí, ya vende'],
+    ['a','Perfecto. Dejé el caso registrado. ¡Buen turno!',['registro','CAS-482913 · Wolkvox ✓ · Salesforce ✓','ok'],{tip:'(POS) Servicios Detenidos',dest:'resuelto por el agente'}]];
+  SC.duda=SC.turno;
+  SC.lento=[
+    ['a','Reviso la EDS 1187, isla 1.',['consulta','estación 1187 · Puerto Sol'],['diagnóstico','isla 1 · LOG: memoria al 97 %, POS sin reinicio hace 9 días']],
+    ['a','El POS de la isla 1 necesita un reinicio. ¿Hay una venta en curso en esa isla?\n1. Sí\n2. No',['conocimiento','PROC-05 · lentitud del sistema']],
+    ['u','2'],
+    ['a','Gracias. Reinicio el POS en remoto; vuelve en unos minutos.',['acción','reinicio remoto del POS · isla 1','ok']],
+    ['a','Listo, el POS de la isla 1 ya está en línea y responde normal.',['verificación','isla 1 en línea · memoria 41 %','ok'],['registro','CAS-517920 · Wolkvox ✓ · Salesforce ✓','ok'],{tip:'(POS) Lentitud en el sistema',dest:'resuelto por el agente'}]];
+  SC.salto=[
+    ['a','Reviso la EDS 2290, surtidor 4.',['consulta','estación 2290 · El Mirador'],['diagnóstico','surtidor 4 · lectura del POS distinta a la del surtidor']],
+    ['a','La comunicación entre el POS y el surtidor 4 se desincronizó. Reinicio el servicio de interfaz del surtidor en remoto.',['conocimiento','PROC-04 · salto de lectura'],['acción','reinicio remoto · interfaz de surtidor 4','ok']],
+    ['a','Listo, las lecturas ya coinciden. ¿Me mandas una foto de la pantalla para confirmar?',['verificación','lecturas POS y surtidor iguales','ok']],
+    ['u','(Foto de la pantalla)'],
+    ['a','Confirmado. Dejé el caso registrado.',['registro','CAS-520441 · Wolkvox ✓ · Salesforce ✓','ok'],{tip:'(POS) Salto de lectura',dest:'resuelto por el agente'}]];
+  SC.bloqueo=[
+    ['a','Reviso la EDS 2290, isla 2.',['consulta','estación 2290 · El Mirador'],['diagnóstico','isla 2 · interfaz congelada, servicios activos']],
+    ['a','La interfaz del POS está congelada. ¿Hay una venta en curso en la isla 2?\n1. Sí\n2. No',['conocimiento','PROC-02 · bloqueo de interfaz']],
+    ['u','2'],
+    ['a','Reinicio la interfaz en remoto.',['acción','reinicio remoto de la interfaz · isla 2','ok']],
+    ['a','Listo, la isla 2 ya responde. Dejé el caso registrado.',['verificación','isla 2 en línea','ok'],['registro','CAS-517204 · Wolkvox ✓ · Salesforce ✓','ok'],{tip:'(POS) Bloqueo de interfaz',dest:'resuelto por el agente'}]];
+  SC.cierre=[
+    ['a','Reviso el turno de la EDS 3350.',['consulta','estación 3350 · La Ceiba'],['diagnóstico','turno de ayer abierto · 1 venta pendiente de sincronizar']],
+    ['a','El cierre automático no corrió porque quedó una venta pendiente de sincronizar. La sincronizo y cierro el turno en remoto.',['conocimiento','PROC-07 · cierre automático de turno'],['acción','venta sincronizada · turno cerrado en remoto','ok']],
+    ['a','Listo, el turno quedó cerrado. Te envío la tirilla de cierre por aquí.',['registro','CAS-603512 · Wolkvox ✓ · Salesforce ✓','ok'],{tip:'(TURNOS) No se realiza cierre automático de turno',dest:'resuelto por el agente'}]];
+  var INS2={
+    venta:['✓ Resuelto por el agente, sin llamar a la mesa',['520 llamadas así en octubre.','Reinicio remoto y verificación con la estación.','Registrado en Wolkvox y Salesforce.']],
+    duda:['✓ La estación lo hizo sola',['1.212 llamadas así en octubre: el caso más frecuente.','El agente guía paso a paso.','Registrado en Wolkvox y Salesforce.']],
+    lento:['✓ POS reiniciado por el agente',['392 llamadas así en octubre.','Antes de reiniciar confirma que no haya una venta en curso.','Cada paso queda en la traza.']],
+    salto:['✓ Lecturas corregidas por el agente',['384 llamadas así en octubre.','La estación confirma con una foto.','Registrado en Wolkvox y Salesforce.']],
+    bloqueo:['✓ Interfaz reiniciada por el agente',['315 llamadas así en octubre.','Confirma que no haya una venta en curso.','Cada paso queda en la traza.']],
+    cierre:['✓ Turno cerrado por el agente',['294 llamadas así en octubre.','Sincroniza la venta pendiente y cierra el turno.','Registrado en Wolkvox y Salesforce.']]};
+  function runChip(b){var key=b.getAttribute('data-sc');var text=b.getAttribute('data-msg');
+    if(caseClosed){caseClosed=false;caseTurns=0;t0=null;$('mClock').textContent='0:00';$('mAns').style.width='0';$('mTip').textContent='—';$('mEst').textContent='en curso';}
+    startClock();addMsg('u',text);turns.push({role:'user',content:text});
+    return new Promise(function(r){setBusy(true);play(SC[key]||SC.otro,function(){setBusy(false);r();});});}
+  function onChip2(e){var b=e.target.closest('.chip');if(!b||b.disabled||killed)return;e.stopImmediatePropagation();var key=b.getAttribute('data-sc');$('insight').hidden=true;
+    document.querySelectorAll('.cases .case').forEach(function(x){x.classList.remove('run')});b.classList.add('run');
+    runChip(b).then(function(){caseClosed=true;b.classList.remove('run');b.classList.add('done');var I=INS2[key];if(!I)return;$('insT').textContent=I[0];var L=$('insL');L.textContent='';I[1].forEach(function(x){var li=document.createElement('li');li.textContent=x;L.appendChild(li);});$('insP').textContent='Tiempo de atención: '+$('mClock').textContent+' · destino: '+$('mEst').textContent;$('insight').hidden=false;});}
+  $('chips').addEventListener('click',onChip2,true);
+  (function(){var bt=$('dmQrBtn'),pp=$('dmQrPop');if(!bt)return;bt.addEventListener('click',function(){var o=pp.hidden;pp.hidden=!o;bt.setAttribute('aria-expanded',o?'true':'false');bt.textContent=o?'Ocultar QR':'Probar en tu celular';});})();
   $('chips').addEventListener('click',onChip);
   // tabs
   var tabBtns=[].slice.call(document.querySelectorAll('.tab'));
